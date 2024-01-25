@@ -24,7 +24,7 @@ header span {
 }
 
 main {
-  padding: 0 25%;
+  margin: 0 25%;
 }
 
 h1 {
@@ -68,16 +68,8 @@ article {
   text-align: left;
 }
 
-ol {
-  font-weight: bold;
-}
-
 li {
   padding: 0.5em 0;
-}
-
-.method {
-  padding-left: 40px;
 }
 
 footer {

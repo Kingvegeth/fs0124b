@@ -119,11 +119,12 @@ main ol {
   font-size: 1.4rem;
   line-height: 30px;
 }
-.blocco-aside a {
-  color: #1e9cbe;
-  font-weight: bold;
-}
 
+
+a {
+    color: #1e9cbe;
+    font-weight: bold;
+}
 .data {
   text-align: right;
   font-size: 1.1rem;
@@ -135,6 +136,7 @@ main ol {
   width: 100%;
   max-height: 230px;
   border-radius: 25px;
+  margin-top: 30px;
 }
 
 article {
@@ -151,6 +153,27 @@ article {
     color: white;
 }
 .table{
+    padding: 20px;
+    line-height: 60px;
     text-align: center;
-    padding: 20px 40px;
+    vertical-align: middle;
+    height: 60px;
+}
+
+.tag{
+    background-color:  rgb(226, 226, 226);
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 5px;
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.footer a{
+    color: #f644fc;
+    font-weight: bold;
 }

@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap");
+body {
+  color: #393d41;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h1,
+h4 {
+  color: #25a2c3;
+}
+
+#header {
+  padding: 40px 0;
+  background-color: black;
+}
+
+#header img {
+  width: 175px;
+}
+
+#main {
+  padding: 0 20px;
+}
+
+#blocco-inizio {
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 70px 40px 10px 40px;
+}
+
+#blocco-prospettive {
+  margin: 4px 20px 50px 20px;
+  padding: 40px 0;
+}
+
+h4 {
+  line-height: 2.5;
+}
+
+.pitch {
+  margin: 30px 0 40px 0;
+}
+
+.button {
+  background-color: #f04c2f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+  width: 200px;
+  height: 60px;
+  margin: 40px auto;
+  line-height: 60px;
+  border-radius: 5px;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+.immagine-cerchio {
+  margin-top: 40px;
+}
+
+.immagine-cerchio img {
+  width: 350px;
+  border-radius: 50%;
+}
+
+#middle {
+  background-color: #e22d0e;
+  color: white;
+  padding: 70px 0 40px 0;
+}
+
+#middle i {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.ruolo {
+  font-size: 1rem;
+}
+
+#aside {
+  margin: 70px 0 90px 0;
+}
+
+.correlati {
+  margin: 40px 30px;
+  padding-bottom: 50px;
+  border: 1px solid #dee1e3;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.sfondo-correlati {
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+}
+
+.sfondo1 {
+  background-image: url(../img/foto1.jpg);
+}
+
+.sfondo2 {
+  background-image: url(../img/foto2.jpg);
+}
+
+.sfondo3 {
+  background-image: url(../img/foto3.jpg);
+}
+
+.argomento {
+  margin-top: 0;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+#footer {
+  padding: 52px;
+  padding-bottom: 80px;
+  background-color: #25a2c3;
+  color: #c8e7f0;
+  font-size: 1.4rem;
+}
+
+footer i {
+  color: white;
+}
+
+author {
+  font-size: 1.2rem;
+}
+
+a {
+  color: inherit;
+}

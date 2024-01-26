@@ -57,6 +57,13 @@ main ol {
   width: 300px;
 }
 
+.titolo{
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 4rem;
+    margin-bottom: 30px;
+}
+
 .sottotitolo {
   padding: 40px 0;
 }
@@ -67,6 +74,11 @@ main ol {
   background-color: white;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.562);
   line-height: 30px;
+}
+
+.highlight{
+    font-weight: bold;
+    color: #9e2b85;
 }
 
 .footer {
@@ -81,6 +93,7 @@ main ol {
 
 .autore {
   color: rgb(146, 146, 146);
+  margin-bottom: 30px;
 }
 
 .titolo-sezione {

@@ -48,7 +48,7 @@ const myName = 'Simone';
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
-let risultato_somma = 15 + 20;
+let risultato_somma = 12 + 20;
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.

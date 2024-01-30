@@ -3,15 +3,15 @@
 */
 
 {
-  let a = 4
-  let b = 2
+  let a = 4;
+  let b = 2;
 
-  if(a>b){
-    console.log('Il numero maggiore è ',a)
-  } else if(b>a){
-    console.log('Il numero maggiore è ',b)
+  if (a > b) {
+    console.log("Il numero maggiore è ", a);
+  } else if (b > a) {
+    console.log("Il numero maggiore è ", b);
   } else {
-    console.log('I due numeri sono uguali')
+    console.log("I due numeri sono uguali");
   }
 }
 
@@ -20,9 +20,9 @@
 */
 
 {
-  let a = 6
-  if(a!=5){
-    console.log('not equal')
+  let a = 6;
+  if (a != 5) {
+    console.log("not equal");
   }
 }
 
@@ -31,9 +31,9 @@
 */
 
 {
-  let a = 15
-  if(a%5==0){
-    console.log('divisibile per 5')
+  let a = 15;
+  if (a % 5 == 0) {
+    console.log("divisibile per 5");
   }
 }
 
@@ -42,12 +42,12 @@
 */
 
 {
-  let a = 1
-  let b = 9
-  if(a==8||b==8||a+b==8||a-b==8||b-a==8){
-    console.log('I numeri vanno bene')
-  } else{
-    console.log('I numeri non vanno bene')
+  let a = 1;
+  let b = 9;
+  if (a == 8 || b == 8 || a + b == 8 || a - b == 8 || b - a == 8) {
+    console.log("I numeri vanno bene");
+  } else {
+    console.log("I numeri non vanno bene");
   }
 }
 
@@ -58,13 +58,13 @@
 */
 
 {
-  let totalShoppingCart = 65
-  let shipping = 10
-  if(totalShoppingCart>50){
-    shipping = 0
+  let totalShoppingCart = 65;
+  let shipping = 10;
+  if (totalShoppingCart > 50) {
+    shipping = 0;
   }
-  let checkout = totalShoppingCart+shipping
-  console.log('Il costo totale è di',checkout)
+  let checkout = totalShoppingCart + shipping;
+  console.log("Il costo totale è di", checkout);
 }
 
 /* ESERCIZIO 6
@@ -73,16 +73,15 @@
 */
 
 {
-  let totalShoppingCart = 65
-  totalShoppingCart *= 0.8
-  let shipping = 10
-  if(totalShoppingCart>50){
-    shipping = 0
+  let totalShoppingCart = 65;
+  totalShoppingCart *= 0.8;
+  let shipping = 10;
+  if (totalShoppingCart > 50) {
+    shipping = 0;
   }
-  let checkout = totalShoppingCart+shipping
-  console.log('Il costo totale è di',checkout)
+  let checkout = totalShoppingCart + shipping;
+  console.log("Il costo totale è di", checkout);
 }
-
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -91,27 +90,27 @@
 */
 
 {
-  let a = 4
-  let b = 3
-  let c = 9
-  let temp = 0
+  let a = 4;
+  let b = 3;
+  let c = 9;
+  let temp = 0;
 
-  if(a>b){
-    temp = a
-    a = b
-    b = temp
+  if (a > b) {
+    temp = a;
+    a = b;
+    b = temp;
   }
-  if(b>c){
-    temp = b
-    b = c
-    c = temp
+  if (b > c) {
+    temp = b;
+    b = c;
+    c = temp;
   }
-  if(a>b){
-    temp = a
-    a = b
-    b = temp
+  if (a > b) {
+    temp = a;
+    a = b;
+    b = temp;
   }
-  console.log(a,b,c)
+  console.log(a, b, c);
 }
 
 /* ESERCIZIO 8
@@ -119,12 +118,12 @@
 */
 
 {
-  let valore = 16
-  if (typeof valore=='number') {
-    console.log('Il valore inserito è un numero')
+  let valore = 16;
+  if (typeof valore == "number") {
+    console.log("Il valore inserito è un numero");
   }
-  if (typeof valore!='number') {
-    console.log('Il valore inserito non è un numero')
+  if (typeof valore != "number") {
+    console.log("Il valore inserito non è un numero");
   }
 }
 
@@ -133,11 +132,11 @@
 */
 
 {
-  let a = 2
-  if (a%2==0){
-    console.log('Il numero inserito è pari')
+  let a = 2;
+  if (a % 2 == 0) {
+    console.log("Il numero inserito è pari");
   } else {
-    console.log('Il numero inserito è dispari')
+    console.log("Il numero inserito è dispari");
   }
 }
 
@@ -154,54 +153,47 @@
 */
 
 {
-  let val = 7
+  let val = 7;
   if (val < 5) {
     console.log("Meno di 5");
   } else if (val < 10) {
-      console.log("Meno di 10");
-    } else {
-      console.log("Uguale a 10 o maggiore");
-    }
-  
+    console.log("Meno di 10");
+  } else {
+    console.log("Uguale a 10 o maggiore");
+  }
 }
-  
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
 const me = {
-  name: 'John',
-  lastName: 'Doe',
-  skills: ['javascript', 'html', 'css'],
-}
-me.city = 'Toronto'
-
+  name: "John",
+  lastName: "Doe",
+  skills: ["javascript", "html", "css"],
+};
+me.city = "Toronto";
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-delete (me.lastName)
-
+delete me.lastName;
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-me.skills.pop()
-
+me.skills.pop();
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-
-  let arr = []
-  arr = [1,2,3,4,5,6,7,8,9,10]
-
+let arr = [];
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
-arr[arr.length-1] = 100
+arr[arr.length - 1] = 100;

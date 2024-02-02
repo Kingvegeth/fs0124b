@@ -1,0 +1,171 @@
+:root {
+  --blu-scuro: #222f3f;
+  --blu-chiaro: #36475a;
+  --arancione: #f56600;
+  --link-blu: #008c91;
+  --grigio: #e9edee;
+  scroll-behavior: smooth;
+}
+
+#body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--grigio);
+}
+
+#header {
+  text-align: left;
+}
+
+#logoh {
+  background-color: var(--blu-scuro);
+}
+
+#logoh img {
+  width: 125px;
+}
+
+.top-menu {
+  background-color: var(--blu-chiaro);
+}
+
+.top-menu a {
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+#logoh,
+.top-menu {
+  padding: 10px 30px;
+}
+
+.top-p {
+  background-color: var(--arancione);
+  padding: 0.6em;
+  margin: 30px 0;
+}
+
+.gift-guides {
+  background-image: url(../images/bg-image.png);
+  background-size: contain;
+  background-repeat: repeat;
+  margin-bottom: 30px;
+  padding: 40px 0 30px 0;
+  font-weight: bold;
+}
+
+.gift-guides p {
+  margin: 1em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.top-menu a,.top-p,.gift-guides {
+  color: var(--grigio);
+}
+
+.link-title {
+  padding: 0.3em 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#main {
+  text-align: center;
+  margin: 30px;
+}
+
+#main a {
+  text-decoration: none;
+  color: var(--link-blu);
+  margin-left: 1em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.gift-blocks {
+  text-align: left;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 10px;
+}
+
+.blocks {
+  text-align: center;
+}
+
+.block {
+  display: inline-block;
+  width: 325px;
+  height: 385px;
+  margin: 15px;
+  margin-top: 0;
+  border-radius: 20px;
+  background-size: cover;
+  background-position-x: center;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.075);
+}
+
+.blocka {
+  background-image: url(../images/img_1.jpg);
+}
+
+.blockb {
+  background-image: url(../images/img_2.jpg);
+}
+
+.blockc {
+  background-image: url(../images/img_3.jpg);
+}
+
+.blockd {
+  background-image: url(../images/img_4.jpg);
+}
+
+.wide-bg {
+  height: 450px;
+}
+
+.widea {
+  background-image: url(../images/img_9.png);
+  background-size: cover;
+}
+
+.wideb {
+  background-image: url(../images/img_10.png);
+  background-size: cover;
+}
+
+.link-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.link-title p {
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+#footer {
+  text-align: center;
+}
+
+#back-to-top {
+  background-color: var(--blu-chiaro);
+  padding: 1em;
+}
+
+#back-to-top a {
+  color: white;
+  font-weight: bold;
+}
+
+#logof {
+  background-color: var(--blu-scuro);
+  padding: 60px;
+}
+
+#logof img {
+  width: 175px;
+}

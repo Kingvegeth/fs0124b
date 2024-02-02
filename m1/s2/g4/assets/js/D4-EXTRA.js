@@ -6,11 +6,6 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
-function checkArray(a) {
-    let somma = 0
-
-}
-
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".

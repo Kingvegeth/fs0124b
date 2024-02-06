@@ -244,10 +244,13 @@ console.log(totalOfYears(movies));
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
-const findMovie = (array, imdb) => array.find((film) => film.imdbID === imdb)
+const findMovie = (array, imdb) => array.find((film) => film.imdbID === imdb);
 console.log(findMovie(movies, "tt0167260"));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 
+const movieThatYear = (array, anno) =>
+  array.findIndex((film) => film.Year === anno);
+console.log(movieThatYear(movies, "2005"));

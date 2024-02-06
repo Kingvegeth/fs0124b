@@ -253,4 +253,4 @@ console.log(findMovie(movies, "tt0167260"));
 
 const movieThatYear = (array, anno) =>
   array.findIndex((film) => film.Year === anno);
-console.log(movieThatYear(movies, "2005"));
+console.log("L'indice del film cercato è",movieThatYear(movies, "2005"));

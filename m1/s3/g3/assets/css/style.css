@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+#body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(125, 172, 161);
+}
+
+#header{
+    background: rgb(97,130,115);
+    background: linear-gradient(47deg, rgba(97,130,115,1) 0%, rgba(12,57,33,1) 90%);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 20px;
+}
+
+#container{
+    background-color: rgb(171, 223, 216);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.199);
+    border: 1px solid black;
+    width: fit-content;
+}
+
+#textbox{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#task-list{
+    padding: 20px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    text-align: left;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#task-list ul{
+    padding-left: 20px;
+    list-style-type: disc
+}
+
+#task-list li{
+    margin-bottom: 0.5em;
+}
+
+#add-button{
+    border-radius: 50%;
+    border: 1px solid black;
+    border: none;
+    background-color: transparent;
+}

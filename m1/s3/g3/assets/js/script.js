@@ -6,12 +6,8 @@ addButton.addEventListener('click', function (e) {
   let creaLi = document.createElement("li");
   creaLi.textContent = taskDaInserire;
   document.querySelector('.lista').appendChild(creaLi);
+  document.getElementById("textbox").value = ""
 });
 
 //task completata
-let lista = document.querySelectorAll('ul li')
-lista.forEach((lis) =>{
-    lis.addEventListener('click', (e) =>{
-        lis.textContent += 'sdsd'
-    })
-})
+let lista = document.querySelectorAll('ul li');

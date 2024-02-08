@@ -1,6 +1,9 @@
 //Variabili globali
 let board = document.querySelector(".board");
 let button = document.querySelector(".button");
+let startButton = document.querySelector(".btn-start");
+let gameStartScreen = document.querySelector(".game-start");
+let tombola = document.querySelector(".tombola");
 
 let numeroCelle = 76;
 
@@ -31,3 +34,10 @@ button.addEventListener("click", () => {
     }
   }
 });
+
+
+//selezione numero tabelline
+startButton.addEventListener('click',()=>{
+    gameStartScreen.classList.add('hidden')
+    tombola.classList.remove('hidden')
+})

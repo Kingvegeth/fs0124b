@@ -5,9 +5,6 @@ let button = document.querySelector(".button");
 let numeroCelle = 76;
 
 //creazione delle celle
-
-//<div class="cell">1</div>
-
 for (let i = 1; i < numeroCelle + 1; i++) {
   let cella = document.createElement("div");
   cella.classList.add("cell");
@@ -16,7 +13,6 @@ for (let i = 1; i < numeroCelle + 1; i++) {
 }
 
 //estrazione del numero con la pressione di 'button'
-
 let numeriEstratti = [];
 button.addEventListener("click", () => {
   let cell = document.querySelectorAll(".cell");

@@ -1,12 +1,31 @@
 @media screen and (min-width:1200px){
    
 
-    header div,header nav{
-        display: inline-block;
+    header{
+        padding: 5px 10px;
     }
 
-    header div{
-        width: 49%;
+    header p, header nav li a{
+        font-size: 1.5rem;
+    }
+
+    header div, header div img ,header div p, header nav, header a{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+    header img{
+        width: 150px;
+    }
+
+    header div {
+        text-align: left;
+        margin-right: 230px;
+    }
+
+    header nav {
+        text-align: right;
     }
 
     h1{

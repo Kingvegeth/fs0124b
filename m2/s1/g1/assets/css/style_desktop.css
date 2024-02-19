@@ -3,6 +3,7 @@
 
     header{
         padding: 5px 10px;
+        text-align: left;
     }
 
     header p, header nav li a{
@@ -15,17 +16,20 @@
         margin: 0 10px;
     }
 
+
+
     header img{
         width: 150px;
     }
 
     header div {
-        text-align: left;
-        margin-right: 230px;
+        padding: 0 15px;
+        width: 70%;
     }
 
-    header nav {
+    header nav ul{
         text-align: right;
+        margin-left: auto;
     }
 
     h1{

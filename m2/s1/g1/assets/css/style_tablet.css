@@ -1,0 +1,99 @@
+@media screen and (min-width:576px) {
+    
+    body{
+        padding: 15px;
+    }
+    
+    header, header nav li a{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    main{
+        padding: 2em;
+    }
+
+    h1{
+        font-size: 4.5rem;
+    }
+
+
+    article{
+        font-size: 1.5rem;
+    }
+
+    article img{
+        width: 10%;
+        box-shadow: 0 0 0 4px rgb(52, 134, 201),
+    0 0 0 8px rgb(136, 0, 107);
+    }
+
+    table{
+        width: 70%;
+        margin: 100px auto;
+    }
+
+    th, td{
+        padding: 10px 15px;
+        font-size: 1.4rem;
+    }
+
+    iframe{
+        height: 120px;
+    }
+
+    input, button{
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    input{
+     width: 70%;
+    }
+}
+
+@media screen and (min-width:768px){
+    
+
+    header, header nav li a,aside,footer{
+        font-size: 2rem;
+    }
+
+    article{
+        font-size: 2rem;
+    }
+
+    h1{
+        font-size: 6rem;
+    }
+
+    th,td{
+        font-size: 1.8rem;
+    }
+
+    iframe{
+        height: 175px;
+    }
+
+    section h2{
+        font-size: 2.5rem;
+    }
+
+    input{
+        padding: 15px;
+        font-size: 1.5rem;
+        width: 70%;
+    }
+
+    button{
+        font-size: 1.5rem;
+        padding: 15px 30px;
+       }
+
+
+
+    aside h2{
+        font-size: 4rem;
+    }
+
+}

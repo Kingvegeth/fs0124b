@@ -1,0 +1,70 @@
+@media screen and (min-width:1200px){
+   
+
+    header div,header nav{
+        display: inline-block;
+    }
+
+    header div{
+        width: 49%;
+    }
+
+    h1{
+        font-size: 4.5rem;
+    }
+
+    article{
+        font-size: 1.6rem;
+    }
+
+    article img{
+        width: 50px;
+    }
+
+    body{
+        padding: 2em 100px;
+    }
+
+    main{
+        padding: 2.5em;
+    }
+
+    th,td{
+        font-size: 1.2rem;
+    }
+
+    iframe, section{
+        display: inline-block ;
+        width: calc(100% / 2 - 3px);
+        vertical-align: middle;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+   section h2{
+    font-size: 2rem;
+   }
+
+   input, button{
+    padding: 10px 25px;
+    font-size: 1.2rem;
+}
+
+    aside div{
+        display: inline-block;
+        margin: 0;
+        width: calc(100% / 3 - 4px);
+        vertical-align: middle;
+        font-size: 1.5rem;
+    }
+
+    aside h2{
+        font-size: 3rem;
+    }
+
+    footer{
+        padding: 15px 21%;
+        font-size: 1.5rem;
+    }
+
+}

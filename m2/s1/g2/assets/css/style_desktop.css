@@ -1,0 +1,91 @@
+@media screen and (min-width:1200px){
+   
+
+    header{
+        padding: 5px 10px;
+        text-align: left;
+    }
+
+    header p, header nav li a{
+        font-size: 1.5rem;
+    }
+
+    header div, header div img ,header div p, header nav, header a{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+
+
+
+    header img{
+        width: 150px;
+    }
+
+    header div {
+        padding: 0 15px;
+        width: 70%;
+    }
+
+    header nav ul{
+        text-align: right;
+        margin-left: auto;
+    }
+
+    h1{
+        font-size: 4.5rem;
+    }
+
+    article{
+        font-size: 1.6rem;
+    }
+
+    .badge-html{
+        width: 50px;
+    }
+
+    body{
+        padding: 2em 100px;
+    }
+
+    main{
+        padding: 2.5em;
+    }
+
+    th,td{
+        font-size: 1.2rem;
+    }
+
+    iframe, section{
+        display: inline-block ;
+        width: calc(100% / 2 - 3px);
+        vertical-align: middle;
+        height: 200px;
+        border-radius: 20px;
+        margin-top: 60px;
+    }
+
+
+   input, button{
+    padding: 10px 25px;
+    font-size: 1.2rem;
+}
+
+    aside div{
+        display: inline-block;
+        margin: 0;
+        width: calc(100% / 3 - 4px);
+        vertical-align: middle;
+        font-size: 1.5rem;
+    }
+
+    aside h2{
+        font-size: 3rem;
+    }
+
+    footer{
+        padding: 15px 21%;
+        font-size: 1.5rem;
+    }
+
+}

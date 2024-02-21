@@ -30,11 +30,7 @@
     .article{
         flex-direction: row;
     }
-
-    .article-title{
-        font-size: 1em;
-    }
-
+    
     .text{
         order: 1;
         align-self: stretch;

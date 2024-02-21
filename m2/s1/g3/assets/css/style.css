@@ -24,6 +24,16 @@ h2{
     font-weight: bold;
 }
 
-.news-title h2{
-    font-size: 1.4rem;
+.article-title{
+    margin: 0;
+}
+
+.article h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.article-text{
+    font-size: 0.8rem;
+    line-height: 1.2em;
 }

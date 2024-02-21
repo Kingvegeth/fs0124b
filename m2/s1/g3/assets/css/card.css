@@ -1,0 +1,55 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light_yellow);
+    color: var(--text_brown);
+    font-size: 1.2rem;
+    gap: 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-image{
+    background-image: url(../imgs/honey.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%
+}
+
+.product-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-description{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.product-description h3{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.price{
+    font-size: 1rem;
+}
+
+.add-to-cart{
+    background-color: var(--dark_yellow);
+    color: var(--text_brown);
+    font-size: 1rem;
+    border: none;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 0.5em 3em;
+    margin-bottom: 20px;
+}

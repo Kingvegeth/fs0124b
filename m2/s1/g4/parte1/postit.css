@@ -2,6 +2,7 @@
 
 body{
     background-color: #666666;
+    overflow: hidden;
 }
 
 #board{

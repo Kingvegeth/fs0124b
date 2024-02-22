@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body{
     background-color: #666666;
 }
@@ -22,10 +24,13 @@ body{
     aspect-ratio: 4/3;
     gap: 30px;
     
+    transition: all 0.07s;
     
+
     background-color: #f3f4c0;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.455), inset 0 -40px 40px rgba(0, 0, 0, 0.288);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.455), inset 0 -50px 40px -20px rgba(0, 0, 0, 0.288);
     font-size: 1.4em;
+    font-family: "Indie Flower", cursive;
 
 }
 
@@ -53,4 +58,13 @@ h2{
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+
+.post-it:hover{
+    z-index: 1;
+    transform: translateZ(0);
+    scale: 1.2;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.455), inset 0 -50px 40px -20px rgba(0, 0, 0, 0.288);
+    filter: brightness(110%);
 }

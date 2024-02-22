@@ -14,6 +14,7 @@ body{
     row-gap: 20px;
     padding: 80px 0;
     box-sizing: border-box;
+    perspective: 20px;
 }
 
 .post-it{
@@ -28,7 +29,7 @@ body{
     transition: all 0.07s;
     
     opacity: 0;
-    scale:1
+    perspective: 0;
     background-color: #f3f4c0;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.455), inset 0 -50px 40px -20px rgba(0, 0, 0, 0.288);
     font-size: 1.4em;
@@ -46,6 +47,7 @@ body{
 .post-it:nth-of-type(2), .post-it:nth-of-type(8){
     background-color: #C8F8CA;
     transform: rotate(3deg);
+    
 }
 
 .post-it:nth-of-type(4){
@@ -65,13 +67,7 @@ h2{
 }
 
 
-.post-it:hover{
-    z-index: 1;
-    transform: translateZ(0);
-    scale: 1.2;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.455), inset 0 -50px 40px -20px rgba(0, 0, 0, 0.288);
-    filter: brightness(110%);
-}
+
 
 
 .post-it:nth-of-type(1){
@@ -125,11 +121,20 @@ h2{
 
 @keyframes entry{
     from{
-        opacity: 0;
+        opacity: 1;
         scale: 2;
     }
     to{
         opacity: 1;
         scale: 1;
+   
     }
+}
+
+.post-it:hover{
+    z-index: 1;
+    transform: translateZ(1px);
+    scale: 1.2;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.455), inset 0 -50px 40px -20px rgba(0, 0, 0, 0.288);
+    filter: brightness(110%);
 }

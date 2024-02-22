@@ -29,9 +29,10 @@
     right: 107px;
     opacity: 0;
     animation-duration: 2s;
+    animation-delay: 2s;
     animation-name: animate;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 .parole i:nth-of-type(2){
@@ -39,10 +40,10 @@
     right: 103px;
     opacity: 0;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-name: animate;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 .parole i:nth-of-type(3){
@@ -53,7 +54,7 @@
     animation-delay: 4s;
     animation-name: animate;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 @keyframes animate{
@@ -71,3 +72,4 @@
         opacity: 0;}
 
 }
+

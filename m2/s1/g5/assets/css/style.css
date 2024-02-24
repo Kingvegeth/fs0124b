@@ -40,7 +40,7 @@ span{
     justify-content: space-between;
     gap: 50px;
 
-    border: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
 
     position: sticky;
     top: 0;
@@ -91,7 +91,11 @@ span{
     align-items: center;
 
     border-bottom: 1px solid var(--grey);
+
+    height: 500px;
+
 }
+
 
 
 .subh-left{
@@ -155,7 +159,7 @@ span{
 }
 
 .topic{
-    width: 30%;
+    width: 26%;
 
     display: flex;
     flex-direction: row;
@@ -170,11 +174,17 @@ span{
     align-items: center;
     gap: 5px;
 
+
     position: relative;
 }
 
-.tooltip .author-tooltip{
+.author-tooltip{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
     font-size: 1.4em;
+
 }
 
 .tooltip .author-tooltip img{
@@ -248,6 +258,8 @@ span{
     justify-content: space-between;
     align-items: center;
     
+    
+
     gap: 20px;
 }
 

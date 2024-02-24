@@ -1,3 +1,4 @@
+//Cambio colore della navbar a una certa soglia di scroll
 window.addEventListener("scroll", function () {
   let scrollThreshold = 310;
   let scrollH = window.scrollY;
@@ -12,11 +13,12 @@ window.addEventListener("scroll", function () {
   }
 });
 
+//Creo dinamicamente i tooltip
 let author =  document.getElementsByClassName("author");
 let tooltip = document.getElementsByClassName("tooltip");
 
 for (let i = 0; i < author.length; i++) {
-  let followerNumber = Math.ceil(Math.random() * 20);
+  let followerNumber = Math.ceil(Math.random() * 30);
   let firstName = document.getElementsByClassName('first-name');
   let authorName = firstName[i].outerText;
 
@@ -34,3 +36,20 @@ for (let i = 0; i < author.length; i++) {
 
   tooltip[i].innerHTML = tooltipCode;
 }
+
+
+//Animo le m dell'svg
+let letters = Array.from(document.querySelectorAll('g[opacity="1"]'));
+
+letters.forEach(e => {
+  e.style.transition = 'opacity 0.2s';
+});
+
+setInterval(() => {
+    let rnd = Math.floor(Math.random() * letters.length);
+    letters[rnd].style.opacity = 0;
+
+    setTimeout(() => {
+        letters[rnd].style.opacity = 1;
+    }, 10000);
+}, 100);

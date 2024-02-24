@@ -4,12 +4,13 @@ window.addEventListener("scroll", function () {
   let scrollH = window.scrollY;
   let navBar = document.getElementById("nav-bar");
   let button = this.document.getElementsByClassName("btn");
+
   if (scrollH >= scrollThreshold) {
     navBar.style.backgroundColor = "#fff";
     button[0].style.backgroundColor = "#1a8917";
   } else if (scrollH < scrollThreshold) {
     navBar.style.backgroundColor = "#ffc017";
-    button[0].style.backgroundColor = "#000";
+    button[0].style.backgroundColor = "#191919";
   }
 });
 
@@ -18,7 +19,8 @@ let author =  document.getElementsByClassName("author");
 let tooltip = document.getElementsByClassName("tooltip");
 
 for (let i = 0; i < author.length; i++) {
-  let followerNumber = Math.ceil(Math.random() * 30);
+
+  let followerNumber = (Math.ceil(Math.random() * 30)+1);
   let firstName = document.getElementsByClassName('first-name');
   let authorName = firstName[i].outerText;
 
@@ -30,7 +32,7 @@ for (let i = 0; i < author.length; i++) {
     <img src="${imgSrc}" alt="author thumb">
     <span>${authorName}</span>
 </div>
-<p>Author</p>
+<p>Author, many articles</p>
 <p class="followers">${followerNumber}k Followers <button class="btn dyn-btn">Follow</button></p>`;
 
 
@@ -42,7 +44,7 @@ for (let i = 0; i < author.length; i++) {
 let letters = Array.from(document.querySelectorAll('g[opacity="1"]'));
 
 letters.forEach(e => {
-  e.style.transition = 'opacity 0.2s';
+  e.style.transition = 'opacity 0.099s';
 });
 
 setInterval(() => {

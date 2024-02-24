@@ -1,0 +1,62 @@
+@media screen and (max-width: 640px) {
+
+    #nav-bar{
+       padding: 20px 5%; 
+    }
+
+      .nav-large{
+        display: none;
+    }
+
+
+    #sub-header{
+        padding-left: 5%;
+        height: 400px;
+    }
+
+    .subh-left h1{
+        font-size: 5em;
+    }
+
+    #sub-header svg{
+        display: none;
+    }
+
+    .subh-left .btn{
+        max-width: 50%;
+        font-size: 1.1em;
+    }
+
+    #trending{
+        padding: 40px 5%;
+    }
+
+    .trending-elements{
+        gap: 30px;
+    }
+
+
+    #more-of a{
+        font-size: 0.8em;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.377);
+    }
+
+    .more-of-topics{
+        gap: 7px;
+    }
+
+    main{
+        gap: 5px;
+        padding: 50px 5%;
+    }
+
+    .topic{
+        width: 100%;
+    }
+
+    .article{
+        margin-top: 4px;
+    }
+
+}

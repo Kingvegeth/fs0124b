@@ -1,0 +1,51 @@
+
+@media screen and (max-width:768px) {
+    
+    #nav-bar{
+        padding: 20px 7%;
+    }
+
+    #nav-bar nav{
+        font-size: 0.8em;
+    }
+
+    #sub-header{
+        padding-left: 7%;
+        height: 450px;
+    }
+
+    #sub-header svg{
+        position: absolute;
+        right: -250px;
+
+    }
+
+
+    main{
+        flex-direction: column-reverse;
+    }
+
+    .topic{
+        width: 49%;
+    }
+
+    .trending-elements{
+        gap: 10px;
+    }
+
+    .trending-number{
+        font-size: 1.8em;
+    }
+
+    #more-of{
+        position: initial;
+        z-index: 0;
+        width: 100%;
+    }
+
+    #more-of a{
+        font-size: 0.8em;
+        
+    }
+
+}

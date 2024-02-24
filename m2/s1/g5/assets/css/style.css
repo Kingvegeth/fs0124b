@@ -173,12 +173,13 @@ span{
     position: relative;
 }
 
-.tooltip .author{
+.tooltip .author-tooltip{
     font-size: 1.4em;
 }
 
-.tooltip .author img{
+.tooltip .author-tooltip img{
     width: 25px;
+    border-radius: 5px;
 }
 
 .trending-title{

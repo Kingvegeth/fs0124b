@@ -46,6 +46,8 @@ span{
     top: 0;
 
     transition-duration: 0.3s;
+
+    z-index: 1;
 }
 
 #nav-bar nav{
@@ -70,6 +72,11 @@ span{
     cursor: pointer;
 
     transition-duration: 0.3s;
+}
+
+.dyn-btn{
+    background-color: var(--green);
+    border: none;
 }
 
 /* SEZIONE SOTTO L'HEADER */
@@ -140,10 +147,11 @@ span{
 
 .trending-number{
 
-
-    font-size: 1.6em;
+    font-size: 2.2em;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.196);
+    color: rgba(0, 0, 0, 0.123);
+
+   
 }
 
 .topic{
@@ -161,6 +169,16 @@ span{
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
+    position: relative;
+}
+
+.tooltip .author{
+    font-size: 1.4em;
+}
+
+.tooltip .author img{
+    width: 25px;
 }
 
 .trending-title{
@@ -306,5 +324,65 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
+    
+}
+
+
+/*TOOLTIPS*/
+.tooltip{
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    position: absolute;
+
+    
+
+    padding: 15px 20px;
+    
+    box-shadow: 0 0 5px #ccc;
+
+    border-radius: 3px;
+
+    left: 100px;
+    top: -45px;
+
+    gap: 10px;
+
+    display: none;
+}
+
+.followers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.114);;
+    padding-top: 10px;
+}
+
+.tooltip::before{
+    content: '';
+    background-color: white;
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotateZ(315deg);
+
+    
+    left: -5px;
+    top: 50px;
+    z-index: 1;
+
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.155);
+
+}
+
+.author:hover .tooltip{
+    display: flex;
     
 }

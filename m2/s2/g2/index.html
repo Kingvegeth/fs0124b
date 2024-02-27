@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Eveline-R</title>
+
+    <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt="Logo" width="90" height="20" class="img-fluid d-inline-block align-text-center"></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Saldi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Welcome Summer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Last Minute</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Recensioni</a>
+              </li>
+              
+           
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cerca posti da sogno"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">
+              Cerca
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+        <div id="sub-h bg-light">
+            <div class="row title">
+                <h1 class="col-3">Eveline-R</h1>
+                <p class="col-3">Feel the freedom</p>
+            </div>
+            Scopri le destinazioni più calde del momento!
+        </div>
+        <button class="btn bg-info">Prenota ora!</button>
+        <div id="saldi">
+            
+            <h2>Saldi</h2>
+            <div class="row">
+                <div class="col-6 col-md-4 col-lg-3 my-2">
+                    <div class="border border-2 border-info card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 my-2">
+                    <div class="border border-2 border-info card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 my-2">
+                    <div class="border border-2 border-info card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-md-none d-lg-block col-lg-3 k my-2">
+                    <div class="border border-2 border-info card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="welcome-summer">
+            <h2>Welcome Summer</h2>
+            <div class="row">
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 my-2">
+                    <div class="border-0 shadow-lg rounded card">
+                        <img src="./assets/img/img1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bel posto</h5>
+                            <p class="card-text">In questa location favolosa potrai vivere una magica vacanza e non vedrai nessun codice per tutta la tua permanenza!</p>
+                            <a href="#" class="btn btn-primary btn-info">Fuggi ora!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="offer">
+            <h2>Offerta del giorno</h2>
+            <div class="row">
+                <img  class="col-6 col-lg-8" src="./assets/img/img4.jpg" alt="">
+                <div class="col-6 col-lg-4">
+                    <div class="row">Fushifaru Maldives</div>
+                    <div class="row">15.01.2021-31.01.2021</div>
+                    <div class="row">Ville a partire da 500 €, non fartele sfuggire!</div>
+                    <div class="row btn btn-dark rounded-pill">Best offer</div>
+                </div>
+            </div>
+        </div>
+        <div id="last-minute">
+            <h2>Last Minute</h2>
+            <div class="row">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+                <img class="col-6 col-md-4 col-lg-2" src="./assets/img/img3.jpg" alt="">
+            </div>
+        </div>
+        <div id="review">
+            <h2 class="text-center">Dicono di noi</h2>
+            <div class="review row">
+                <img class="col-1" src="./assets/img/user.png"></img>
+                <div class="col-11">
+                    <div class="row">Username</div>
+                    <div class="row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed et itaque explicabo inventore eos? Vitae iure nam, quae, nihil error ratione alias quidem sit facere ut harum delectus cum molestias!</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

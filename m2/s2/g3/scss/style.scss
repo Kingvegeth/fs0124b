@@ -59,34 +59,41 @@ body{
         width: 40%;
         
         gap: 20px;
+
     }
     h1{
         @include title-big;
+        @include animation(1s, -20px, 0, 0.5s, title-animation);
+    }
+
+    p{
+        @include animation(1s, -20px, 0, 0.7s, p-animation);
     }
     img{
         width: 40%;
-        border: 2px solid $purple-border;
+        
         position: absolute;
         
         bottom: -50px;
         right: 50px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include floating;
+        @include animation(1.5s, -60px, 0, 1s, img-animation);
+    }
+
+    .btn{
+            @include animation(0.5s, -20px, 0, 2s, img-animation);
     }
 
 }
 
 .img-grid{
     display: flex;
-    justify-content: center;
     gap: 20px;
     img{
-        width: 20%;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include grid(4);
+        @include floating;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.164) 0px 1px 10px;
     }
 
-}
-
-img{
-    border-radius: 10px;
-    
 }

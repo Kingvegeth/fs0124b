@@ -1,15 +1,24 @@
 .btn{
-    color: #fff;
+    color: $text-color;
     border-radius: 10px;
     padding: 10px;
     border: none;
     cursor: pointer;
+
+    @include animation(0.5s, -20px, 0, 1.6s, img-animation);
+
+    &:hover {
+        filter: brightness(120%);
+      }
 }
 
 @mixin generate-buttons(){
     @each $color-name, $color-value in $btn-colors {
         .btn-#{$color-name} {
           background-color: $color-value;
+            &:hover{
+                box-shadow: 0px 0px 15px 2px $color-value;
+            }
         }
     }
 }

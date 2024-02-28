@@ -2,9 +2,9 @@
 @import 'spacing';
 @import 'colors';
 @import 'font';
+@import 'animations';
 @import 'buttons';
 @import 'mixins';
-@import 'animations';
 
 
 body{
@@ -50,15 +50,16 @@ body{
 
     position: relative;
 
-    color: #fff;
 
     .headline-text{
 
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 45%;
         
         gap: 20px;
+
+        color: $text-color;
 
     }
     h1{
@@ -77,12 +78,9 @@ body{
         bottom: -50px;
         right: 50px;
         @include floating;
-        @include animation(1.5s, -60px, 0, 1s, img-animation);
+        @include animation(1s, -60px, 0, 1s, img-animation);
     }
 
-    .btn{
-            @include animation(0.5s, -20px, 0, 2s, img-animation);
-    }
 
 }
 
@@ -93,7 +91,7 @@ body{
         @include grid(4);
         @include floating;
         border: none;
-        box-shadow: rgba(0, 0, 0, 0.164) 0px 1px 10px;
+        box-shadow: 	5px 5px 10px rgba(0, 0, 0, 0.216)	;
     }
 
 }

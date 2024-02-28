@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap');
+
+$size: 1em, 2em, 3em, 4em, 6em;
+
+body{
+    font-family: "Corben", serif;
+}
+
+@mixin title-big{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $top-yellow;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: nth($size, 3);
+    font-weight: 600;
+}

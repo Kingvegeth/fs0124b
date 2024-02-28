@@ -1,0 +1,62 @@
+@import 'reset';
+@import 'colors';
+@import 'font';
+@import 'spacing';
+@import 'buttons';
+@import 'mixins';
+@import 'animations';
+
+
+body{
+    width: 100%;
+    margin-inline: auto;
+    
+    box-sizing: border-box;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 5% 10px 5%;
+
+    background-color: $top-yellow;
+    
+    position: sticky;
+    top: 0;
+    
+    img{
+        height: 50px;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}   
+#headline{
+    display: flex;
+    flex-direction: row;
+    background-color: $hero-bg-color;
+    background-size: contain;
+    .headline-text{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    h1{
+        @include title-big;
+    }
+}
+.img-grid{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    img{
+        width: 20%;
+    }
+
+}

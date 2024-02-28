@@ -1,7 +1,7 @@
 @import 'reset';
+@import 'spacing';
 @import 'colors';
 @import 'font';
-@import 'spacing';
 @import 'buttons';
 @import 'mixins';
 @import 'animations';
@@ -20,43 +20,73 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 5% 10px 5%;
-
     background-color: $top-yellow;
     
     position: sticky;
     top: 0;
+    z-index: 2;
     
     img{
         height: 50px;
+        
     }
     nav{
         display: flex;
         flex-direction: row;
         gap: 20px;
+
+        a{
+            text-decoration: none;
+            color: $hero-bg-color;
+        }
     }
 }   
+
 #headline{
     display: flex;
     flex-direction: row;
     background-color: $hero-bg-color;
     background-size: contain;
+
+    position: relative;
+
+    color: #fff;
+
     .headline-text{
-        padding: 20px;
+
         display: flex;
         flex-direction: column;
+        width: 40%;
+        
         gap: 20px;
     }
     h1{
         @include title-big;
     }
+    img{
+        width: 40%;
+        border: 2px solid $purple-border;
+        position: absolute;
+        
+        bottom: -50px;
+        right: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
 }
+
 .img-grid{
     display: flex;
     justify-content: center;
     gap: 20px;
     img{
         width: 20%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
+}
+
+img{
+    border-radius: 10px;
+    
 }

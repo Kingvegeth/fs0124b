@@ -1,5 +1,12 @@
 $text-color: #f4f4f4;
 $hero-bg-color: #640fc5;
+
+$purple-border:#B97FFF;
+
 $top-yellow: #f3b93f;
 
-$btn-color: #0e6cff, #ff8700, #4caf50;
+$btn-colors: (
+  blue: #0e6cff,
+  orange: #ff8700,
+  green: #4caf50
+);

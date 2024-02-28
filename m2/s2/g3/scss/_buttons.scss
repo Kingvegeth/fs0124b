@@ -1,0 +1,16 @@
+.btn{
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin generate-buttons(){
+    @each $color-name, $color-value in $btn-colors {
+        .btn-#{$color-name} {
+          background-color: $color-value;
+        }
+    }
+}
+@include generate-buttons();

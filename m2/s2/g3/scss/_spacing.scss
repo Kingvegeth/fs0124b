@@ -4,7 +4,7 @@ $sizes: (
   md: 24px,
   lg: 36px,
   xl: 48px,
-  xxl: 160px
+  xxl: 100px
 );
 
 @mixin generate-padding($direction: null) {
@@ -19,6 +19,15 @@ $sizes: (
   }
 }
 
+@include generate-padding(top);
+@include generate-padding(bottom);
+@include generate-padding(left);
+@include generate-padding(right);
+@include generate-padding(block);
+@include generate-padding(inline);
+@include generate-padding();
+
+
 @mixin generate-margins($direction: null) {
     @each $size, $value in $sizes {
       .margin-#{$direction}-#{$size} {
@@ -30,3 +39,11 @@ $sizes: (
       }
     }
   }
+
+  @include generate-margins(top);
+  @include generate-margins(bottom);
+  @include generate-margins(left);
+  @include generate-margins(right);
+  @include generate-margins(block);
+  @include generate-margins(inline);
+  @include generate-margins();

@@ -11877,7 +11877,7 @@ main, #hero, #sub-hero, footer {
   color: #C28031;
 }
 
-.dropdown-toggle::after {
+.prof .dropdown-toggle::after {
   display: none;
 }
 

@@ -1,0 +1,60 @@
+$success: #1ACB98;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+
+// viola hero #7550FE
+// arancione icone hero #FFEEDA
+//bottone verde #1ACB98
+
+
+.profile{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/avatar-1.jpg);
+    background-size: contain;
+}
+
+#hero{
+    background-color: #7550FE;
+    img{
+
+        max-height: 350px;
+    }
+}
+
+main,#hero,#sub-hero,footer{
+    padding-inline: 10%;
+}
+
+.argument{
+    gap: 15px;
+}
+
+.argument-img{
+    background-color: #FFEEDA;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    svg{
+        color: #C28031;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.profile-dropdown{
+    margin-left:110px;
+    width: 100px;
+}
+
+.notifications{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

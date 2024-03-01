@@ -1,0 +1,16 @@
+{
+  "name": "g5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass scss/style.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}

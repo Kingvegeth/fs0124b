@@ -7,7 +7,7 @@
     <title>Esercizio G4</title>
   </head>
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top p-0 bg-white">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="./img/svg/logo.svg" alt="Bootstrap" width="30" height="24">
@@ -68,11 +68,22 @@
           </ul>
           
         </div>
-        <div class="notifications bg-light d-flex justify-content-center align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
-        <ul class="navbar-nav me-auto al"><li class="nav-item dropdown prof">
+        <div class="notifications bg-light d-flex justify-content-center align-items-center position-relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        <span class="notify1 position-absolute p-2 border border-3 border-white rounded-circle">
+    <span class="visually-hidden">New alerts</span>
+  </span>
+        </div>
+        <ul class="navbar-nav me-auto al position-relative">
+          <span class="notify2 position-absolute p-2 border border-3 border-white rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+          <li class="nav-item dropdown prof">
+          
           <a class="nav-link dropdown-toggle profile-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-            <div class="profile"></div>
+            <div class="profile">
+              
+            </div>
           </a>
           <ul class="dropdown-menu p-4">
             <li><a class="dropdown-item" href="#">Annette Black</a></li>
@@ -94,7 +105,7 @@
           modern students and entrepreneur.
         </p>
 
-        <div id="hero-buttons">
+        <div id="hero-buttons" class="mb-4">
           <button class="btn btn-success text-light fw-bold p-3">
             Browse Courses
           </button>

@@ -1,0 +1,121 @@
+@import 'colors';
+@import 'mixins';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+.header-logo{
+    height: 50px
+}
+
+.profile-header{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 16%, rgba(20,20,20,1) 100%);
+}
+
+.dropdown-menu img{
+    @include avatar-size;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.side-btns{
+    font-size: 1.2em;
+    gap: 20px;
+    p{
+        font-size: 0.7em;
+        line-height: 2em;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+footer{
+    
+    i{
+        font-size: 1.4em;
+    }
+    font-size: 0.8em;
+    p{
+        font-size: 0.9em;
+    }
+    a:hover{
+        @include linkize;
+    }
+
+}
+
+.socials{
+    gap: 20px;
+    font-size: 1.8em;
+
+    i:hover{
+        @include linkize;
+    }
+}
+
+
+//TITLE
+#title-sx{
+    gap: 40px;
+    button{
+        border-radius: 1px;
+        &:hover{
+            filter: brightness(120%);
+        }
+    }
+    .dropdown-menu{
+        border-radius: 0;
+    }
+}
+
+.btn-group{
+    button{
+        font-size: 0.7em;
+
+        text-align: center;
+    }
+}
+
+.input-group{
+    input{
+        border-radius: 0;
+        border: none;
+        &::placeholder{
+            color: #fff;
+        }
+    }
+}
+
+#profile-page{
+    img{
+        height: 100px;
+    }    
+}
+
+.profile-top{
+    gap: 20px;
+}
+
+
+
+.form-check{
+
+    input{
+        border-color: $info;
+        background-color: $dark;   
+        &:focus{
+            box-shadow: none;
+            border-color: $info;
+        }
+        &:checked{
+            background-color: $dark;
+            border-color: $info;
+        }
+    }
+}
+
+.buttons{
+    gap: 20px;
+}

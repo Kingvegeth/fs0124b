@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <title>Netflix</title>
+</head>
+<body class="px-5 py-1 bg-dark">
+    <header>
+        <nav  class=" mb-3">
+          <div class="d-flex flex-wrap align-items-center  justify-content-start navbar navbar-expand-lg">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+              <img class="bi me-2 header-logo" src="./img/netflix_logo.png" alt="Netflix logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                  <ul class="navbar-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                      <li><a href="#" class="nav-link px-2 link-secondary fw-bold">TV Shows</a></li>
+                      <li><a href="#" class="nav-link px-2 link-secondary">Movies</a></li>
+                      <li><a href="#" class="nav-link px-2 link-secondary">Recently Added</a></li>
+                      <li><a href="#" class="nav-link px-2 link-secondary">My List</a></li>
+                    </ul>
+                    
+                    <div class="d-flex text-white side-btns align-items-center">
+                        <i class="d-none d-lg-block bi bi-search"></i>
+                        <p class="d-none d-lg-block p-0 m-0">KIDS</p>
+                        <i class="d-none d-lg-block bi bi-bell-fill"></i>
+                        
+                    </div>
+                </div>
+            <div class="dropdown dropstart position-relative" data-bs-theme="dark">
+              <a href="#" class="d-block link-body-emphasis text-white text-decoration-none dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./img/avatar.png" alt="mdo" width="32" height="32">
+              </a>
+              <ul class="dropdown-menu text-small ">
+                <li><a class="dropdown-item pb-3" href="#"><img src="./img/avatar.png" class="rounded-circle  pe-2">Rick Astley</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil pe-2"></i>Manage profiles</a></li>
+                <li><a class="dropdown-item" href="./profile.html"><i class="bi bi-person pe-2"></i>Account</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-gear pe-2"></i>Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main class="text-white">
+        <div id="section-title" class="d-flex align-items-center justify-content-between">
+            <div id="title-sx" class="d-flex align-items-center">
+                <h1 class="d-inline">TV Shows</h1>
+            <div class="dropdown d-inline" data-bs-theme="dark">
+                <button class="btn btn-outline-secondary bg-black text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Genres
+                </button>
+                <ul class="dropdown-menu  bg-black">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Crime</a></li>
+                  <li><a class="dropdown-item" href="#">Drama</a></li>
+                  <li><a class="dropdown-item" href="#">Documentary</a></li>
+                  <li><a class="dropdown-item" href="#">Musical</a></li>
+                  <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                  <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-secondary opacity-50 py-1"><i class="bi bi-text-left"></i></button>
+                <button type="button" class="btn btn-outline-secondary opacity-50 py-1"><i class="bi bi-grid-fill"></i></button>
+              </div>
+        </div>
+
+        <section id="trending" class="my-5">
+            <h4>Trending Now</h4>
+            <div class="movie-list row gx-0">
+                <img class="col-6 col-md-4 col-lg-2 " src="./img/media/media0.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 " src="./img/media/media1.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media2.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media3.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media4.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media6.jpg" alt="Show Thumbnail">
+            </div>
+        </section>
+        <section id="trending" class="my-5">
+            <h4>Watch it Again</h4>
+            <div class="movie-list row gx-0">
+                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media7.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media8.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media9.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media10.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media11.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media12.jpg" alt="Show Thumbnail">
+            </div>
+        </section>
+        <section id="trending" class="my-5">
+            <h4>New Releases</h4>
+            <div class="movie-list row gx-0">
+                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media13.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media14.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media15.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media16.webp" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media17.jpg" alt="Show Thumbnail">
+                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media18.jpg" alt="Show Thumbnail">
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-secondary text-opacity-75 container">
+        <div class="row">
+
+            <div class="socials d-flex mb-3">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+
+            </div>
+
+          <div class="col-6 col-md-2 mb-2">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Audio and Subtitles</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Media Center</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Privacy</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-2">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Audio Description</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Investor Relations</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Legal Notices</a></li>
+
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-2">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Help Center</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Jobs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Cookie Preferences</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-2">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Gift Cards</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Terms of Use</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary text-opacity-75">Corporate Information</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <button type="button" class="btn btn-outline-secondary opacity-75 my-3">Service Code</button>
+
+          <p>© 1997-2019 Netflix, Inc. {i-29hriwehdf923h49hry3}</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+</body>
+</html>

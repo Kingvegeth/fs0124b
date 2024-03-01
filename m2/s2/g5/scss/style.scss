@@ -11,6 +11,7 @@
     background: linear-gradient(180deg, rgba(0,0,0,1) 16%, rgba(20,20,20,1) 100%);
 }
 
+
 .dropdown-menu img{
     @include avatar-size;
 }
@@ -31,6 +32,19 @@
     }
 }
 
+.show-wrapper{
+    img{
+        transition-duration: .3s;
+        &:hover{
+            cursor: pointer;
+            scale: 1.1;
+            box-shadow: 0 0 20px 5px #fdf5d277;
+            z-index: 3;
+        }
+    }
+    
+}
+
 footer{
     
     i{
@@ -42,6 +56,11 @@ footer{
     }
     a:hover{
         @include linkize;
+    }
+
+    .contact{
+        text-decoration: none;
+        font-size: 1.3em;
     }
 
 }
@@ -118,4 +137,63 @@ footer{
 
 .buttons{
     gap: 20px;
+}
+
+#page{
+    p{
+        margin-bottom: 5px;
+        color: $info;
+    }
+    h4{
+        font-size: 1.1em;
+        color: #737373;
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+.billing,.plan,.security,.extra, .parental{
+    img{
+        height: 20px;
+    }
+    gap: 40px;
+}
+
+.badge-new{
+    background-color: #0f84fa;
+    border-radius: 10%;
+    color: #fff;
+    display: inline-block;
+    font-size: .7em;
+    font-weight: 700;
+    margin: 0 0.5em;
+    padding: 0.15em 0.5em;
+}
+
+.extra{
+    p span{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .badge-new{
+        padding: 0.4em 0.6em;
+        background-color: #5196FF;
+        font-size: .8em;
+    }
+}
+
+.parental{
+    img{
+        height: 60px;
+        border-radius: 5px;
+    }
+    i{
+        cursor: pointer;
+    }
 }

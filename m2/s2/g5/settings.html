@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <title>Settings</title>
+</head>
+<body class="bg-light">
+    <header class="sticky-top bg-black px-5 pt-1">
+        <nav  class=" mb-3">
+          <div class="d-flex flex-wrap align-items-center  justify-content-between navbar navbar-expand-lg  ">
+            <a href="./index.html" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+              <img class="bi me-2 header-logo" src="./img/netflix_logo.png" alt="Netflix logo">
+            </a>
+            
+            <div class="dropdown dropstart position-relative" data-bs-theme="dark">
+              <a href="#" class="d-block link-body-emphasis text-white text-decoration-none dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./img/avatar.png" alt="mdo" width="32" height="32">
+              </a>
+              <ul class="dropdown-menu text-small ">
+                <li><a class="dropdown-item pb-3" href="#"><img src="./img/avatar.png" class="rounded-circle  pe-2">Rick Astley</a></li>
+                <li><a class="dropdown-item" href="./profile.html"><i class="bi bi-pencil pe-2"></i>Manage profiles</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person pe-2"></i>Account</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-gear pe-2"></i>Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://shorturl.at/dhuzA"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div id="page" class="container-lg px-lg-5">
+
+        <div class="container-lg px-md-5 d-flex flex-column my-4 justify-content-start">
+            <div class="settings-title d-flex align-items-center">
+                <h1 class=>Account</h1>
+                <p class="text-info fw-bold mx-5 mb-0"><img class="me-1" src="./img/membersince.svg" alt="member since">Subscribed from february 1969</p>
+            </div>
+            <hr>
+            <div class="billing d-flex justify-content-between">    
+                <div class="subscription-sx col-3">
+                    <h4>MEMBERSHIP & BILLING</h4>
+                    <button class="btn btn-warning btn-sm p-2 px-md-3 px-lg-4 px-xl-5">Cancel Membership</button>
+                </div>
+                <div class="subscription-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <p class="fw-bold">rick.astley@rick.roll</p>
+                            <p>Password: ********</p>
+                            <p>Phone: 420 069 1337</p>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                            <p><a href="#">Change email</a></p>
+                            <p><a href="#">Change password</a></p>
+                            <p><a href="#">Change phone number</a></p>
+                        </div>
+                    </div>
+                    <hr class="text-secondary">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center">
+                                <p class="my-0 mx-1 fw-bold"><img src="./img/PAYPAL.png" alt="Paypal"> ri***@rick.roll</p>
+                            </div>    
+                            <p>Your next billing date is March 27, 2024.</p>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                            <p><a href="#">Manage payment method</a></p>
+                            <p><a href="#">Add backup payment method</a></p>
+                            <p><a href="#">Billling details</a></p>
+                        </div>
+                    </div>
+                    <hr class="text-secondary">
+                    <div class="d-flex justify-content-end">
+                        <div class="d-flex flex-column text-end">
+                            <p><a href="#">Redeem gift card or promo code</a></p>
+                            <p><a href="#">Where to buy gift cards</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="plan d-flex justify-content-between mb-3">    
+                <div class="plan-sx col-3">
+                    <h4>PLAN DETAILS</h4>
+                </div>
+                <div class="subscription-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center">
+                                <p class="my-0 mx-1 fw-bold">Premium <img src="./img/ultrahd.png" alt="Paypal"></p>
+                            </div>    
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                            <p><a href="#">Change plan</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="security d-flex justify-content-between">    
+                <div class="security-sx col-3">
+                    <h4>SECURITY & PRIVACY</h4>
+                </div>
+                <div class="subscription-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center col-11">
+                                <p class="my-0 mx-1">Control access to this account, view the most recently active devices and more.</p>
+                            </div>    
+                        </div>
+                        <div class="d-flex flex-column text-end col-6">
+                            <p><span class="badge-new">NEW</span><a href="#">Manage access and devices</a></p>
+                            <p><a href="#">Sign out of all devices</a></p>
+                            <p><a href="#">Download your personal information</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="extra d-flex justify-content-between">    
+                <div class="extra-sx col-3 position-relative">
+                    <h4>EXTRA MEMBERS<span class="badge-new position-absolute">NEW</span></h4>
+                </div>
+                <div class="subscription-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center col-11">
+                                <p class="my-0 mx-1">Share your Netflix with someone who doesn't live with you by adding an extra member. learn more in our <span>Help Center.</span></p>
+                            </div>    
+                        </div>
+                        <div class="d-flex flex-column text-end col-6">
+                            <p><a href="#">Buy an extra member slot</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="parental d-flex justify-content-between">  
+                <div class="col-3">
+                    <H4>PROFILE & PARENTAL CONTROLS</H4>
+                </div>
+                <div class="parental-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center col-11">
+                                <img class="me-3" src="./img/avatar.png" alt="profile picture">
+                                <div class="d-flex flex-column col-10">
+                                    <p class="fw-bold text-black">Rick</p>
+                                    <p>All Maturity Ratings</p>
+                                </div>
+                            </div>    
+                        </div>
+                        <i class="bi bi-chevron-down text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="security d-flex justify-content-between">    
+                <div class="security-sx col-3">
+                    <h4>SETTINGS</h4>
+                </div>
+                <div class="subscription-dx d-flex flex-column  flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column col-6 mb-5">
+                            <p><a href="#">Turn off profile transferss</a></p>
+                            <p><a href="#">Test participation</a></p>
+                            <p><a href="#">Manage download devices</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr class="text-secondary">
+        </div>
+    </div>
+        <footer class=" mx-5 px-4 pb-4 text-dark text-opacity-75">
+            <div class="row">
+                
+                <a href="#" class="contact text-dark text-opacity-75 mb-4">Questions? Contact us.</a>
+                
+                <div class="col-6 col-md-3 col-lg-2 mb-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Audio and Subtitles</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Media Center</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Privacy statement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-6 col-md-3 col-lg-2 mb-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Never gonna</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Give you</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Up</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-6 col-md-3 col-lg-2 mb-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Gift Cards</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-6 col-md-3 col-lg-2 mb-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Investor Relations</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark text-opacity-75">Terms of Use</a></li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-outline-dark opacity-75 my-3">Service Code</button>
+            
+        </footer>
+    
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

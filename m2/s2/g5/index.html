@@ -11,32 +11,30 @@
 <body class="px-5 bg-dark">
     <header class="sticky-top bg-dark pt-1">
         <nav  class=" mb-3">
-          <div class="d-flex flex-wrap align-items-center  justify-content-start navbar navbar-expand-lg  ">
+          <div class="d-flex flex-wrap align-items-center  justify-content-between navbar navbar-expand-md  ">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
               <img class="bi me-2 header-logo" src="./img/netflix_logo.png" alt="Netflix logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                  <ul class="navbar-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                      <li><a href="#" class="nav-link px-2 link-secondary fw-bold">TV Shows</a></li>
-                      <li><a href="#" class="nav-link px-2 link-secondary">Movies</a></li>
-                      <li><a href="#" class="nav-link px-2 link-secondary">Recently Added</a></li>
-                      <li><a href="#" class="nav-link px-2 link-secondary">My List</a></li>
-                    </ul>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-secondary fw-bold">TV Shows</a></li>
+                <li><a href="#" class="nav-link px-2 link-secondary">Movies</a></li>
+                <li><a href="#" class="nav-link px-2 link-secondary">Recently Added</a></li>
+                <li><a href="#" class="nav-link px-2 link-secondary">My List</a></li>
+              </ul>
                     
-                    <div class="d-flex text-white side-btns align-items-center">
-                        <i class="d-none d-lg-block bi bi-search"></i>
-                        <p class="d-none d-lg-block p-0 m-0">KIDS</p>
-                        <i class="d-none d-lg-block bi bi-bell-fill"></i>
-                        
-                    </div>
-                </div>
+              <div class="d-flex text-white side-btns align-items-center">
+                <i class="d-none d-lg-block bi bi-search"></i>
+                <p class="d-none d-lg-block p-0 m-0">KIDS</p>
+                <i class="d-none d-lg-block bi bi-bell-fill"></i>      
+              </div>
+            </div>
             <div class="dropdown dropstart position-relative" data-bs-theme="dark">
-              <a href="#" class="d-block link-body-emphasis text-white text-decoration-none dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+              <a href="#" class="d-block link-body-emphasis text-white text-decoration-none ms-3" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="./img/avatar.png" alt="mdo" width="32" height="32">
               </a>
               <ul class="dropdown-menu text-small ">
@@ -79,35 +77,38 @@
 
         <section id="trending" class="my-5 show-wrapper">
             <h4>Trending Now</h4>
-            <div class="movie-list row gx-0">
-                <img class="col-6 col-md-4 col-lg-2 " src="./img/media/media0.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 " src="./img/media/media1.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media2.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media3.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media4.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media6.jpg" alt="Show Thumbnail">
+            <div class="movie-list row gx-0 position-relative">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 " src="./img/media/media0.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-sm-block" src="./img/media/media1.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media2.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media3.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media4.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media6.jpg" alt="Show Thumbnail">
+                <div class="position-absolute right"><img class="right" src="./img/right.png" alt=""></div>
             </div>
         </section>
         <section id="watch-again" class="my-5 show-wrapper">
             <h4>Watch it Again</h4>
-            <div class="movie-list row gx-0">
-                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media7.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media8.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media9.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media10.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media11.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media12.jpg" alt="Show Thumbnail">
+            <div class="movie-list row gx-0 position-relative">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2" src="./img/media/media7.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-sm-block" src="./img/media/media8.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media9.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media10.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media11.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media12.jpg" alt="Show Thumbnail">
+                <div class="position-absolute right"><img class="right" src="./img/right.png" alt=""></div>
             </div>
         </section>
         <section id="new-releases" class="my-5 show-wrapper">
             <h4>New Releases</h4>
-            <div class="movie-list row gx-0">
-                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media13.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2" src="./img/media/media14.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media15.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media16.webp" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media17.jpg" alt="Show Thumbnail">
-                <img class="col-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media18.jpg" alt="Show Thumbnail">
+            <div class="movie-list row gx-0 position-relative">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2" src="./img/media/media13.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-sm-block" src="./img/media/media14.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-md-block" src="./img/media/media15.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media16.webp" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media17.jpg" alt="Show Thumbnail">
+                <img class="thumb col-12 col-sm-6 col-md-4 col-lg-2 d-none d-lg-block" src="./img/media/media18.jpg" alt="Show Thumbnail">
+                <div class="position-absolute right"><img class="right" src="./img/right.png" alt=""></div>
             </div>
         </section>
     </main>

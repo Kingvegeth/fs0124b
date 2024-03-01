@@ -11873,14 +11873,34 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
-.show-wrapper img {
+.show-wrapper .thumb {
   transition-duration: 0.3s;
+  filter: brightness(90%);
 }
-.show-wrapper img:hover {
+.show-wrapper .thumb:hover {
   cursor: pointer;
-  scale: 1.1;
-  box-shadow: 0 0 20px 5px rgba(253, 245, 210, 0.4666666667);
+  scale: 1.15;
   z-index: 3;
+  filter: brightness(105%);
+}
+@media screen and (max-width: 420px) {
+  .show-wrapper .thumb:hover {
+    scale: 1.07;
+  }
+}
+
+.right {
+  z-index: 4;
+  width: 50px;
+  right: -30px;
+  top: 35%;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+  border-radius: 50%;
+}
+.right:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 footer {

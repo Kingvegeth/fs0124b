@@ -33,16 +33,34 @@
 }
 
 .show-wrapper{
-    img{
+    .thumb{
         transition-duration: .3s;
+        filter: brightness(90%);
+        
         &:hover{
             cursor: pointer;
-            scale: 1.1;
-            box-shadow: 0 0 20px 5px #fdf5d277;
+            scale: 1.15;
             z-index: 3;
+            filter: brightness(105%);
+            @media screen and (max-width:420px) {
+                scale: 1.07;
+            }
         }
     }
-    
+}
+
+.right{
+    z-index: 4;
+    width: 50px;
+    right: -30px;
+    top: 35%;
+    opacity: 0.5;
+    transition-duration: .3s;
+    border-radius: 50%;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
 }
 
 footer{

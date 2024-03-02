@@ -36,11 +36,11 @@
     .thumb{
         transition-duration: .3s;
         filter: brightness(90%);
+        cursor: pointer;
         
         &:hover{
-            cursor: pointer;
-            scale: 1.15;
             z-index: 3;
+            scale: 1.15;
             filter: brightness(105%);
             @media screen and (max-width:420px) {
                 scale: 1.07;
@@ -93,7 +93,6 @@ footer{
 }
 
 
-//TITLE
 #title-sx{
     gap: 40px;
     button{
@@ -119,6 +118,10 @@ footer{
     input{
         border-radius: 0;
         border: none;
+        color: #ffffff;
+        &:focus{
+            box-shadow: 0 0 0 2px $secondary;
+        }
         &::placeholder{
             color: #fff;
         }
@@ -135,7 +138,21 @@ footer{
     gap: 20px;
 }
 
+.pencil{
+    top: 35px;
+    left: -35px;
+    scale: 0.2;
 
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 10px 10px 20px 2px #0000008f;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 20px 10px #ffffffab;
+        filter: brightness(150%);
+    }
+    
+}
 
 .form-check{
 

@@ -11876,11 +11876,11 @@ textarea.form-control-lg {
 .show-wrapper .thumb {
   transition-duration: 0.3s;
   filter: brightness(90%);
+  cursor: pointer;
 }
 .show-wrapper .thumb:hover {
-  cursor: pointer;
-  scale: 1.15;
   z-index: 3;
+  scale: 1.15;
   filter: brightness(105%);
 }
 @media screen and (max-width: 420px) {
@@ -11951,6 +11951,10 @@ footer .contact {
 .input-group input {
   border-radius: 0;
   border: none;
+  color: #ffffff;
+}
+.input-group input:focus {
+  box-shadow: 0 0 0 2px #B4AEAE;
 }
 .input-group input::placeholder {
   color: #fff;
@@ -11962,6 +11966,20 @@ footer .contact {
 
 .profile-top {
   gap: 20px;
+}
+
+.pencil {
+  top: 35px;
+  left: -35px;
+  scale: 0.2;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.5607843137);
+  cursor: pointer;
+}
+.pencil:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6705882353);
+  filter: brightness(150%);
 }
 
 .form-check input {

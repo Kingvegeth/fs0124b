@@ -1,0 +1,59 @@
+.input-group{
+    input{
+        border-radius: 0;
+        border: none;
+        color: #fff;
+        &:focus{
+            box-shadow: 0 0 0 2px $secondary;
+        }
+        &::placeholder{
+            color: #fff;
+        }
+    }
+}
+
+#profile-page{
+    img{
+        height: 100px;
+    }    
+}
+
+.profile-top{
+    gap: 20px;
+}
+
+.pencil{
+    top: 35px;
+    left: -35px;
+    scale: 0.2;
+
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 10px 10px 20px 2px #0000008f;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 20px 10px #ffffffab;
+        filter: brightness(150%);
+    }
+    
+}
+
+.form-check{
+
+    input{
+        border-color: $info;
+        background-color: $dark;   
+        &:focus{
+            box-shadow: none;
+            border-color: $info;
+        }
+        &:checked{
+            background-color: $dark;
+            border-color: $info;
+        }
+    }
+}
+
+.buttons{
+    gap: 20px;
+}

@@ -1,20 +1,13 @@
 @import 'colors';
 @import 'mixins';
+@import 'carousel';
+@import 'header';
+@import 'footer';
+@import 'profile';
+@import 'settings';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../node_modules/@splidejs/splide/dist/css/splide.min.css';
 
-.header-logo{
-    height: 50px
-}
-
-.profile-header{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 16%, rgba(20,20,20,1) 100%);
-}
-
-
-.dropdown-menu img{
-    @include avatar-size;
-}
 
 .btn{
     border-radius: 0;
@@ -24,74 +17,13 @@
     font-size: 1.2em;
     gap: 20px;
     p{
-        font-size: 0.7em;
+        font-size: .7em;
         line-height: 2em;
     }
     &:hover{
         cursor: pointer;
     }
 }
-
-.show-wrapper{
-    .thumb{
-        transition-duration: .3s;
-        filter: brightness(90%);
-        cursor: pointer;
-        
-        &:hover{
-            z-index: 3;
-            scale: 1.15;
-            filter: brightness(105%);
-            @media screen and (max-width:420px) {
-                scale: 1.07;
-            }
-        }
-    }
-}
-
-.right{
-    z-index: 4;
-    width: 50px;
-    right: -30px;
-    top: 35%;
-    opacity: 0.5;
-    transition-duration: .3s;
-    border-radius: 50%;
-    &:hover{
-        opacity: 1;
-        cursor: pointer;
-    }
-}
-
-footer{
-    
-    i{
-        font-size: 1.4em;
-    }
-    font-size: 0.8em;
-    p{
-        font-size: 0.9em;
-    }
-    a:hover{
-        @include linkize;
-    }
-
-    .contact{
-        text-decoration: none;
-        font-size: 1.3em;
-    }
-
-}
-
-.socials{
-    gap: 20px;
-    font-size: 1.8em;
-
-    i:hover{
-        @include linkize;
-    }
-}
-
 
 #title-sx{
     gap: 40px;
@@ -108,127 +40,8 @@ footer{
 
 .btn-group{
     button{
-        font-size: 0.7em;
+        font-size: .7em;
 
         text-align: center;
-    }
-}
-
-.input-group{
-    input{
-        border-radius: 0;
-        border: none;
-        color: #ffffff;
-        &:focus{
-            box-shadow: 0 0 0 2px $secondary;
-        }
-        &::placeholder{
-            color: #fff;
-        }
-    }
-}
-
-#profile-page{
-    img{
-        height: 100px;
-    }    
-}
-
-.profile-top{
-    gap: 20px;
-}
-
-.pencil{
-    top: 35px;
-    left: -35px;
-    scale: 0.2;
-
-    border-radius: 50%;
-    border: 8px solid #fff;
-    box-shadow: 10px 10px 20px 2px #0000008f;
-    cursor: pointer;
-    &:hover{
-        box-shadow: 0 0 20px 10px #ffffffab;
-        filter: brightness(150%);
-    }
-    
-}
-
-.form-check{
-
-    input{
-        border-color: $info;
-        background-color: $dark;   
-        &:focus{
-            box-shadow: none;
-            border-color: $info;
-        }
-        &:checked{
-            background-color: $dark;
-            border-color: $info;
-        }
-    }
-}
-
-.buttons{
-    gap: 20px;
-}
-
-#page{
-    p{
-        margin-bottom: 5px;
-        color: $info;
-    }
-    h4{
-        font-size: 1.1em;
-        color: #737373;
-    }
-    a{
-        text-decoration: none;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-}
-
-
-
-.billing,.plan,.security,.extra, .parental{
-    img{
-        height: 20px;
-    }
-    gap: 40px;
-}
-
-.badge-new{
-    background-color: #0f84fa;
-    border-radius: 10%;
-    color: #fff;
-    display: inline-block;
-    font-size: .7em;
-    font-weight: 700;
-    margin: 0 0.5em;
-    padding: 0.15em 0.5em;
-}
-
-.extra{
-    p span{
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .badge-new{
-        padding: 0.4em 0.6em;
-        background-color: #5196FF;
-        font-size: .8em;
-    }
-}
-
-.parental{
-    img{
-        height: 60px;
-        border-radius: 5px;
-    }
-    i{
-        cursor: pointer;
     }
 }

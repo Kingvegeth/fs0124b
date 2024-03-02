@@ -1,0 +1,28 @@
+footer{
+    
+    i{
+        font-size: 1.4em;
+    }
+    font-size: 0.8em;
+    p{
+        font-size: 0.9em;
+    }
+    a:hover{
+        @include linkize;
+    }
+
+    .contact{
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+
+}
+
+.socials{
+    gap: 20px;
+    font-size: 1.8em;
+
+    i:hover{
+        @include linkize;
+    }
+}

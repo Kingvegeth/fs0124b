@@ -1,0 +1,11 @@
+.header-logo{
+    height: 50px
+}
+
+.profile-header{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 16%, rgba(20,20,20,1) 100%);
+}
+
+.dropdown-menu img{
+    @include avatar-size;
+}

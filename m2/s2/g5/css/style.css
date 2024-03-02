@@ -1,10 +1,158 @@
 @charset "UTF-8";
+@import '../node_modules/@splidejs/splide/dist/css/splide.min.css';
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.splide__slide {
+  filter: brightness(90%);
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  border: none !important;
+}
+.splide__slide:hover {
+  scale: 1.2;
+  z-index: 1;
+  filter: brightness(105%);
+}
+.splide__slide:focus {
+  border: none !important;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.profile-header {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 16%, rgb(20, 20, 20) 100%);
+}
+
+.dropdown-menu img {
+  height: 40px;
+}
+
+footer {
+  font-size: 0.8em;
+}
+footer i {
+  font-size: 1.4em;
+}
+footer p {
+  font-size: 0.9em;
+}
+footer a:hover {
+  cursor: pointer;
+  filter: brightness(200%);
+}
+footer .contact {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.socials {
+  gap: 20px;
+  font-size: 1.8em;
+}
+.socials i:hover {
+  cursor: pointer;
+  filter: brightness(200%);
+}
+
+.input-group input {
+  border-radius: 0;
+  border: none;
+  color: #fff;
+}
+.input-group input:focus {
+  box-shadow: 0 0 0 2px #B4AEAE;
+}
+.input-group input::placeholder {
+  color: #fff;
+}
+
+#profile-page img {
+  height: 100px;
+}
+
+.profile-top {
+  gap: 20px;
+}
+
+.pencil {
+  top: 35px;
+  left: -35px;
+  scale: 0.2;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.5607843137);
+  cursor: pointer;
+}
+.pencil:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6705882353);
+  filter: brightness(150%);
+}
+
+.form-check input {
+  border-color: #666666;
+  background-color: #141414;
+}
+.form-check input:focus {
+  box-shadow: none;
+  border-color: #666666;
+}
+.form-check input:checked {
+  background-color: #141414;
+  border-color: #666666;
+}
+
+.buttons {
+  gap: 20px;
+}
+
+.billing, .plan, .security, .extra, .parental {
+  gap: 40px;
+}
+.billing img, .plan img, .security img, .extra img, .parental img {
+  height: 20px;
+}
+
+.badge-new {
+  background-color: #0f84fa;
+  border-radius: 10%;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin: 0 0.5em;
+  padding: 0.15em 0.5em;
+}
+
+.extra p span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.extra .badge-new {
+  padding: 0.4em 0.6em;
+  background-color: #5196FF;
+  font-size: 0.8em;
+}
+
+.parental img {
+  height: 60px;
+  border-radius: 5px;
+}
+.parental i {
+  cursor: pointer;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import '../node_modules/@splidejs/splide/dist/css/splide.min.css';
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11845,18 +11993,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.header-logo {
-  height: 50px;
-}
-
-.profile-header {
-  background: linear-gradient(180deg, rgb(0, 0, 0) 16%, rgb(20, 20, 20) 100%);
-}
-
-.dropdown-menu img {
-  height: 40px;
-}
-
 .btn {
   border-radius: 0;
 }
@@ -11871,63 +12007,6 @@ textarea.form-control-lg {
 }
 .side-btns:hover {
   cursor: pointer;
-}
-
-.show-wrapper .thumb {
-  transition-duration: 0.3s;
-  filter: brightness(90%);
-  cursor: pointer;
-}
-.show-wrapper .thumb:hover {
-  z-index: 3;
-  scale: 1.15;
-  filter: brightness(105%);
-}
-@media screen and (max-width: 420px) {
-  .show-wrapper .thumb:hover {
-    scale: 1.07;
-  }
-}
-
-.right {
-  z-index: 4;
-  width: 50px;
-  right: -30px;
-  top: 35%;
-  opacity: 0.5;
-  transition-duration: 0.3s;
-  border-radius: 50%;
-}
-.right:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-footer {
-  font-size: 0.8em;
-}
-footer i {
-  font-size: 1.4em;
-}
-footer p {
-  font-size: 0.9em;
-}
-footer a:hover {
-  cursor: pointer;
-  filter: brightness(200%);
-}
-footer .contact {
-  text-decoration: none;
-  font-size: 1.3em;
-}
-
-.socials {
-  gap: 20px;
-  font-size: 1.8em;
-}
-.socials i:hover {
-  cursor: pointer;
-  filter: brightness(200%);
 }
 
 #title-sx {
@@ -11946,108 +12025,6 @@ footer .contact {
 .btn-group button {
   font-size: 0.7em;
   text-align: center;
-}
-
-.input-group input {
-  border-radius: 0;
-  border: none;
-  color: #ffffff;
-}
-.input-group input:focus {
-  box-shadow: 0 0 0 2px #B4AEAE;
-}
-.input-group input::placeholder {
-  color: #fff;
-}
-
-#profile-page img {
-  height: 100px;
-}
-
-.profile-top {
-  gap: 20px;
-}
-
-.pencil {
-  top: 35px;
-  left: -35px;
-  scale: 0.2;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.5607843137);
-  cursor: pointer;
-}
-.pencil:hover {
-  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6705882353);
-  filter: brightness(150%);
-}
-
-.form-check input {
-  border-color: #666666;
-  background-color: #141414;
-}
-.form-check input:focus {
-  box-shadow: none;
-  border-color: #666666;
-}
-.form-check input:checked {
-  background-color: #141414;
-  border-color: #666666;
-}
-
-.buttons {
-  gap: 20px;
-}
-
-#page p {
-  margin-bottom: 5px;
-  color: #666666;
-}
-#page h4, #page .h4 {
-  font-size: 1.1em;
-  color: #737373;
-}
-#page a {
-  text-decoration: none;
-}
-#page a:hover {
-  text-decoration: underline;
-}
-
-.billing, .plan, .security, .extra, .parental {
-  gap: 40px;
-}
-.billing img, .plan img, .security img, .extra img, .parental img {
-  height: 20px;
-}
-
-.badge-new {
-  background-color: #0f84fa;
-  border-radius: 10%;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.7em;
-  font-weight: 700;
-  margin: 0 0.5em;
-  padding: 0.15em 0.5em;
-}
-
-.extra p span {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.extra .badge-new {
-  padding: 0.4em 0.6em;
-  background-color: #5196FF;
-  font-size: 0.8em;
-}
-
-.parental img {
-  height: 60px;
-  border-radius: 5px;
-}
-.parental i {
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

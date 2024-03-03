@@ -1,6 +1,8 @@
-let elms = document.getElementsByClassName("splide");
 
+
+let elms = document.getElementsByClassName("splide");
 for (let i = 0; i < elms.length; i++) {
+ 
   new Splide(elms[i], {
     height: 200,
     fixedWidth: 290,

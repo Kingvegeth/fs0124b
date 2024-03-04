@@ -44,6 +44,10 @@ class Pet {
       pets.push(newPet); 
       Pet.displayPet(newPet);
     }
+    document.getElementById('pet-name').value='';
+    document.getElementById('pet-owner').value='';
+    document.getElementById('species').value='';
+    document.getElementById('breed').value='';
   }
 
   static displayPet(pet) {

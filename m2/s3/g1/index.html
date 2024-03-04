@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Esercizio G1</title>
+</head>
+<body>
+    
+    <form id="pet-form">
+        <h2>Registrazione animali domestici</h2>
+        <label for="pet-name">Nome animale</label>
+        <input type="text" id="pet-name" placeholder="Inserisci il nome dell'animale">
+        <label for="pet-name">Nome proprietario</label>
+        <input type="text" id="pet-owner"  placeholder="Inserisci il nome del proprietario">
+        <label for="species">Specie</label>
+        <select id="species">
+            <option value="cat">Gatto</option>
+            <option value="dog">Cane</option>
+            <option value="snake">Serpente</option>
+            <option value="bird">Uccello</option>
+            <option value="pokemon">Pokémon</option>
+            <option value="human">Umano</option>
+        </select>
+        <label for="breed">Razza</label>
+        <input type="text" id="breed" placeholder="Scrivi la razza dell'animale">
+        <button type="button" id="add-pet-btn">Aggiungi animale</button>
+    </form>
+    
+    <div id="pet-list">
+        <h2>Animali registrati:</h2>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

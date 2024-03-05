@@ -32,6 +32,7 @@ btnRemove.addEventListener('click', function(e){
 //ESERCIZIO 2
 
 let counter = parseInt(sessionStorage.getItem('counter')) || 0;
+let btnReset = document.getElementById('reset')
 
 const updateCounter = () =>{
     counter++;
@@ -42,3 +43,8 @@ const updateCounter = () =>{
 setInterval(updateCounter, 1000);
 
 document.getElementById('counter').innerText = counter;
+
+btnReset.addEventListener('click', function() {
+    counter = 0;
+    document.getElementById('counter').innerText = 0;
+})

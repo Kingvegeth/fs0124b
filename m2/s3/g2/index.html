@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio G2</title>
+</head>
+<body>
+    <main>
+        <h1>Form di registrazione</h1>
+        <form>
+            <strong>Ultimo nome inserito: </strong><span id="last-name">Nessun nome inserito</span>
+            <br>
+            <br>
+            <label for="nome">Nome utente</label>
+            <input id="nome" type="text" placeholder="Inserisci il tuo nome">
+            <button type="button" id="btn-set">Salva in localStorage</button>
+            <button type="button" id="btn-remove">Rimuovi il dato</button>
+        </form>
+        <br>
+        <strong>Stato localStorage: </strong><span id="storage-state"></span>
+        <hr>
+    </main>
+    <footer>
+        <strong>Timer: </strong><span id="counter"></span>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

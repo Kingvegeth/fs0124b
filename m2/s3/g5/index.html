@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <title>Crudazon</title>
+</head>
+<body>
+    <template id="card-template">
+        <div class="col-4"> 
+            <div class="card h-100">
+                <img src="" class="card-img-top" alt="smartphone photo">
+                <div class="card-body">
+                    <span class="badge rounded-pill text-bg-secondary"></span>
+                    <h5 class="card-title"></h5>
+                    <p class="description card-text"></p>
+                    <p class="price card-text"></p>
+                    <div class="mb-1">
+                        <a href="" class="card-edit btn btn-warning">Modifica</a>
+                    </div>
+                    <div>
+                        <a href="#" class="card-more-info btn btn-info">Scopri di più</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </template>
+    <header class="sticky-top p-3 d-flex justify-content-between">
+        <img  src="./img/Amazon_logo.png" alt="Amazon logo">
+        <a class="text-white" href="./index.html">Back Office</a>
+    </header>
+
+    <main class="container my-5">
+
+        <h1>Prodotti</h1>
+        <hr class="text-secondary">
+
+        <div class="row gy-4" id="shelf"></div>
+        
+
+
+    </main>
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+

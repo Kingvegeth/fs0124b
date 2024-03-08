@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <title>Add Product</title>
+</head>
+<body>
+    <header class="sticky-top p-3 d-flex justify-content-between">
+        <img src="./img/Amazon_logo.png" alt="Amazon logo">
+        <a class="text-white" href="./index.html">Home</a>
+    </header>
+    <main class="container mt-5">
+
+        <h1>Add Product</h1>
+        <hr class="text-secondary">
+        <form class="product-form row justify-content-between g-1 gx-2">
+            <label for="product-name" class="px-0">Nome</label>
+            <input id="product-name" class="col-12 mb-2 form-control" type="text" placeholder="Nome Prodotto" required>
+            <label for="product-brand" class="px-0">Brand</label>
+            <input id="product-brand" class="col-12 mb-2 form-control" type="text" placeholder="Marca" required>
+            <label for="product-price" class="px-0">Prezzo</label>
+            <input id="product-price" class="col-12 mb-2 form-control" type="text" placeholder="0€" required>
+            <label for="product-image" class="px-0">URL Immagine</label>
+            <input id="product-image" class="col-12 mb-2 form-control" type="text" placeholder="http://placeholder.com/image.jpg" required>
+            <label for="product-description" class="px-0">Descrizione prodotto</label>
+            <textarea id="product-description" class="col-12 mb-2 form-control" type="text"></textarea>
+            
+            <div class="col d-flex justify-content-end">
+                
+                <input class="col-4 btn btn-outline-dark" type="reset" value="Reset">
+
+            </div>
+            <button class="save-btn col-3 btn btn-warning">Salva</button>
+            
+    </form>
+</main>
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

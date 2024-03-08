@@ -1,0 +1,12 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+header {
+  background-color: #131921;
+}
+header img {
+  height: 25px;
+}
+header a {
+  font-size: 0.8em;
+}
+
+/*# sourceMappingURL=style.css.map */

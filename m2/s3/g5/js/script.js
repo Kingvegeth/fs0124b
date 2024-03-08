@@ -2,6 +2,7 @@ const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViMjgzYzJkN2I
 const auth = "Bearer " + apiKey;
 
 let currentUrl = window.location.pathname.split('?')[0];
+console.log("La pagina corrente è:",currentUrl);
 
 //CREAZIONE DELLA PAGINA CON LE CARD DEI PRODOTTI
 if (currentUrl === "/index.html") {
@@ -45,7 +46,6 @@ if (currentUrl === "/index.html") {
     
     //PAGINE DI AGGIUNTA E MODIFICA PRODOTTO
     
-    console.log(currentUrl);
     
     let deleteBtn = document.querySelector('.delete-btn');
     let saveBtn = document.querySelector('.save-btn');

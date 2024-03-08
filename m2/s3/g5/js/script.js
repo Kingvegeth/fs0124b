@@ -46,7 +46,7 @@ let saveBtn = document.querySelector('.save-btn');
 
 let urlParams = new URLSearchParams(location.search)
 let productId = urlParams.get('_id');
-let fetchUrl = '"https://striveschool-api.herokuapp.com/api/product/"'
+let fetchUrl = "https://striveschool-api.herokuapp.com/api/product/"
 let fetchMethod = 'POST'
 
 if (productId) {
@@ -57,6 +57,7 @@ if (productId) {
     
 
 
+console.log(fetchMethod);
 
 saveBtn.addEventListener('click',function(e){
     e.preventDefault()
@@ -87,8 +88,8 @@ saveBtn.addEventListener('click',function(e){
     })
     .then(res => res.json())
     .then(res => {
-        console.log(res);
-        document.querySelector('.product-form').reset()
+        console.log(res)
+        window.location.href = "index.html"
 
     })
 })
@@ -104,7 +105,7 @@ deleteBtn.addEventListener('click',function () {
     .then(res => res.json())
     .then(res => {
         console.log(res);
-        
+        window.location.href = "index.html"
     })
 
 })

@@ -10,14 +10,18 @@
 </head>
 <body>
     <header class="sticky-top p-3 d-flex justify-content-between">
-        <img src="./img/Amazon_logo.png" alt="Amazon logo">
+        <a href="./index.html">
+            <img  src="./img/Amazon_logo.png" alt="Amazon logo">
+        </a>
         <a class="text-white" href="./index.html">Home</a>
     </header>
     <main class="container mt-5">
-
+        <div class="alert alert-danger d-none" role="alert">
+            Devi compilare tutti i campi per poter proseguire!
+          </div>
         <h1>Add Product</h1>
         <hr class="text-secondary">
-        <form class="product-form row justify-content-between g-1 gx-2">
+        <form class="product-form row justify-content-between g-1 gx-2 ">
             <label for="product-name" class="px-0">Nome</label>
             <input id="product-name" class="col-12 mb-2 form-control" type="text" placeholder="Nome Prodotto" required>
             <label for="product-brand" class="px-0">Brand</label>

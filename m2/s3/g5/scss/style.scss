@@ -11,3 +11,11 @@ header{
     }
 }
 
+.card{
+    overflow: hidden;
+    img{
+
+        width: max-content;
+        max-height: 250px;
+    }
+}

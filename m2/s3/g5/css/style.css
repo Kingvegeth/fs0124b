@@ -9,4 +9,12 @@ header a {
   font-size: 0.8em;
 }
 
+.card {
+  overflow: hidden;
+}
+.card img {
+  width: max-content;
+  max-height: 250px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,9 @@ const auth = "Bearer " + apiKey;
 let currentUrl = window.location.pathname.split("?")[0];
 console.log("La pagina corrente è:", currentUrl);
 
+let urlParams = new URLSearchParams(location.search);
+let productId = urlParams.get("_id");
+
 //CREAZIONE DELLA PAGINA CON LE CARD DEI PRODOTTI
 if (currentUrl === "/index.html") {
   fetch("https://striveschool-api.herokuapp.com/api/product/", {
@@ -53,9 +56,6 @@ if (currentUrl === "/index.html") {
 
   let saveBtn = document.querySelector(".save-btn");
 
-  let urlParams = new URLSearchParams(location.search);
-  let productId = urlParams.get("_id");
-
   let fetchUrl = "https://striveschool-api.herokuapp.com/api/product/";
   let fetchMethod = "POST";
 
@@ -84,7 +84,7 @@ if (currentUrl === "/index.html") {
 
     let alert = document.querySelector(".alert");
     if (!name || !price || !brand || !imageUrl) {
-      console.log(alert);
+      alert.classList.remove('d-none')
     } else {
       fetch(fetchUrl, {
         method: fetchMethod,
@@ -129,7 +129,7 @@ if (currentUrl === "/index.html") {
     
 
     //gestione del pulsante delete
-    
+
     let deleteBtn = document.querySelector(".delete-btn");
 
     deleteBtn.addEventListener("click", function () {
@@ -147,4 +147,36 @@ if (currentUrl === "/index.html") {
         });
     });
   }
+} else if (currentUrl = '/view_product.html') {
+
+    fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': auth
+        }
+    })
+    .then(res => res.json())
+    .then(phone => {
+        
+        displayProduct(phone);
+    })
+        
+    
+
+    function displayProduct(product) {
+
+        let details = document.getElementById('product-details');
+        let cardImage = details.querySelector('.card-img-top');
+        let badge = details.querySelector('.badge');
+        let cardTitle = details.querySelector('.card-title');
+        let description = details.querySelector('.description');
+        let price = details.querySelector('.price');
+
+        cardImage.src = product.imageUrl;
+        badge.textContent = product.brand;
+        cardTitle.textContent = product.name;
+        description.textContent = product.description;
+        price.textContent = product.price + "€";
+    }
+
 }

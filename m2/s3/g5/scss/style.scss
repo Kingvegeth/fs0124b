@@ -3,6 +3,7 @@
 
 header{
     background-color: #131921;
+    z-index: 2;
     img{
         height: 25px;
     }
@@ -15,26 +16,16 @@ header{
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
     z-index: 1;
-    img{
-        
-        width: max-content;
-        max-height: 250px;
-    }
+    
 }
 
-.loader{
-    background-color: #131921d3;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    
-    .spinner-border{
-        position: absolute;
-        top: 50%;
-        left: 50%;
+.card-img-top{
+        
+    width: max-content;
+    max-height: 250px;
+}
 
-        z-index: 99999;
-    }
-
+.spinner-border{
+    font-size: 1.4em;
 }
 

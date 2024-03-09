@@ -9,11 +9,42 @@
     <title>Edit Product</title>
 </head>
 <body>
-    <div class="loader">
-        <div class="spinner-border text-light" role="status">
-            <span class="visually-hidden">Loading...</span>
+   
+    <div class="modal fade" id="confirm-save" tabindex="-1" aria-labelledby="save-confirm-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="save-confirm-label">Salvataggio Modifiche</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Sei sicuro di voler salvare i cambiamenti?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+              <button type="button" class="save-btn  btn btn-warning">Salva Modifiche</button>
+            </div>
           </div>
-    </div>
+        </div>
+      </div>
+      <div class="modal fade" id="confirm-delete" tabindex="-1" aria-labelledby="delete-confirm-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="delete-confirm-label">Eliminazione Prodotto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Sei sicuro di voler eliminare il prodotto?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+              <button type="button" class="delete-btn btn btn-danger">Elimina Prodotto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <header class="sticky-top p-3 d-flex justify-content-between">
         <a href="./index.html">
             <img  src="./img/Amazon_logo.png" alt="Amazon logo">
@@ -39,11 +70,11 @@
             <textarea id="product-description" class="col-12 mb-2 form-control" type="text"></textarea>
             
             <div class="col d-flex justify-content-between">
-                <i class="delete-btn col-4 btn btn-danger bi bi-trash3"></i>
+                <i type="button"  class="col-4 btn btn-danger bi bi-trash3" data-bs-toggle="modal" data-bs-target="#confirm-delete"></i>
                 <input class="col-4 btn btn-outline-dark" type="reset" value="Reset">
 
             </div>
-            <button class="save-btn col-3 btn btn-warning">Salva</button>
+            <button type="button" class="col-3 btn btn-warning" data-bs-toggle="modal" data-bs-target="#confirm-save">Salva</button>
             
     </form>
 </main>

@@ -18,7 +18,7 @@ if (currentUrl === "/index.html") {
   })
     .then((res) => res.json())
     .then((phones) => {
-      document.querySelector('.loader').classList.add('d-none');
+      document.querySelector('.spinner-border').classList.add('d-none');
       displayCards(phones);
     });
 
@@ -117,7 +117,6 @@ if (currentUrl === "/index.html") {
       })
         .then((response) => response.json())
         .then((product) => {
-          document.querySelector('.loader').classList.add('d-none');
           document.getElementById("product-name").value = product.name;
           document.getElementById("product-brand").value = product.brand;
           document.getElementById("product-price").value = product.price;

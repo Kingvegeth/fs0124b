@@ -14,9 +14,9 @@ header{
 
 .card{
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.168);
+    border-top: none;
     z-index: 1;
-    
 }
 
 .card-img-top{

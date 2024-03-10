@@ -50,26 +50,49 @@ if (currentUrl === "/index.html") {
 ) {
   //PAGINE DI AGGIUNTA E MODIFICA PRODOTTO
 
-  let saveBtn = document.querySelector(".save-btn");
+  let modalId = currentUrl === "/edit_product.html" ? 'confirm-save' : 'confirm-add';
+  let modal = new bootstrap.Modal(document.getElementById(modalId));
 
+
+  
   let fetchUrl = "https://striveschool-api.herokuapp.com/api/product/";
   let fetchMethod = "POST";
-
+  
   if (productId) {
-    fetchUrl =
-      "https://striveschool-api.herokuapp.com/api/product/" + productId;
+    fetchUrl = "https://striveschool-api.herokuapp.com/api/product/" + productId;
     fetchMethod = "PUT";
   }
 
-  saveBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+  let saveBtn = document.querySelector("[data-bs-target='#" + modalId + "']");
 
+  saveBtn.addEventListener("click", function (e) {
+    let name = document.querySelector("#product-name").value;
+    let price = document.querySelector("#product-price").value;
+    let brand = document.querySelector("#product-brand").value;
+    let imageUrl = document.querySelector("#product-image").value;
+  
+    let alert = document.querySelector(".alert");
+    if (!name || !price || !brand || !imageUrl) {
+      e.preventDefault();
+      alert.classList.remove('d-none');
+    } else {
+      alert.classList.add('d-none');
+      modal.show(); // Mostra il modale manualmente
+    }
+  });
+  
+  
+  let confirmSaveBtn = document.querySelector("#" + modalId + " .save-btn");
+
+  confirmSaveBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+  
     let name = document.querySelector("#product-name").value;
     let price = document.querySelector("#product-price").value;
     let brand = document.querySelector("#product-brand").value;
     let imageUrl = document.querySelector("#product-image").value;
     let description = document.querySelector("#product-description").value;
-
+  
     let smartphone = {
       name,
       price,
@@ -77,30 +100,26 @@ if (currentUrl === "/index.html") {
       imageUrl,
       description,
     };
-
-    let alert = document.querySelector(".alert");
-    if (!name || !price || !brand || !imageUrl) {
-      alert.classList.remove('d-none')
-    } else {
-      fetch(fetchUrl, {
-        method: fetchMethod,
-        headers: {
-          "Content-type": "application/json",
-          Authorization: auth,
-        },
-        body: JSON.stringify(smartphone),
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          window.location.href = "index.html";
-        });
-    }
+  
+    fetch(fetchUrl, {
+      method: fetchMethod,
+      headers: {
+        "Content-type": "application/json",
+        Authorization: auth,
+      },
+      body: JSON.stringify(smartphone),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        window.location.href = "index.html";
+      });
   });
 
   if (currentUrl === "/edit_product.html") {
     
-    
+
+
     //Riempie automaticamente le value degli input all'apertura della pagina
 
       fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
@@ -126,22 +145,31 @@ if (currentUrl === "/index.html") {
 
     //gestione del pulsante delete
 
-    let deleteBtn = document.querySelector(".delete-btn");
+    let deleteBtn = document.querySelector("[data-bs-target='#confirm-delete']");
+    let modalDelete = new bootstrap.Modal(document.getElementById('confirm-delete'));
 
-    deleteBtn.addEventListener("click", function () {
-      fetch(fetchUrl, {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-          Authorization: auth,
-        },
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          window.location.href = "index.html";
-        });
+    deleteBtn.addEventListener("click", function (e) {
+    modalDelete.show();
+  });
+    
+  let confirmDeleteBtn = document.querySelector("#confirm-delete .delete-btn");
+
+  confirmDeleteBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  fetch(fetchUrl, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+      Authorization: auth,
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      window.location.href = "index.html";
     });
+});
   }
 } else if (currentUrl = '/view_product.html') {
 

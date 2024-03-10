@@ -3,7 +3,7 @@ const apiKey =
 const auth = "Bearer " + apiKey;
 
 let currentUrl = window.location.pathname.split("?")[0];
-console.log("La pagina corrente è:", currentUrl);
+
 
 let urlParams = new URLSearchParams(location.search);
 let productId = urlParams.get("_id");
@@ -31,15 +31,10 @@ if (currentUrl === "/index.html") {
       card.querySelector(".card-img-top").src = product.imageUrl;
       card.querySelector(".card-title").textContent = product.name;
       card.querySelector(".description").textContent = product.description;
-      card.querySelector(".price").textContent =
-        "Prezzo: " + product.price + "€";
+      card.querySelector(".price").textContent = "Prezzo: " + product.price + "€";
       card.querySelector(".badge").textContent = product.brand;
-      card.querySelector(
-        ".card-edit"
-      ).href = `./edit_product.html?_id=${product._id}`;
-      card.querySelector(
-        ".card-more-info"
-      ).href = `./view_product.html?_id=${product._id}`;
+      card.querySelector(".card-edit").href = `./edit_product.html?_id=${product._id}`;
+      card.querySelector(".card-more-info").href = `./view_product.html?_id=${product._id}`;
       shelf.appendChild(card);
     });
   }

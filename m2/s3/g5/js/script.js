@@ -1,5 +1,5 @@
 const apiKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViMjgzYzJkN2IxMTAwMTkwZTc4NzYiLCJpYXQiOjE3MDk5MTAwNzYsImV4cCI6MTcxMTExOTY3Nn0.HqcexqGNSl7i4qmZa0KoaCqgrH1usfWNQ8ZKO-8DIsQ";
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWViMjgzYzJkN2IxMTAwMTkwZTc4NzYiLCJpYXQiOjE3MDk5MTAwNzYsImV4cCI6MTcxMTExOTY3Nn0.HqcexqGNSl7i4qmZa0KoaCqgrH1usfWNQ8ZKO-8DIsQ";
 const auth = "Bearer " + apiKey;
 
 let currentUrl = window.location.pathname.split("?")[0];
@@ -7,6 +7,8 @@ let currentUrl = window.location.pathname.split("?")[0];
 
 let urlParams = new URLSearchParams(location.search);
 let productId = urlParams.get("_id");
+
+let alert = document.querySelector(".alert");
 
 //CREAZIONE DELLA PAGINA CON LE CARD DEI PRODOTTI
 if (currentUrl === "/index.html") {
@@ -20,6 +22,11 @@ if (currentUrl === "/index.html") {
     .then((phones) => {
       document.querySelector('.spinner-border').classList.add('d-none');
       displayCards(phones);
+    })
+    .catch((error) => {
+      console.log(alert.innerText);
+      alert.classList.remove('d-none');
+      alert.innerText += " " + error
     });
 
   function displayCards(phones) {
@@ -66,18 +73,44 @@ if (currentUrl === "/index.html") {
   let saveBtn = document.querySelector("[data-bs-target='#" + modalId + "']");
 
   saveBtn.addEventListener("click", function (e) {
-    let name = document.querySelector("#product-name").value;
-    let price = document.querySelector("#product-price").value;
-    let brand = document.querySelector("#product-brand").value;
-    let imageUrl = document.querySelector("#product-image").value;
+
+
+    let nameInput = document.querySelector("#product-name");
+    let priceInput = document.querySelector("#product-price");
+    let brandInput = document.querySelector("#product-brand");
+    let imageUrlInput = document.querySelector("#product-image");
+
+    let name = nameInput.value;
+    let price = priceInput.value;
+    let brand = brandInput.value;
+    let imageUrl = imageUrlInput.value;
   
-    let alert = document.querySelector(".alert");
     if (!name || !price || !brand || !imageUrl) {
       e.preventDefault();
       alert.classList.remove('d-none');
+      if(!name) nameInput.classList.add('is-invalid')
+      else nameInput.classList.add('is-valid')
+      if(!price) priceInput.classList.add('is-invalid')
+      else priceInput.classList.add('is-valid')
+      if(!brand) brandInput.classList.add('is-invalid')
+      else brandInput.classList.add('is-valid')
+      if(!imageUrl) imageUrlInput.classList.add('is-invalid')
+      else imageUrlInput.classList.add('is-valid')
     } else {
+
       alert.classList.add('d-none');
-      modal.show(); // Mostra il modale manualmente
+      nameInput.classList.remove('is-invalid')
+      priceInput.classList.remove('is-invalid')
+      brandInput.classList.remove('is-invalid')
+      imageUrlInput.classList.remove('is-invalid')
+
+      nameInput.classList.add('is-valid')
+      priceInput.classList.add('is-valid')
+      brandInput.classList.add('is-valid')
+      imageUrlInput.classList.add('is-valid')
+
+      modal.show();
+
     }
   });
   
@@ -92,6 +125,10 @@ if (currentUrl === "/index.html") {
     let brand = document.querySelector("#product-brand").value;
     let imageUrl = document.querySelector("#product-image").value;
     let description = document.querySelector("#product-description").value;
+
+    if (description === "") {
+      description = " ";
+    }
   
     let smartphone = {
       name,
@@ -113,6 +150,10 @@ if (currentUrl === "/index.html") {
       .then((res) => {
         console.log(res);
         window.location.href = "index.html";
+      })
+      .catch((error) => {
+        alert.classList.remove('d-none');
+        alert.innerText = error
       });
   });
 
@@ -138,9 +179,10 @@ if (currentUrl === "/index.html") {
           document.getElementById("product-description").value =
             product.description;
         })
-        .catch((error) =>
-          console.error("Error fetching product details:", error)
-        );
+        .catch((error) => {
+          alert.classList.remove('d-none');
+          alert.innerText = error
+        });
     
 
     //gestione del pulsante delete
@@ -168,6 +210,10 @@ if (currentUrl === "/index.html") {
     .then((res) => {
       console.log(res);
       window.location.href = "index.html";
+    })
+    .catch((error) => {
+      alert.classList.remove('d-none');
+      alert.innerText = error
     });
 });
   }
@@ -184,6 +230,10 @@ if (currentUrl === "/index.html") {
         
         displayProduct(phone);
     })
+    .catch((error) => {
+      alert.classList.remove('d-none');
+      alert.innerText = error
+    });
         
     
 

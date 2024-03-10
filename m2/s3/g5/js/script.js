@@ -8,7 +8,8 @@ let currentUrl = window.location.pathname.split("?")[0];
 let urlParams = new URLSearchParams(location.search);
 let productId = urlParams.get("_id");
 
-let alert = document.querySelector(".alert");
+let alert = document.querySelector(".alert-danger");
+let alertForm = document.querySelector(".alert-warning");
 
 //CREAZIONE DELLA PAGINA CON LE CARD DEI PRODOTTI
 if (currentUrl === "/index.html") {
@@ -24,9 +25,11 @@ if (currentUrl === "/index.html") {
       displayCards(phones);
     })
     .catch((error) => {
-      console.log(alert.innerText);
+      
       alert.classList.remove('d-none');
-      alert.innerText += " " + error
+      index = String(error).indexOf(':');
+      alert.innerText ="Errore nella fetch" + String(error).slice(index)
+
     });
 
   function displayCards(phones) {
@@ -55,6 +58,8 @@ if (currentUrl === "/index.html") {
   currentUrl === "/edit_product.html" ||
   currentUrl === "/add_product.html"
 ) {
+
+
   //PAGINE DI AGGIUNTA E MODIFICA PRODOTTO
 
   let modalId = currentUrl === "/edit_product.html" ? 'confirm-save' : 'confirm-add';
@@ -87,7 +92,7 @@ if (currentUrl === "/index.html") {
   
     if (!name || !price || !brand || !imageUrl) {
       e.preventDefault();
-      alert.classList.remove('d-none');
+      alertForm.classList.remove('d-none');
       if(!name) nameInput.classList.add('is-invalid')
       else nameInput.classList.add('is-valid')
       if(!price) priceInput.classList.add('is-invalid')
@@ -98,7 +103,7 @@ if (currentUrl === "/index.html") {
       else imageUrlInput.classList.add('is-valid')
     } else {
 
-      alert.classList.add('d-none');
+      alertForm.classList.add('d-none');
       nameInput.classList.remove('is-invalid')
       priceInput.classList.remove('is-invalid')
       brandInput.classList.remove('is-invalid')
@@ -114,6 +119,7 @@ if (currentUrl === "/index.html") {
     }
   });
   
+  //gestione del pulsante di aggiunta prodotto
   
   let confirmSaveBtn = document.querySelector("#" + modalId + " .save-btn");
 
@@ -152,17 +158,36 @@ if (currentUrl === "/index.html") {
         window.location.href = "index.html";
       })
       .catch((error) => {
+        
         alert.classList.remove('d-none');
-        alert.innerText = error
+        index = String(error).indexOf(':');
+          modal.hide()
+          alert.innerText ="Errore nella fetch" + String(error).slice(index)
       });
   });
+
+      //gestione del pulsante reset
+      let resetBtn = document.querySelector("[data-bs-target='#confirm-reset']");
+      let modalReset = new bootstrap.Modal(document.getElementById('confirm-reset'));
+      
+  
+      resetBtn.addEventListener("click", function (e) {
+        modalReset.show();
+      });
+  
+      let confirmResetBtn = document.querySelector("#confirm-reset .reset-btn");
+  
+      confirmResetBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.reload();
+      });
+  
 
   if (currentUrl === "/edit_product.html") {
     
 
 
     //Riempie automaticamente le value degli input all'apertura della pagina
-
       fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
         method: "GET",
         headers: {
@@ -181,10 +206,12 @@ if (currentUrl === "/index.html") {
         })
         .catch((error) => {
           alert.classList.remove('d-none');
-          alert.innerText = error
+
+          console.log(error);
+          index = String(error).indexOf(':');
+          alert.innerText ="Errore nella fetch" + String(error).slice(index)
         });
     
-
     //gestione del pulsante delete
 
     let deleteBtn = document.querySelector("[data-bs-target='#confirm-delete']");
@@ -213,7 +240,8 @@ if (currentUrl === "/index.html") {
     })
     .catch((error) => {
       alert.classList.remove('d-none');
-      alert.innerText = error
+      index = String(error).indexOf(':');
+      alert.innerText ="Errore nella fetch" + String(error).slice(index)
     });
 });
   }
@@ -232,7 +260,8 @@ if (currentUrl === "/index.html") {
     })
     .catch((error) => {
       alert.classList.remove('d-none');
-      alert.innerText = error
+      index = String(error).indexOf(':');
+      alert.innerText ="Errore nella fetch" + String(error).slice(index)
     });
         
     

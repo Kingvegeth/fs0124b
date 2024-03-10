@@ -9,9 +9,9 @@
     <title>Aggiungi Prodotto</title>
 </head>
 <body>
-
+    <!-- Modale Save -->
     <div class="modal fade" id="confirm-add" tabindex="-1" aria-labelledby="add-confirm-label" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="add-confirm-label">Aggiunta Prodotto</h1>
@@ -28,6 +28,25 @@
         </div>
       </div>
 
+      <!-- Modale Reset -->
+      <div class="modal fade" id="confirm-reset" tabindex="-1" aria-labelledby="reset-confirm-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="reset-confirm-label">Reset Form</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Tutte le modifiche verranno annullate. Sei sicuro di voler continuare?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+              <button type="button" class="reset-btn btn btn-outline-dark">Ripristina form</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <header class="sticky-top p-3 d-flex justify-content-between">
         <a href="./index.html">
             <img  src="./img/Amazon_logo.png" alt="Amazon logo">
@@ -35,9 +54,10 @@
         <a class="text-white" href="./index.html">Home</a>
     </header>
     <main class="container mt-5">
-        <div class="alert alert-danger d-none" role="alert">
-            Devi compilare tutti i campi per poter proseguire!
-        </div>
+        <div class="alert alert-danger d-none" role="alert"></div>
+        <div class="alert alert-warning d-none" role="alert">
+          <i class="bi bi-exclamation-triangle"></i> Devi compilare tutti i campi per poter proseguire!
+      </div>
         <h1>Aggiungi Prodotto</h1>
         <hr class="text-secondary">
         <form class="product-form row justify-content-between g-1 gx-2 ">
@@ -54,7 +74,7 @@
             
             <div class="col d-flex justify-content-end">
                 
-                <input class="col-4 btn btn-outline-dark" type="reset" value="Reset">
+              <input class="col-4 btn btn-outline-dark"  data-bs-toggle="modal" data-bs-target="#confirm-reset" type="button" value="Reset">
 
             </div>
             <button type="button" class="col-3 btn btn-warning" data-bs-target="#confirm-add">Salva</button>

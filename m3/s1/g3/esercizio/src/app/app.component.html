@@ -4,9 +4,9 @@
   <h2 class="my-3">Articoli</h2>
 
 
-    <div class="row row-cols-3 text-start">
+    <div class="row row-cols-3 g-2 text-start my-2">
       <div class="col" *ngFor="let article of articleArr.slice(0,2)">
-        <div  class="card mb-3 articolo">
+        <div  class="card mb-3 h-100 articolo">
           <div  class="card-body">
             <p class="text-info">Articolo Fisso</p>
             <h5 class="card-title">{{article.title}}</h5>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="col" *ngFor="let index of randomIndex">
-        <div class="card mb-3 articolo">
+        <div class="card mb-3 h-100 articolo">
           <div class="card-body">
             <p class="text-warning">Articolo scelto casualmente</p>
             <h5 class="card-title">{{articleArr[index].title}}</h5>

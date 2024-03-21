@@ -1,35 +1,5 @@
 <app-navbar></app-navbar>
+
 <div class="container text-center">
-
-  <h2 class="my-3">Articoli</h2>
-
-
-    <div class="row row-cols-3 g-2 text-start my-2">
-      <div class="col" *ngFor="let article of articleArr.slice(0,2)">
-        <div  class="card mb-3 h-100 articolo">
-          <div  class="card-body">
-            <p class="text-info">Articolo Fisso</p>
-            <h5 class="card-title">{{article.title}}</h5>
-            <p class="card-text corpo-articolo">{{article.body}}</p>
-            <div class="d-flex justify-content-between">
-              <p class="card-text"><small class="text-body-secondary">Article by User<span> {{article.userId}}</span></small></p>
-              <p class="text-body-secondary">{{article.tags}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col" *ngFor="let index of randomIndex">
-        <div class="card mb-3 h-100 articolo">
-          <div class="card-body">
-            <p class="text-warning">Articolo scelto casualmente</p>
-            <h5 class="card-title">{{articleArr[index].title}}</h5>
-            <p class="card-text corpo-articolo">{{articleArr[index].body}}</p>
-            <div class="d-flex justify-content-between">
-              <p class="card-text"><small class="text-body-secondary">Article by User<span> {{articleArr[index].userId}}</span></small></p>
-              <p class="text-body-secondary">{{articleArr[index].tags}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
+</div>

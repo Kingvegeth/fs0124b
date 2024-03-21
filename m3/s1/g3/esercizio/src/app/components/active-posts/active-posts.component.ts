@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { iArticle } from '../../models/iarticle';
+import { ArticleService } from '../../article.service'
 
 @Component({
   selector: 'app-active-posts',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class ActivePostsComponent {
 
+  articleArr: iArticle[] = [];
+  randomIndex: number[] = [];
+
+  constructor(private articleSvc:ArticleService){}
+
+  ngOnInit(){
+
+    this.articleSvc.getActiveArticle().then(res => {
+      this.articleArr = res;
+    });
+  }
 }

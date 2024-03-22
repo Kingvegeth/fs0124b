@@ -1,0 +1,24 @@
+<h1>Le nostre Ford</h1>
+
+<div class="row row-cols-3 g-5 text-start my-2 ">
+  <div class="col" *ngFor="let car of fordCars" >
+    <div  class="card mb-3 h-100">
+      <div class="text-center img-wrapper">
+        <img [src]="'../../../assets/img/' + car.modelImage" class="card-img-top p-3 w-75" alt="car preview" >
+      </div>
+      <div  class="card-body">
+        <h5 class="card-title">{{car.brand}}</h5>
+        <div class="d-flex justify-content-between">
+          <p class="card-text">{{car.model}}</p>
+          <p>{{car.year}}</p>
+        </div>
+        <p class="card-text"><small class="text-secondary">Prezzo:<span class="text-secondary"> {{car.price | number: '1.0-0'}}</span>€</small></p>
+      </div>
+      <div class="container p-2 d-flex justify-content-between align-items-center card-text"  [ngClass]="{'bg-success': car.available, 'bg-danger': !car.available}">
+        <button class="col-4 btn btn-light" [routerLink]="['/details', car.id]">Dettagli</button>
+        <div *ngIf="car.available; else elseBlock" class="text-white">Disponibile</div>
+        <ng-template #elseBlock> <div class="text-white">Non disponibile</div></ng-template>
+      </div>
+    </div>
+  </div>
+</div>

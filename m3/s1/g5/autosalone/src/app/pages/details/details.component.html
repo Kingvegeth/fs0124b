@@ -1,0 +1,20 @@
+
+<div class="d-flex row">
+  <div class="col-6">
+    <img [src]="'../../../assets/img/' + car.modelImage" class="card-img-top p-3" alt="car preview">
+  </div>
+
+  <div class="d-flex flex-column align-items-start justify-content-center col-6">
+    <div class="d-flex gap-3 align-items-center">
+      <h5 class="m-0">{{ car.brand }}</h5>
+      <p class="m-0">{{ car.model }}</p>
+    </div>
+
+    <p>Anno: {{ car.year }}</p>
+    <p>Prezzo: {{ car.price | number: '1.0-0' }}€</p>
+    <div *ngIf="car.available; else elseBlock" class="text-success">Disponibile</div>
+    <ng-template #elseBlock> <div class="text-danger">Non disponibile</div></ng-template>
+  </div>
+
+
+</div>

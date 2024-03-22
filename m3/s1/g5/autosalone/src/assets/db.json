@@ -68,5 +68,26 @@
       "year": 1863,
       "price": 1200,
       "available": true
+  },
+  {
+    "id": 8,
+    "brand": "Turiddu",
+    "brandLogo": "loghi/turiddu.png",
+    "model": "U Lapino",
+    "modelImage": "auto/u lapino.png",
+    "year": 1980,
+    "price": 10,
+    "available": false
+  },
+  {
+    "id": 9,
+    "brand": "Turiddu",
+    "brandLogo": "loghi/turiddu.png",
+    "model": "Cascia",
+    "modelImage": "auto/cascia.png",
+    "year": 1900,
+    "price": 1800,
+    "available": true
   }
+
 ]

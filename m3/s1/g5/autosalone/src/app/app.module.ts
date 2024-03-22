@@ -11,6 +11,7 @@ import { FiatComponent } from './pages/fiat/fiat.component';
 import { FordComponent } from './pages/ford/ford.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { DisclaimerComponent } from './main-components/disclaimer/disclaimer.component';
+import { TuridduComponent } from './pages/turiddu/turiddu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DisclaimerComponent } from './main-components/disclaimer/disclaimer.com
     FiatComponent,
     FordComponent,
     DetailsComponent,
-    DisclaimerComponent
+    DisclaimerComponent,
+    TuridduComponent
   ],
   imports: [
     BrowserModule,

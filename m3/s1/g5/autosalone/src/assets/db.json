@@ -58,5 +58,15 @@
         "year": 2020,
         "price": 41700,
         "available": false
-    }
+    },
+    {
+      "id": 7,
+      "brand": "Turiddu",
+      "brandLogo": "loghi/turiddu.png",
+      "model": "800A",
+      "modelImage": "auto/turiddu 800A.png",
+      "year": 1863,
+      "price": 1200,
+      "available": true
+  }
 ]

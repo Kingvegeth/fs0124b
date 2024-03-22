@@ -15,8 +15,9 @@ export class HomeComponent {
 
   ngOnInit(): void{
 
-    this.carsSvc.getAllCars().then(res => {
+    this.carsSvc.getRandomCars(2).then(res => {
       this.carsArr = res;
+
     });
   }
 }

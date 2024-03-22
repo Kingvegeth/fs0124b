@@ -30,4 +30,16 @@ export class CarsService {
     });
   }
 
+
+  getRandomCars(numCars: number = 2): Promise<iCar[]> {
+    return this.getAllCars().then(cars => {
+      let randomCars: iCar[] = [];
+      for(let i = 0; i < numCars; i++){
+        let randomIndex = Math.floor(Math.random() * cars.length);
+        randomCars.push(cars[randomIndex]);
+        cars.splice(randomIndex, 1);
+      }
+      return randomCars;
+    });
+  }
 }

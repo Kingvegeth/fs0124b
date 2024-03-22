@@ -5,6 +5,7 @@ import { AudiComponent } from './pages/audi/audi.component';
 import { FiatComponent } from './pages/fiat/fiat.component';
 import { FordComponent } from './pages/ford/ford.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { TuridduComponent } from './pages/turiddu/turiddu.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'details/:id',
     component:DetailsComponent
+  },
+  {
+    path:'turiddu',
+    component:TuridduComponent
   }
 ];
 

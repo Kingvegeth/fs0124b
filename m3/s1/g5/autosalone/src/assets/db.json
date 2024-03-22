@@ -1,73 +1,73 @@
 [
-    {
-        "id": 1,
-        "brand": "Fiat",
-        "brandLogo": "loghi/fiat.png",
-        "model": "500L",
-        "modelImage": "auto/fiat 500l.png",
-        "year": 2015,
-        "price": 7500,
-        "available": false
-    },
-    {
-        "id": 2,
-        "brand": "Fiat",
-        "brandLogo": "loghi/fiat.png",
-        "model": "500 Abarth",
-        "modelImage": "auto/fiat 500 abarth.png",
-        "year": 2010,
-        "price": 3500,
-        "available": true
-    },
-    {
-        "id": 3,
-        "brand": "Ford",
-        "brandLogo": "loghi/ford.png",
-        "model": "Taurus",
-        "modelImage": "auto/ford taurus.png",
-        "year": 2009,
-        "price": 5200,
-        "available": false
-    },
-    {
-        "id": 4,
-        "brand": "Ford",
-        "brandLogo": "loghi/ford.png",
-        "model": "Focus",
-        "modelImage": "auto/ford focus.png",
-        "year": 2014,
-        "price": 9700,
-        "available": true
-    },
-    {
-        "id": 5,
-        "brand": "Audi",
-        "brandLogo": "loghi/audi.png",
-        "model": "A3",
-        "modelImage": "auto/audi a3.png",
-        "year": 2012,
-        "price": 4300,
-        "available": true
-    },
-    {
-        "id": 6,
-        "brand": "Audi",
-        "brandLogo": "loghi/audi.png",
-        "model": "Q7",
-        "modelImage": "auto/audi q7.png",
-        "year": 2020,
-        "price": 41700,
-        "available": false
-    },
-    {
-      "id": 7,
-      "brand": "Turiddu",
-      "brandLogo": "loghi/turiddu.png",
-      "model": "800A",
-      "modelImage": "auto/turiddu 800A.png",
-      "year": 1863,
-      "price": 1200,
-      "available": true
+  {
+    "id": 1,
+    "brand": "Fiat",
+    "brandLogo": "loghi/fiat.png",
+    "model": "500L",
+    "modelImage": "auto/fiat 500l.png",
+    "year": 2015,
+    "price": 7500,
+    "available": false
+  },
+  {
+    "id": 2,
+    "brand": "Fiat",
+    "brandLogo": "loghi/fiat.png",
+    "model": "500 Abarth",
+    "modelImage": "auto/fiat 500 abarth.png",
+    "year": 2010,
+    "price": 3500,
+    "available": true
+  },
+  {
+    "id": 3,
+    "brand": "Ford",
+    "brandLogo": "loghi/ford.png",
+    "model": "Taurus",
+    "modelImage": "auto/ford taurus.png",
+    "year": 2009,
+    "price": 5200,
+    "available": false
+  },
+  {
+    "id": 4,
+    "brand": "Ford",
+    "brandLogo": "loghi/ford.png",
+    "model": "Focus",
+    "modelImage": "auto/ford focus.png",
+    "year": 2014,
+    "price": 9700,
+    "available": true
+  },
+  {
+    "id": 5,
+    "brand": "Audi",
+    "brandLogo": "loghi/audi.png",
+    "model": "A3",
+    "modelImage": "auto/audi a3.png",
+    "year": 2012,
+    "price": 4300,
+    "available": true
+  },
+  {
+    "id": 6,
+    "brand": "Audi",
+    "brandLogo": "loghi/audi.png",
+    "model": "Q7",
+    "modelImage": "auto/audi q7.png",
+    "year": 2020,
+    "price": 41700,
+    "available": false
+  },
+  {
+    "id": 7,
+    "brand": "Turiddu",
+    "brandLogo": "loghi/turiddu.png",
+    "model": "800A",
+    "modelImage": "auto/turiddu 800A.png",
+    "year": 1863,
+    "price": 1200,
+    "available": true
   },
   {
     "id": 8,
@@ -89,5 +89,4 @@
     "price": 1800,
     "available": true
   }
-
 ]

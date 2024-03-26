@@ -1,16 +1,16 @@
-import { Directive, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, OnInit, ElementRef} from '@angular/core';
 
 @Directive({
   selector: '[appRandomcolor]'
 })
 export class RandomcolorDirective implements OnInit {
 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  constructor(private el: ElementRef) { }
 
   ngOnInit() {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    this.renderer.setStyle(this.el.nativeElement, 'background-color', randomColor);
-    console.log(randomColor);
+    this.el.nativeElement.style.backgroundColor = randomColor;
+
   }
 
 }

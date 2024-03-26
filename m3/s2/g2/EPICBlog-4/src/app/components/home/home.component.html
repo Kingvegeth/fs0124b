@@ -9,7 +9,6 @@
   </button>
 </div>
 <div *ngIf="!showFilteredPosts">
-
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 text-start my-2">
     <div class="col" *ngFor="let article of articleArr.slice(0,2)">
       <div class="card mb-3 h-100 articolo border" [ngClass]="{'border-primary': article.active}">

@@ -9,9 +9,7 @@ export class CartService {
   cart: iProduct[] = [];
 
   addToCart(product: iProduct): void {
-    if (!this.cart.some(item => item.id === product.id)) {
       this.cart.push(product);
-    }
   }
 
   removeFromCart(product: iProduct): void {
@@ -20,8 +18,16 @@ export class CartService {
       this.cart.splice(index, 1);
     }
   }
-
   getCart(): iProduct[] {
     return this.cart;
+  }
+
+  getTotal(): number {
+    let total = 0;
+    for (let product of this.cart) {
+      total += product.price;
+      console.log('Valore del totale:', total);
+    }
+    return total;
   }
 }

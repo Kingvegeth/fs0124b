@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { iProduct } from '../../Models/iproduct';
 import { ProductsService } from '../../services/products.service';
 import { FavouritesService } from '../../services/favourites.service';
+import { CartService } from '../../services/cart.service';
 
 
 @Component({
@@ -13,9 +14,11 @@ export class HomeComponent {
 
   products:iProduct[]=[]
 
+
   constructor(
     private productSvc: ProductsService,
-    private favouritesSvc: FavouritesService
+    private favouritesSvc: FavouritesService,
+    private cartSvc: CartService
   ) {}
 
   ngOnInit(): void {
@@ -38,5 +41,18 @@ export class HomeComponent {
 
   isInFavourites(product: iProduct): boolean {
     return this.favourites.some(item => item.id === product.id);
+  }
+
+
+  addToCart(product: iProduct): void {
+    this.cartSvc.addToCart(product);
+  }
+
+  removeFromCart(product: iProduct): void {
+    this.cartSvc.removeFromCart(product);
+  }
+
+  get cart(): iProduct[] {
+    return this.cartSvc.getCart();
   }
 }

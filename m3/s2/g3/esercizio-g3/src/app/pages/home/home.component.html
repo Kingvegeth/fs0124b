@@ -24,7 +24,7 @@
       <div class="text-center d-flex gap-2 container mb-2">
         <button *ngIf="!isInFavourites(product)" class="btn btn-info" (click)="addToFavourites(product)">Aggiungi ai preferiti</button>
         <button *ngIf="isInFavourites(product)" class="btn btn-danger" (click)="removeFromFavourites(product)">Rimuovi dai preferiti</button>
-        <button class="btn btn-warning">Aggiungi al carrello</button>
+        <button class="btn btn-warning"(click)="addToCart(product)">Aggiungi al carrello</button>
       </div>
     </div>
   </div>

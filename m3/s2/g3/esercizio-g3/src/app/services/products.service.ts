@@ -15,4 +15,5 @@ export class ProductsService {
   getProducts(): Observable<iProducts> {
     return this.http.get<iProducts>(this.apiUrl);
   }
+
 }

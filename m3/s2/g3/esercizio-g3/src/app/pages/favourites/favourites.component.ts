@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { iProduct } from '../../Models/iproduct';
-import { ProductsService } from '../../services/products.service';
 import { FavouritesService } from '../../services/favourites.service';
 
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
-  styleUrl: './favourites.component.scss'
+  styleUrls: ['./favourites.component.scss']
 })
 export class FavouritesComponent implements OnInit {
   favourites: iProduct[] = [];
 
-  constructor(public favouritesSvc: FavouritesService) { }
+  constructor(private favouritesSvc: FavouritesService) { }
 
   ngOnInit(): void {
     this.favourites = this.favouritesSvc.getFavourites();
-    console.log(this.favourites);
+  }
 
+  removeFromFavourites(product: iProduct): void {
+    this.favouritesSvc.removeFromFavourites(product);
   }
 }

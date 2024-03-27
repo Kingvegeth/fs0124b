@@ -21,8 +21,6 @@ export class FavouritesService {
     }
   }
 
-
-
   getFavourites(): iProduct[] {
     return this.favourites;
   }

@@ -7,7 +7,7 @@ import { FavouritesService } from '../../services/favourites.service';
   templateUrl: './favourites.component.html',
   styleUrls: ['./favourites.component.scss']
 })
-export class FavouritesComponent implements OnInit {
+export class FavouritesComponent{
   favourites: iProduct[] = [];
 
   constructor(private favouritesSvc: FavouritesService) { }

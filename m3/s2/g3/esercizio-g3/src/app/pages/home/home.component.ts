@@ -13,6 +13,7 @@ import { CartService } from '../../services/cart.service';
 export class HomeComponent {
 
   products:iProduct[]=[]
+  showAlert: boolean = false;
 
 
   constructor(
@@ -46,6 +47,10 @@ export class HomeComponent {
 
   addToCart(product: iProduct): void {
     this.cartSvc.addToCart(product);
+    this.showAlert = true;
+    setTimeout(() => {
+      this.showAlert = false;
+    }, 1000);
   }
 
   removeFromCart(product: iProduct): void {

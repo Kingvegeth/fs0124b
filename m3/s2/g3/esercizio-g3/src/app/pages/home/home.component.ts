@@ -13,8 +13,8 @@ import { CartService } from '../../services/cart.service';
 export class HomeComponent {
 
   products:iProduct[]=[]
-  showAlert: boolean = false;
-
+  showCartAlert: boolean = false;
+  showFavAlert: boolean = false;
 
   constructor(
     private productSvc: ProductsService,
@@ -30,6 +30,10 @@ export class HomeComponent {
 
   addToFavourites(product: iProduct): void {
     this.favouritesSvc.addToFavourites(product);
+    this.showFavAlert = true;
+    setTimeout(() => {
+      this.showFavAlert = false;
+    }, 1000);
   }
 
   removeFromFavourites(product: iProduct): void {
@@ -47,9 +51,9 @@ export class HomeComponent {
 
   addToCart(product: iProduct): void {
     this.cartSvc.addToCart(product);
-    this.showAlert = true;
+    this.showCartAlert = true;
     setTimeout(() => {
-      this.showAlert = false;
+      this.showCartAlert = false;
     }, 1000);
   }
 

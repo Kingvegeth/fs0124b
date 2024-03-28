@@ -1,0 +1,17 @@
+
+ <h1>Una selezione delle nostre foto</h1>
+
+ <h2>Totale preferiti: {{favorites.length}}</h2>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex g-4 ">
+  <div *ngFor=" let p of photos.slice(0,69)" class="col">
+  <div  class="card" style="width: 18rem;">
+    <img [src]="p.thumbnailUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{p.title}}</h5>
+      <div class="d-flex justify-content-between">
+        <button (click)="deletePhoto(p.id)" class="btn bg-danger" >Elimina</button>
+        <button (click)="addToFavorites(p.id)" class="btn bg-info">&#9829;</button>
+      </div>
+    </div>
+  </div>
+  </div>

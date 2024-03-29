@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { iUser } from './models/iuser'; // Assicurati di importare l'interfaccia dell'utente
+import { iUser } from './models/iuser';
 
 @Injectable({
   providedIn: 'root'
@@ -808,7 +808,6 @@ export class UsersService {
       "title":"VP Sales"
     }
   ]
-  constructor() { }
 
   getAllUsers(): iUser[] {
     return this.userArr;

@@ -9,6 +9,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CompletedComponent } from './pages/completed/completed.component';
 import { IncompleteComponent } from './pages/incomplete/incomplete.component';
 import { UsersComponent } from './pages/users/users.component';
+import { FooterComponent } from './main-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UsersComponent } from './pages/users/users.component';
     HomepageComponent,
     CompletedComponent,
     IncompleteComponent,
-    UsersComponent
+    UsersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

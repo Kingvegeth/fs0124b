@@ -1,6 +1,6 @@
-<div *ngFor="let user of users">
+<div id="top" *ngFor="let user of users">
   <div
-    class="user-card row d-flex align-items-center justify-content-between bg-warning-subtle shadow-sm rounded-3 mb-3 gap-5"
+    class="user-card row d-flex align-items-center justify-content-between bg-warning-subtle shadow-sm rounded-4 mb-3 gap-5"
   >
     <div class="col-12 col-lg-5 d-flex align-items-center gap-4">
       <img [src]="user.image" alt="User Image" />
@@ -19,7 +19,7 @@
     <div class="col-11 col-lg-6 m-3">
       <h4>Cose da fare:</h4>
       <ng-container *ngIf="getTodosForUser(user.id).length > 0; else noTodos">
-        <div *ngFor="let todo of getTodosForUser(user.id)" class="task-badge p-2 my-3 d-flex align-items-start gap-1 shadow-sm rounded-1" [ngClass]="{ 'bg-success-subtle': todo.completed,  'bg-danger-subtle': !todo.completed }">
+        <div *ngFor="let todo of getTodosForUser(user.id)" class="task-badge p-2 my-3 d-flex align-items-start gap-1 shadow-sm rounded-4" [ngClass]="{ 'bg-success-subtle': todo.completed,  'bg-danger-subtle': !todo.completed }">
           <input class="mt-2" type="checkbox" [(ngModel)]="todo.completed" (change)="updateTodoStatus(todo)" />
           <div>
             <h6 class="fw-bold my-1">{{ todo.todo }}</h6>

@@ -28,4 +28,5 @@ export class HomepageComponent {
   updateTodoStatus(todo: iTodo): void {
     this.todoService.updateTodoStatus(todo.id, todo.completed);
   }
+
 }

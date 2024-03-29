@@ -1,0 +1,8 @@
+body{
+  background-image: url(./assets/img/todo-bg.png);
+}
+
+.task-badge:hover{
+  scale: 1.01;
+  filter: brightness(105%);
+}

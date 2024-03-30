@@ -1,5 +1,6 @@
 <div *ngFor="let todo of incompleteTodos">
-  <div class="task-badge p-2 px-3 my-2 d-flex align-items-start gap-1 shadow-sm rounded-4" [ngClass]="{ 'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed }">
+  <div class="task-badge p-2 px-3 my-2 d-flex align-items-start gap-1 shadow-sm rounded-4" 
+  [ngClass]="{ 'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed }">
     <input class="mt-2" type="checkbox" [(ngModel)]="todo.completed" (change)="updateTodoStatus(todo)">
     <div>
       <h6 class="fw-bold my-1">{{ todo.todo }}</h6>

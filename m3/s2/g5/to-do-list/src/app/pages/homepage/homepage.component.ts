@@ -14,6 +14,8 @@ export class HomepageComponent {
   todos: iTodo[] = [];
   users: iUser[] = [];
 
+  searchTerm: string = '';
+
   constructor(private todoService: TodoService, private usersService: UsersService) { }
 
   ngOnInit(): void {
@@ -22,11 +24,32 @@ export class HomepageComponent {
   }
 
   getUserById(userId: number): iUser | undefined {
-    return this.users.find(user => user.id === userId);
+    if (this.searchTerm.trim() === '') {
+      return this.users.find(user => user.id === userId);
+    } else {
+      return this.users.find(user => 
+        user.id === userId && 
+        (user.firstName.toLowerCase() + ' ' + user.lastName.toLowerCase()).includes(this.searchTerm.toLowerCase())
+      );
+    }
   }
 
   updateTodoStatus(todo: iTodo): void {
     this.todoService.updateTodoStatus(todo.id, todo.completed);
+  }
+
+  filterTodos(): void {
+    if (this.searchTerm.trim() !== '') {
+      this.todos = this.todoService.getAllTodo().filter(todo => {
+        const user = this.getUserById(todo.userId);
+        return user !== undefined;
+      });
+    } else this.todos = this.todoService.getAllTodo();
+  }
+
+  updateSearchTerm(event: any): void {
+    this.searchTerm = event.target.value.trim();
+    this.filterTodos();
   }
 
 }

@@ -14,7 +14,7 @@
   <div formGroupName="authData" class="form-row row">
     <div class="form-group col-12">
 
-      <div class="row row-cols-1 row-cols-md-3 gx-2 gy-2">
+      <div class="row row-cols-1 row-cols-md-3 gx-2">
         <div class="col">
           <input type="email" formControlName="email" class="form-control" placeholder="Email">
           <div *ngIf="form.get('authData.email')?.touched && form.get('authData.email')?.invalid" class="text-danger">

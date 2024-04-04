@@ -1,0 +1,25 @@
+<h1 class="mb-4">Pagina di login</h1>
+
+<form (ngSubmit)="submit(f)" #f="ngForm" novalidate>
+
+  <div ngModelGroup="authData" class="form-row row">
+    <div class="form-group col-6">
+      <input type="email" name="email" ngModel required email class="form-control"
+      placeholder="email" #email="ngModel">
+      <div *ngIf="email.invalid && email.touched" class="text-danger">
+        Devi inserire un'email valida.
+      </div>
+    </div>
+    <div class="form-group col-6">
+      <input type="password" name="password" ngModel required class="form-control"
+      placeholder="password" #password="ngModel">
+      <div *ngIf="password.invalid && password.touched" class="text-danger">
+        La password è obbligatoria.
+      </div>
+    </div>
+  </div>
+
+  <button  class="btn btn-danger my-3" [disabled]="f.invalid">Login</button>
+
+</form>
+

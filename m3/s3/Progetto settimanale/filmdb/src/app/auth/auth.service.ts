@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment.development';
 import { iLoginData } from '../Models/ilogindata';
+import { UsersService } from '../users.service';
 
 type AccessData = {
   accessToken:string,
@@ -33,7 +34,8 @@ export class AuthService {
 
     constructor(
       private http:HttpClient,
-      private router:Router
+      private router:Router,
+      private usersService: UsersService
       ) {
 
         this.restoreUser()
@@ -43,9 +45,14 @@ export class AuthService {
       registerUrl:string = environment.registerUrl
       loginUrl:string = environment.loginUrl
 
-  register(newUser:Partial<iUsers>):Observable<AccessData>{
-    return this.http.post<AccessData>(this.registerUrl,newUser)
-  }
+      register(newUser: Partial<iUsers>): Observable<AccessData> {
+        return this.http.post<AccessData>(this.registerUrl, newUser).pipe(
+          tap(data => {
+            this.usersService.updateUsersList();
+          })
+        );
+      }
+
 
   login(loginData: iLoginData, rememberMe: boolean): Observable<AccessData> {
     return this.http.post<AccessData>(this.loginUrl, loginData)

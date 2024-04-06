@@ -1,4 +1,9 @@
-header{
-  background-color: rgba(33, 37, 41, .6);
+header {
+  background-color: rgba(33, 37, 41, 1);
   backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(33, 37, 41, 0.6);
 }

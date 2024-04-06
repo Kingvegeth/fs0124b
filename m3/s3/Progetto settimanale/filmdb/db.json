@@ -23,6 +23,27 @@
       "lastName": "Mario",
       "id": 6,
       "favorites": []
+    },
+    {
+      "email": "rick@roll.it",
+      "password": "$2a$10$KCrpj5cB7OKUnh1dgDgKcOB271yG1E/DzzbfLBct9i3oxSeF2x18m",
+      "firstName": "Rick",
+      "lastName": "Astley",
+      "id": 7
+    },
+    {
+      "email": "simone@gmail.com",
+      "password": "$2a$10$2ufPfysGzkSNLRuXMN.DVem5d0rJpHBJ0AaXgJ56Jgmf74KFWVO1i",
+      "firstName": "Simone",
+      "lastName": "Nardo",
+      "id": 8
+    },
+    {
+      "email": "mago@otelma.com",
+      "password": "$2a$10$As5UyugbRb0SMXPQMB657eUuxYZ/4Xnp11Ws80p3S9vdFyZdlWtqS",
+      "firstName": "Mago",
+      "lastName": "Otelma",
+      "id": 9
     }
   ],
   "movies": [
@@ -384,10 +405,18 @@
       "id": 20,
       "title": "The Martian - Sopravvissuto",
       "year": 2015,
-      "genre": ["Avventura", "Drammatico", "Fantascienza"],
+      "genre": [
+        "Avventura",
+        "Drammatico",
+        "Fantascienza"
+      ],
       "duration": 144,
       "director": "Ridley Scott",
-      "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
+      "cast": [
+        "Matt Damon",
+        "Jessica Chastain",
+        "Kristen Wiig"
+      ],
       "plot": "Dopo essere stato lasciato indietro durante una missione su Marte, un astronauta deve trovare un modo per sopravvivere e tornare a casa.",
       "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ic1Ojv8jurZn4dFywHPBrvXMduf.jpg"
     }

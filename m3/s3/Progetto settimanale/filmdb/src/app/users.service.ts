@@ -28,4 +28,10 @@ export class UsersService {
     return this.http.get<iUsers[]>(this.usersUrl)
   }
 
+  updateUsersList(): void {
+    this.getAll().subscribe(users => {
+      this.usersSubject.next(users);
+    });
+  }
+
 }

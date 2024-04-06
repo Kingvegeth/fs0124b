@@ -1,32 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss'] // Corretto da styleUrl a styleUrls
 })
 export class HeaderComponent {
+  scrolled = false;
+  isUserLoggedIn = false;
 
-  show:boolean = false
-  isUserLoggedIn:boolean = false;
+  constructor(public authSvc: AuthService) {}
 
-  constructor(public authSvc:AuthService){}
-
-  ngOnInit(){
-
+  ngOnInit() {
     this.authSvc.isLoggedIn$.subscribe(data => {
-
       this.isUserLoggedIn = data;
-
-    })
+    });
   }
 
-
-
-  logout(){
-    this.authSvc.logout()
+  logout() {
+    this.authSvc.logout();
   }
 
-
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.pageYOffset > 155) {
+      this.scrolled = true;
+    } else {
+      this.scrolled = false;
+    }
+  }
 }

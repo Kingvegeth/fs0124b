@@ -11,8 +11,8 @@ import { iLoginData } from '../../Models/ilogindata';
 export class LoginComponent {
 
   loginData:iLoginData = {
-    email:'mario@varano.it',
-    password:'mario'
+    email:'simone@gmail.com',
+    password:'password'
   }
 
   rememberMe: boolean = false;

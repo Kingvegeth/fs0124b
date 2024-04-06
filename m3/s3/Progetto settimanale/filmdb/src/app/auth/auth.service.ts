@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { iUsers } from '../Models/iusers';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, of, switchMap, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment.development';
@@ -54,18 +54,23 @@ export class AuthService {
       }
 
 
-  login(loginData: iLoginData, rememberMe: boolean): Observable<AccessData> {
-    return this.http.post<AccessData>(this.loginUrl, loginData)
-      .pipe(tap(data => {
-        this.authSubject.next(data.user);
-        if (rememberMe) {
-          localStorage.setItem('accessData', JSON.stringify(data));
-        } else {
-          sessionStorage.setItem('accessData', JSON.stringify(data));
-        }
-        this.autoLogout(data.accessToken);
-      }));
-  }
+      login(loginData: iLoginData, rememberMe: boolean): Observable<AccessData> {
+        return this.http.post<AccessData>(this.loginUrl, loginData)
+          .pipe(
+            tap(data => {
+              this.authSubject.next(data.user);
+              if (rememberMe) {
+                localStorage.setItem('accessData', JSON.stringify(data));
+              } else {
+                sessionStorage.setItem('accessData', JSON.stringify(data));
+              }
+              this.autoLogout(data.accessToken);
+            }),
+            catchError(error => {
+              return of(error);
+            })
+          );
+      }
 
   logout(){
 
@@ -108,6 +113,43 @@ export class AuthService {
     this.authSubject.next(accessData.user);
     this.autoLogout(accessData.accessToken);
   }
+
+  getCurrentUserId(): number | null {
+    const currentUser = this.authSubject.value;
+    return currentUser ? currentUser.id : null;
+  }
+
+  addFavorite(userId: number, movieId: number): Observable<any> {
+    const url = `${environment.usersUrl}/${userId}`;
+    return this.http.get<any>(url).pipe(
+      tap(user => {
+        const favorites = Array.isArray(user.favorites) ? user.favorites : [];
+        if (!favorites.includes(movieId)) {
+          const updatedFavorites = [...favorites, movieId];
+          const updatedUser = { ...user, favorites: updatedFavorites };
+          this.http.patch<any>(url, { favorites: updatedFavorites }).subscribe(() => {
+            this.authSubject.next(updatedUser);
+          });
+        }
+      })
+    );
+  }
+  deleteFavorite(userId: number, movieId: number): Observable<any> {
+    const url = `${environment.usersUrl}/${userId}`;
+    return this.http.get<any>(url).pipe(
+      tap(user => {
+        const favorites = Array.isArray(user.favorites) ? user.favorites : [];
+        if (favorites.includes(movieId)) {
+          const updatedFavorites = favorites.filter((id: number) => id !== movieId);
+          const updatedUser = { ...user, favorites: updatedFavorites };
+          this.http.patch<any>(url, { favorites: updatedFavorites }).subscribe(() => {
+            this.authSubject.next(updatedUser);
+          });
+        }
+      })
+    );
+  }
+
 
   errors(err: any) {
     switch (err.error) {

@@ -9,5 +9,6 @@ export interface iMovies {
   cast: string[]
   plot: string
   image: string
+  isFavorite: boolean;
 
 }

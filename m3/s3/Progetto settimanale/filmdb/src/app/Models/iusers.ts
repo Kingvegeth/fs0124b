@@ -6,6 +6,5 @@ export interface iUsers {
   email: string
   password: string
   favorites: number[]
-
 }
 

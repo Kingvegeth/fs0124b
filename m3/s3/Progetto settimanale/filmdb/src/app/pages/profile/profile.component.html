@@ -1,10 +1,7 @@
 <div class="container mt-5">
   <h1 class="text-white mb-4">Il tuo profilo</h1>
-  <div class="card text-white">
+  <div class="card card-profile text-white">
     <div class="row g-0">
-      <!-- <div class="col-md-4">
-        <img src="avatar.jpg" class="img-fluid" alt="Avatar">
-      </div> -->
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">{{currentUser?.firstName}} {{currentUser?.lastName}}</h5>
@@ -14,5 +11,24 @@
       </div>
     </div>
   </div>
+  <div class="card-film mt-4">
+    <h2 class="text-white mb-3">I tuoi film preferiti</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+      <div class="col mb-4 position-relative" *ngFor="let movie of favoriteMovies">
+        <div class="card bg-dark text-white movie-card">
+          <img [src]="movie.image" class="card-img-top img-fluid" alt="Cover immagine di {{movie.title}}">
+          <div class="overlay"></div>
+          <div class="card-body ">
+            <h5 class="card-title">{{movie.title}}</h5>
+            <p class="card-text"><strong>Anno:</strong> {{movie.year}}</p>
+            <p class="card-text"><strong>Durata:</strong> {{movie.duration}} minuti</p>
+            <p class="card-text"><strong>Generi:</strong> {{movie.genre.join(', ')}}</p>
+            <button class="btn btn-danger" (click)="removeFromFavorites(movie.id)">Rimuovi dai preferiti</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 

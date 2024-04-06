@@ -24,6 +24,8 @@ export class UsersService {
     })
   }
 
+
+
   getAll(){
     return this.http.get<iUsers[]>(this.usersUrl)
   }

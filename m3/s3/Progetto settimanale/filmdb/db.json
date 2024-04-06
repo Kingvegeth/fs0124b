@@ -1,49 +1,41 @@
 {
   "users": [
     {
-      "email": "cexa@mailinator.com",
-      "password": "$2a$10$cMfJ7QPZGiuDyebrf/MePOqBIzNG7QZwJVkSRnB4gI6kJiB2JTq3e",
-      "firstName": "Morgan",
-      "lastName": "Boyle",
-      "id": 4,
-      "favorites": []
+      "email": "pippo@franco.it",
+      "password": "$2a$10$NY.FT30cvuSLunM83kpu/OtU6J1Jc8.2nazZEWuzBzUqahqVoxSbq",
+      "firstName": "Pippo",
+      "lastName": "Franco",
+      "id": 1,
+      "favorites": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "email": "simone@epicode.it",
+      "password": "$2a$10$HqxIwDF2cYNijkG1ZsK3c..17vf4wbE/eA4QBJtqAOElcl41qfJe.",
+      "firstName": "Simone",
+      "lastName": "Nardo",
+      "id": 2,
+      "favorites": [
+        2,
+        4,
+        13
+      ]
     },
     {
       "email": "mario@varano.it",
-      "password": "$2a$10$nAQZHlv5sl4eHhLhI67.OeOCRBlvGrfNjMEXUdaDWRJqf059ci2VK",
+      "password": "$2a$10$8oyP8OgtPQwANIWYQQ6LZOIUYLpXXQj8eK7KUaX.mYs6F8Fj5jP7m",
       "firstName": "Mario",
       "lastName": "Varano",
-      "id": 5,
-      "favorites": []
-    },
-    {
-      "email": "mario@mario.it",
-      "password": "$2a$10$rerolVPLwqY2fgOZrq0Sw.0sUvSnE4Jk76.WKcJ0pFC0zyFhjd76i",
-      "firstName": "Mario",
-      "lastName": "Mario",
-      "id": 6,
-      "favorites": []
-    },
-    {
-      "email": "rick@roll.it",
-      "password": "$2a$10$KCrpj5cB7OKUnh1dgDgKcOB271yG1E/DzzbfLBct9i3oxSeF2x18m",
-      "firstName": "Rick",
-      "lastName": "Astley",
-      "id": 7
-    },
-    {
-      "email": "simone@gmail.com",
-      "password": "$2a$10$2ufPfysGzkSNLRuXMN.DVem5d0rJpHBJ0AaXgJ56Jgmf74KFWVO1i",
-      "firstName": "Simone",
-      "lastName": "Nardo",
-      "id": 8
-    },
-    {
-      "email": "mago@otelma.com",
-      "password": "$2a$10$As5UyugbRb0SMXPQMB657eUuxYZ/4Xnp11Ws80p3S9vdFyZdlWtqS",
-      "firstName": "Mago",
-      "lastName": "Otelma",
-      "id": 9
+      "id": 3,
+      "favorites": [
+        15,
+        10,
+        5,
+        3
+      ]
     }
   ],
   "movies": [

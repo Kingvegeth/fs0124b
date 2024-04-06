@@ -1,0 +1,395 @@
+{
+  "users": [
+    {
+      "email": "cexa@mailinator.com",
+      "password": "$2a$10$cMfJ7QPZGiuDyebrf/MePOqBIzNG7QZwJVkSRnB4gI6kJiB2JTq3e",
+      "firstName": "Morgan",
+      "lastName": "Boyle",
+      "id": 4,
+      "favorites": []
+    },
+    {
+      "email": "mario@varano.it",
+      "password": "$2a$10$nAQZHlv5sl4eHhLhI67.OeOCRBlvGrfNjMEXUdaDWRJqf059ci2VK",
+      "firstName": "Mario",
+      "lastName": "Varano",
+      "id": 5,
+      "favorites": []
+    },
+    {
+      "email": "mario@mario.it",
+      "password": "$2a$10$rerolVPLwqY2fgOZrq0Sw.0sUvSnE4Jk76.WKcJ0pFC0zyFhjd76i",
+      "firstName": "Mario",
+      "lastName": "Mario",
+      "id": 6,
+      "favorites": []
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Il Padrino: Parte III",
+      "year": 1990,
+      "genre": [
+        "Poliziesco",
+        "Drammatico"
+      ],
+      "duration": 162,
+      "director": "Francis Ford Coppola",
+      "cast": [
+        "Al Pacino",
+        "Diane Keaton",
+        "Andy Garcia"
+      ],
+      "plot": "Michael Corleone cerca di liberare la sua famiglia dal mondo del crimine mentre si confronta con i suoi nemici interni ed esterni.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hK11AO5ys2XXZ79iclOCBQLb2g0.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Il Signore degli Anelli: Le Due Torri",
+      "year": 2002,
+      "genre": [
+        "Avventura",
+        "Drammatico",
+        "Fantasy"
+      ],
+      "duration": 179,
+      "director": "Peter Jackson",
+      "cast": [
+        "Elijah Wood",
+        "Ian McKellen",
+        "Viggo Mortensen"
+      ],
+      "plot": "La seconda parte della saga epica mentre la compagnia si divide e affronta nuove sfide nella loro missione per distruggere l'anello.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fVKewiBPcY2dQujYEsnQmQ7lfRZ.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Salvate il soldato Ryan",
+      "year": 1998,
+      "genre": [
+        "Drammatico",
+        "Guerra"
+      ],
+      "duration": 169,
+      "director": "Steven Spielberg",
+      "cast": [
+        "Tom Hanks",
+        "Matt Damon",
+        "Tom Sizemore"
+      ],
+      "plot": "Durante la Seconda Guerra Mondiale, un gruppo di soldati viene incaricato di trovare e salvare un soldato dietro le linee nemiche.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iRvttKKh8ZSWNYXPxDm3IUqLlB3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Departed - Il bene e il male",
+      "year": 2006,
+      "genre": [
+        "Poliziesco",
+        "Drammatico",
+        "Thriller"
+      ],
+      "duration": 151,
+      "director": "Martin Scorsese",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Matt Damon",
+        "Jack Nicholson"
+      ],
+      "plot": "Un giovane poliziotto sotto copertura si infiltra nella mafia mentre un membro della mafia si infiltra nel dipartimento di polizia.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nT97ifVT2J1yMQmeq20Qblg61T.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Il Gladiatore",
+      "year": 2000,
+      "genre": [
+        "Azione",
+        "Drammatico"
+      ],
+      "duration": 155,
+      "director": "Ridley Scott",
+      "cast": [
+        "Russell Crowe",
+        "Joaquin Phoenix",
+        "Connie Nielsen"
+      ],
+      "plot": "Un generale romano diventa gladiatore per vendicare la morte della sua famiglia e per sfidare l'imperatore corrotto che ha causato la loro caduta.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xrbcYeeuUOppd5cNET9dooP2Wk6.jpg"
+    },
+    {
+      "id": 6,
+      "title": "The Prestige",
+      "year": 2006,
+      "genre": [
+        "Drammatico",
+        "Giallo",
+        "Thriller"
+      ],
+      "duration": 130,
+      "director": "Christopher Nolan",
+      "cast": [
+        "Christian Bale",
+        "Hugh Jackman",
+        "Scarlett Johansson"
+      ],
+      "plot": "Due illusionisti rivali intraprendono una lotta per la supremazia durante l'epoca vittoriana.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xKsiJimxRa44FArhlfGHnylrT0i.jpg"
+    },
+    {
+      "id": 7,
+      "title": "I Soliti Sospetti",
+      "year": 1995,
+      "genre": [
+        "Poliziesco",
+        "Giallo",
+        "Thriller"
+      ],
+      "duration": 106,
+      "director": "Bryan Singer",
+      "cast": [
+        "Kevin Spacey",
+        "Gabriel Byrne",
+        "Chazz Palminteri"
+      ],
+      "plot": "Dopo un violento massacro, un gruppo di criminali sospettati viene interrogato dalla polizia, ma c'è molto di più di quanto sembri.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2aazroY8WZBdtDRxXOZXKvefPam.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Green Book",
+      "year": 2018,
+      "genre": [
+        "Biografico",
+        "Commedia",
+        "Drammatico"
+      ],
+      "duration": 130,
+      "director": "Peter Farrelly",
+      "cast": [
+        "Viggo Mortensen",
+        "Mahershala Ali",
+        "Linda Cardellini"
+      ],
+      "plot": "La storia di un pianista afroamericano e del suo autista bianco durante un tour nel profondo sud degli Stati Uniti negli anni '60.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8JdWhorq2dIjePyc2BMSiRi1d4i.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Revenant - Redivivo",
+      "year": 2015,
+      "genre": [
+        "Azione",
+        "Avventura",
+        "Drammatico"
+      ],
+      "duration": 156,
+      "director": "Alejandro González Iñárritu",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Tom Hardy",
+        "Domhnall Gleeson"
+      ],
+      "plot": "Un cacciatore viene lasciato per morto dai suoi compagni e deve sopravvivere da solo nelle terre selvagge americane.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eK3WHDEGHsNm8SconE56cuDu7vm.jpg"
+    },
+    {
+      "id": 10,
+      "title": "A Beautiful Mind",
+      "year": 2001,
+      "genre": [
+        "Biografico",
+        "Drammatico",
+        "Romantico"
+      ],
+      "duration": 135,
+      "director": "Ron HoGuerrad",
+      "cast": [
+        "Russell Crowe",
+        "Ed Harris",
+        "Jennifer Connelly"
+      ],
+      "plot": "La storia vera del genio matematico John Nash e del suo spirito di sopravvivenza mentre lotta con la schizofrenia.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bsVAjDLllFLEkuS1HwU96bbvkw5.jpg"
+    },
+    {
+      "id": 11,
+      "title": "The Truman Show",
+      "year": 1998,
+      "genre": [
+        "Commedia",
+        "Drammatico",
+        "Fantascienza"
+      ],
+      "duration": 103,
+      "director": "Peter Weir",
+      "cast": [
+        "Jim Carrey",
+        "Ed Harris",
+        "Laura Linney"
+      ],
+      "plot": "Un uomo scopre che la sua vita è in realtà un reality show televisivo e cerca di fuggire dalla sua esistenza controllata.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vniJPHHUpjdVPTSGxn6b3z93nyK.jpg"
+    },
+    {
+      "id": 12,
+      "title": "The Social Network",
+      "year": 2010,
+      "genre": [
+        "Biografico",
+        "Drammatico"
+      ],
+      "duration": 120,
+      "director": "David Fincher",
+      "cast": [
+        "Jesse Eisenberg",
+        "Andrew Garfield",
+        "Justin Timberlake"
+      ],
+      "plot": "La storia della nascita di Facebook e delle controversie che hanno circondato il suo fondatore, Mark Zuckerberg.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aZJxgQCqDrg5ALD4OhNc4yRNAkW.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "genre": [
+        "Poliziesco",
+        "Drammatico"
+      ],
+      "duration": 154,
+      "director": "Quentin Tarantino",
+      "cast": [
+        "John Travolta",
+        "Uma Thurman",
+        "Samuel L. Jackson"
+      ],
+      "plot": "Una serie di storie interconnesse che coinvolgono gangster, un pugile, un boss della droga e una coppia di criminali.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9p10J9Xp7MuaVac56g8BwAuXEsA.jpg"
+    },
+    {
+      "id": 14,
+      "title": "La ricerca della felicità",
+      "year": 2006,
+      "genre": [
+        "Biografico",
+        "Drammatico"
+      ],
+      "duration": 117,
+      "director": "Gabriele Muccino",
+      "cast": [
+        "Will Smith",
+        "Thandie Newton",
+        "Jaden Smith"
+      ],
+      "plot": "La storia vera di Chris Gardner, un uomo che lotta contro l'omeless e le difficoltà mentre cerca di costruire una vita migliore per sé e suo figlio.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jAPWniIzOPWeKvnaPuGEXBF9iP4.jpg"
+    },
+    {
+      "id": 15,
+      "title": "The Intouchables - Gli Intoccabili",
+      "year": 2011,
+      "genre": [
+        "Biografico",
+        "Commedia",
+        "Drammatico"
+      ],
+      "duration": 112,
+      "director": "Olivier Nakache, Éric Toledano",
+      "cast": [
+        "François Cluzet",
+        "Omar Sy",
+        "Anne Le Ny"
+      ],
+      "plot": "La storia vera di un ricco paraplegico e del suo insolito assistente di colore che cambia la sua vita.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oFCOi5DzZYgKk5gSjglBigSrmpK.jpg"
+    },
+    {
+      "id": 16,
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "genre": [
+        "Biografico",
+        "Poliziesco",
+        "Drammatico"
+      ],
+      "duration": 180,
+      "director": "Martin Scorsese",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Jonah Hill",
+        "Margot Robbie"
+      ],
+      "plot": "La storia vera di Jordan Belfort, un broker di Wall Street che finisce coinvolto in frodi e crimini finanziari.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hwg3pXw2m4HfRGbyRMIP8laf5Lf.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Il Re Leone",
+      "year": 1994,
+      "genre": [
+        "Animazione",
+        "Avventura",
+        "Drammatico"
+      ],
+      "duration": 88,
+      "director": "Roger Allers, Rob Minkoff",
+      "cast": [
+        "Matthew Broderick",
+        "Jeremy Irons",
+        "James Earl Jones"
+      ],
+      "plot": "La storia di un giovane leone che deve affrontare la responsabilità di diventare il re della savana dopo la morte di suo padre.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8FfIaBWb1IEmUf2c71IMGwz7wXv.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Il Cavaliere Oscuro - Il Ritorno",
+      "year": 2012,
+      "genre": [
+        "Azione",
+        "Thriller"
+      ],
+      "duration": 164,
+      "director": "Christopher Nolan",
+      "cast": [
+        "Christian Bale",
+        "Tom Hardy",
+        "Anne Hathaway"
+      ],
+      "plot": "Batman deve affrontare un terrorista mascherato noto come Bane, che minaccia Gotham City.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4Op2hWPNa5JygwbmLs1O1pDAm7L.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Avengers",
+      "year": 2012,
+      "genre": [
+        "Azione",
+        "Avventura",
+        "Fantascienza"
+      ],
+      "duration": 143,
+      "director": "Joss Whedon",
+      "cast": [
+        "Robert Downey Jr.",
+        "Chris Evans",
+        "Scarlett Johansson"
+      ],
+      "plot": "Un gruppo di supereroi si riunisce per combattere una minaccia aliena e salvare il mondo.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/5jXmtKZoZSKJPy6F8jKUvM6103T.jpg"
+    },
+    {
+      "id": 20,
+      "title": "The Martian - Sopravvissuto",
+      "year": 2015,
+      "genre": ["Avventura", "Drammatico", "Fantascienza"],
+      "duration": 144,
+      "director": "Ridley Scott",
+      "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
+      "plot": "Dopo essere stato lasciato indietro durante una missione su Marte, un astronauta deve trovare un modo per sopravvivere e tornare a casa.",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ic1Ojv8jurZn4dFywHPBrvXMduf.jpg"
+    }
+  ]
+}

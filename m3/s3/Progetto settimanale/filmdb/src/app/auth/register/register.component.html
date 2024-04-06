@@ -1,0 +1,25 @@
+<div class="register-wrapper d-flex justify-content-center align-items-center m-0">
+<form class="d-flex flex-column gap-3  p-5  col-6 m-auto text-white">
+  <h1>Registrati</h1>
+
+  <input type="text" name="firstName"
+  [(ngModel)]="registerData.firstName"
+  class="form-control" placeholder="nome">
+
+  <input type="text" name="lastName"
+  [(ngModel)]="registerData.lastName"
+  class="form-control" placeholder="cognome">
+
+  <input type="email" name="email"
+  [(ngModel)]="registerData.email"
+  class="form-control register-text" placeholder="email">
+
+  <input type="password" name="password"
+  [(ngModel)]="registerData.password"
+  class="form-control register-text" placeholder="password">
+
+  <button (click)="signUp()" class="btn btn-success mt-2">Registrati</button>
+
+
+</form>
+</div>

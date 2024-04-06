@@ -1,0 +1,19 @@
+.login-wrapper{
+  height: calc(100vh - 70px)
+}
+
+form{
+  border-radius: 20px;
+
+  background-color: rgba(33, 37, 41, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.login-text{
+  height: 50px;
+}
+
+.btn{
+  color: white;
+  font-weight: bold;
+}

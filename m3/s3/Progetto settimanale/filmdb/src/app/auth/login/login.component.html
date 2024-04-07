@@ -1,9 +1,6 @@
 <div class="login-wrapper d-flex justify-content-center align-items-center m-0">
   <form class="d-flex flex-column gap-3 text-white p-5 col-6 m-auto">
     <h1>Accedi</h1>
-    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-      {{ errorMessage }} Riprova o <a routerLink="/auth/register" class="text-black">crea un nuovo account.</a>
-    </div>
     <input type="email" name="email" [(ngModel)]="loginData.email" class="form-control login-text" placeholder="email">
     <input type="password" name="password" [(ngModel)]="loginData.password" class="form-control login-text" placeholder="password">
 

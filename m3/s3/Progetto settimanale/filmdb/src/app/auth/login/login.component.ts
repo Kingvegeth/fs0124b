@@ -11,13 +11,12 @@ import { iLoginData } from '../../Models/ilogindata';
 export class LoginComponent {
 
   loginData:iLoginData = {
-    email:'pippo@franco.it',
+    email:'simone@epicode.it',
     password:'password'
   }
 
   rememberMe: boolean = false;
 
-  errorMessage: string = '';
 
   constructor(
     private authSvc:AuthService,
@@ -29,10 +28,6 @@ export class LoginComponent {
         .subscribe({
           next: (data) => {
             this.router.navigate(['/movies']);
-          },
-          error: (error) => {
-            this.errorMessage = 'Dati inseriti non validi.';
-            console.error('Errore di login:', error);
           }
         });
     }

@@ -114,6 +114,8 @@ export class AuthService {
     this.autoLogout(accessData.accessToken);
   }
 
+
+
   getCurrentUserId(): number | null {
     const currentUser = this.authSubject.value;
     return currentUser ? currentUser.id : null;

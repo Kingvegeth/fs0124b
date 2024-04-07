@@ -3,7 +3,7 @@ import { iMovies } from './Models/imovies';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { environment } from '../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 
 
 @Injectable({
@@ -39,10 +39,7 @@ export class MoviesService {
   }
 
   getFavorites(favoriteIds: number[]): Observable<iMovies[]> {
-
-    const queryParams = favoriteIds.map(id => `id=${id}`).join('&');
-    const url = `${environment.moviesUrl}?${queryParams}`;
-
-    return this.http.get<iMovies[]>(url);
+    const favoriteMovies = this.moviesArray.filter(movie => favoriteIds.includes(movie.id));
+    return of(favoriteMovies);
   }
 }

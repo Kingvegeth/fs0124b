@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { iUsers } from '../Models/iusers';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, Observable, catchError, map, of, switchMap, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment.development';
@@ -67,7 +67,7 @@ export class AuthService {
               this.autoLogout(data.accessToken);
             }),
             catchError(error => {
-              return of(error);
+              throw error;
             })
           );
       }

@@ -26,10 +26,13 @@ public class Main {
     public static String maxThree(int n) {
         switch (n) {
             case 0:
+                return "Il numero inserito è zero";
             case 1:
+                return "Il numero inserito è uno";
             case 2:
+                return "Il numero inserito è due";
             case 3:
-                return "Il numero inserito è " + n;
+                return "Il numero inserito è tre";
             default:
                 return "Il numero inserito non è valido!";
         }
@@ -44,7 +47,7 @@ public class Main {
             int i = 0;
             while (i < charArr.length - 1) {
                 System.out.print(charArr[i] + ",");
-            i++;
+                i++;
             }
             System.out.println(charArr[charArr.length-1]);
         }

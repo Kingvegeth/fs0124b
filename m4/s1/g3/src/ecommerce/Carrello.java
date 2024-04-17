@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Carrello {
 
-    String cliente;
-    ArrayList<String> articoli;
-    float totale;
+    private String cliente;
+    private ArrayList<String> articoli;
+    private float totale;
 
 
     public Carrello(){

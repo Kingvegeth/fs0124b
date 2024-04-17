@@ -23,9 +23,9 @@ public class Carrello {
 
     public void leggiCarrello(){
         System.out.println("Cliente: "+cliente);
-        System.out.println("Articoli nel carrello");
+        System.out.println("Articoli nel carrello:");
         for (int i =0; i< articoli.size(); i++){
-            System.out.println(articoli.get(i));
+            System.out.println("- " + articoli.get(i));
         }
         System.out.println("Totale: " + totale + "€");
     }

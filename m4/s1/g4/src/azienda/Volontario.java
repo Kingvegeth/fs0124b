@@ -18,6 +18,6 @@ public class Volontario implements turni{
 
     @Override
     public void checkin() {
-
+        System.out.println("Il volontario " + this.nome + " " + this.cognome + " inizia il turno alle ore 15:00");
     }
 }

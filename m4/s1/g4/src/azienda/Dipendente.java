@@ -39,7 +39,19 @@ public abstract class Dipendente implements turni{
 
     @Override
     public void checkin() {
-
+        String ruolo = "";
+        String inizioTurno = "";
+        if (this instanceof DipendenteFullTime){
+            ruolo="Dipendente Full Time";
+            inizioTurno = "09:00";
+        } else if (this instanceof DipendentePartTime) {
+            ruolo="Dipendente Part Time";
+            inizioTurno = "10:30";
+        } else if (this instanceof Dirigente) {
+            ruolo="Dirigente";
+            inizioTurno = "11:00";
+        }
+        System.out.println("Il " + ruolo + " con matricola " + this.getMatricola() + " inizia il turno alle ore " + inizioTurno);
     }
 }
 

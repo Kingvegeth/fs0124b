@@ -1,6 +1,6 @@
 package azienda;
 
-public class DipendentePartTime extends Dipendente{
+public class DipendentePartTime extends Dipendente implements turni{
 
     private int oreLavorative;
 
@@ -20,6 +20,10 @@ public class DipendentePartTime extends Dipendente{
     }
 
 
-
-
+    @Override
+    public void checkin() {
+        String ruolo = "dipendente part time";
+        String inizioTurno ="10:30";
+        System.out.println("Il " + ruolo + " con matricola " + this.getMatricola() + " inizia il turno alle ore " + inizioTurno + ".");
+    }
 }

@@ -4,9 +4,9 @@ import it.epicode.mediaPlayer.Interfacce.ElementiVisualizzabili;
 
 public class Immagine extends Media implements ElementiVisualizzabili {
 
-    private int luminosita =5;
+    private int luminosita =5;  //la luminosità ha un valore di default pari a 5
 
-    public Immagine(String titolo){
+    public Immagine(String titolo){ //costruttore dell'immagine
         this.setTitolo(titolo);
     }
 
@@ -16,17 +16,17 @@ public class Immagine extends Media implements ElementiVisualizzabili {
     }
 
 
-    public void show(){
+    public void show(){ //metodo che apre l'immagine.
 
         System.out.print(this.getTitolo() + " - ");
         for (int i = 0; i<this.getLuminosita(); i++){
-            System.out.print("*");
+            System.out.print("*"); //mostra un numero di * pari al valore di luminosità
         }
 
     }
 
     @Override
-    public void alzaLuminosita() {
+    public void alzaLuminosita() {  //questo metodo aumenta la luminosità, ma non se è già al massimo
         if(luminosita<10){
             luminosita++;
         } else{
@@ -35,7 +35,7 @@ public class Immagine extends Media implements ElementiVisualizzabili {
     }
 
     @Override
-    public void abbassaLuminosita() {
+    public void abbassaLuminosita() { //questo metodo riduce la luminosità, ma non se è già al minimo
         if(luminosita>0){
             luminosita--;
         } else{

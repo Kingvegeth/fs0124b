@@ -1,15 +1,18 @@
 package it.epicode.mediaPlayer;
 
-public class Immagine extends Media implements ElementiVisualizzabili{
+import it.epicode.mediaPlayer.Interfacce.ElementiVisualizzabili;
 
-    private int luminosita;
+public class Immagine extends Media implements ElementiVisualizzabili {
+
+    private int luminosita =5;
+
+    public Immagine(String titolo){
+        this.setTitolo(titolo);
+    }
+
 
     public int getLuminosita() {
         return luminosita;
-    }
-
-    public void setLuminosita(int luminosita) {
-        this.luminosita = luminosita;
     }
 
 
@@ -22,10 +25,9 @@ public class Immagine extends Media implements ElementiVisualizzabili{
 
     }
 
-
     @Override
     public void alzaLuminosita() {
-        if(luminosita<100){
+        if(luminosita<10){
             luminosita++;
         } else{
             System.out.println("Luminosità già al massimo!");

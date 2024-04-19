@@ -1,16 +1,16 @@
 package it.epicode.mediaPlayer;
 
-public class Video extends Riproducibile implements ElementiVisualizzabili{
+import it.epicode.mediaPlayer.Interfacce.ElementiVisualizzabili;
 
-    private int luminosita;
+public class Video extends Riproducibile implements ElementiVisualizzabili {
+
+    private int luminosita = 5;
 
 
     public Video(String titolo, int durata){
 
         this.setTitolo(titolo);
         this.setDurata(durata);
-        this.setLuminosita(50);
-        this.setVolume(50);
 
     }
 
@@ -18,11 +18,6 @@ public class Video extends Riproducibile implements ElementiVisualizzabili{
     public int getLuminosita() {
         return luminosita;
     }
-
-    public void setLuminosita(int luminosita) {
-        this.luminosita = luminosita;
-    }
-
 
 
     @Override
@@ -45,7 +40,7 @@ public class Video extends Riproducibile implements ElementiVisualizzabili{
 
     @Override
     public void alzaLuminosita() {
-        if(luminosita<100){
+        if(luminosita<10){
             luminosita++;
         } else{
             System.out.println("Luminosità già al massimo!");

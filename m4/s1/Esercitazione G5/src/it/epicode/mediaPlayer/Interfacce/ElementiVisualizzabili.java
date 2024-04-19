@@ -1,4 +1,4 @@
-package it.epicode.mediaPlayer;
+package it.epicode.mediaPlayer.Interfacce;
 
 public interface ElementiVisualizzabili {
 

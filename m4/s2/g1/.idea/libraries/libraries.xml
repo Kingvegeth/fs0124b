@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../librerie java/logback-classic-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../librerie java/logback-core-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../librerie java/slf4j-api-1.7.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

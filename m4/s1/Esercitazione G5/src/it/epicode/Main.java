@@ -26,7 +26,5 @@ public class Main {
         //test di apertura dell'immagine
         mikePirata.alzaLuminosita();
         mikePirata.show();
-
-
     }
 }

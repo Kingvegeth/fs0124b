@@ -33,7 +33,6 @@ public class Program {
         rubrica.put("Danilo", new Rubrica("Danilo", "3471451229"));
         rubrica.put("Simone", new Rubrica("Simone", "3496666666"));
         rubrica.put("Francesca", new Rubrica("Francesca", "3481234567"));
-        rubrica.put("Chiara", new Rubrica("Chiara", "3451122334"));
         rubrica.put("Andrea", new Rubrica("Alessandro", "3498765432"));
         rubrica.put("Sara", new Rubrica("Sara", "3475647382"));
 

@@ -27,8 +27,12 @@ public class Program {
 
     private static void oddsOrEvens (ArrayList<Integer> list, boolean b){
 
-        int j = b ? 1 : 0;
+        int j = b ? 0 : 1;
+        String parita = null;
+        if (j==0) parita = "pari";
+        else parita = "dispari";
 
+        System.out.println("Stampa degli elementi con indice " + parita);
         for (int i = j;i<list.size(); i=i+2){
             System.out.print(list.get(i) + " ,");
         }
@@ -39,10 +43,13 @@ public class Program {
 
         var list = generateList(20);
 
+        System.out.println();
         System.out.println(list);
+        System.out.println();
         System.out.println(listaDoppia(list));
+        System.out.println();
         oddsOrEvens(list,true);
-        //oddsOrEvens(list,false);
+        System.out.println();
     }
 
 

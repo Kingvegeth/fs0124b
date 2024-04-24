@@ -32,9 +32,12 @@ public class Program {
         if (j==0) parita = "pari";
         else parita = "dispari";
 
-        System.out.println("Stampa degli elementi con indice " + parita);
-        for (int i = j;i<list.size(); i=i+2){
-            System.out.print(list.get(i) + " ,");
+        System.out.println("Elementi con indice " + parita);
+        for (int i = j; i < list.size(); i += 2) {
+            System.out.print(list.get(i));
+            if (i + 2 < list.size()) {
+                System.out.print(", ");
+            }
         }
     }
 

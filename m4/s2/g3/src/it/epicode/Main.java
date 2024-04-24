@@ -52,7 +52,7 @@ public class Main {
                 .toList();
 
         System.out.println("Lista di libri con prezzo maggiore di 20");
-        libriCostosi.forEach(product -> System.out.println("Prodotto: " + product.getName() + ", Prezzo: " + product.getPrice()));
+        libriCostosi.forEach(product -> System.out.println("Prodotto: " + product.getName() + " - Prezzo: " + product.getPrice() + "€"));
 
 
 
@@ -67,7 +67,7 @@ public class Main {
         ordiniBaby.forEach(order -> {
             System.out.println("ID ordine: " + order.getId());
             order.getProducts().forEach(product -> {
-                System.out.println("Prodotto: " + product.getName() + ", Categoria: " + product.getCategory() + ", Prezzo: " + product.getPrice());
+                System.out.println("Prodotto: " + product.getName() + " - Categoria: " + product.getCategory() + " - Prezzo: " + product.getPrice() + "€");
             });
         });
 
@@ -79,7 +79,7 @@ public class Main {
                 .toList();
         System.out.println();
         System.out.println("Lista di prodotti di categoria Boys scontati del 10%");
-        boysToDiscount.forEach(product -> System.out.println("Prodotto: "+ product.getName() + ", Categria: " + product.getCategory() + ", Prezzo Scontato: " + product.getPrice()));
+        boysToDiscount.forEach(product -> System.out.println("Prodotto: "+ product.getName() + " - Categria: " + product.getCategory() + " - Prezzo Scontato: " + product.getPrice() + "€"));
 
 
         //***** ESERCIZIO 4 *****
@@ -90,7 +90,7 @@ public class Main {
                 .flatMap(order -> order.getProducts().stream())
                 .toList();
 
-        tier2OrderedProducts.forEach(product -> System.out.format("%nLista di prodotti ordinati tra il 01/02/21 e il 01/04/21 da clienti di livello 2%nProdotto: " + product.getName() + ", Categoria: " + product.getCategory() + ", Prezzo: " + product.getPrice()));
+        tier2OrderedProducts.forEach(product -> System.out.format("%nLista di prodotti ordinati tra il 01/02/21 e il 01/04/21 da clienti di livello 2%nProdotto: " + product.getName() + " - Categoria: " + product.getCategory() + " - Prezzo: " + product.getPrice() + "€"));
     }
 
 

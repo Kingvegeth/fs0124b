@@ -85,8 +85,8 @@ public class Main {
         //***** ESERCIZIO 4 *****
 
         List<Product> tier2OrderedProducts = orders.stream()
-                .filter(order -> order.getOrderDate() != null && order.getOrderDate().compareTo(LocalDate.of(2021, 2, 1)) >= 0 && order.getOrderDate().compareTo(LocalDate.of(2021, 4, 1)) <= 0)
-                .filter(order -> order.getCustomer() != null && order.getCustomer().getTier() == 2)
+                .filter(order -> order.getOrderDate().compareTo(LocalDate.of(2021, 2, 1)) >= 0 && order.getOrderDate().compareTo(LocalDate.of(2021, 4, 1)) <= 0)
+                .filter(order -> order.getCustomer().getTier() == 2)
                 .flatMap(order -> order.getProducts().stream())
                 .toList();
 

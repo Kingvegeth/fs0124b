@@ -20,6 +20,6 @@ public class Rivista extends Pubblicazione {
 
     @Override
     public String toString() {
-        return super.toString() + " Rivista{" + "frequenza=" + frequenza + '}';
+        return "- RIVISTA - ISBN: " + getISBN() +  ", titolo: '" + getTitolo() + "', periodicità: " + getFrequenza() ;
     }
 }

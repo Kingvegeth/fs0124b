@@ -30,9 +30,6 @@ public class Libro extends Pubblicazione {
 
     @Override
     public String toString() {
-        return "Libro{" +
-                "autore='" + autore + '\'' +
-                ", genere='" + genere + '\'' +
-                '}';
+        return "- LIBRO - ISBN: " + getISBN() +  ", titolo: '" + getTitolo() + "', autore: '" + getAutore() + "', genere: '" + getGenere() + "'";
     }
 }

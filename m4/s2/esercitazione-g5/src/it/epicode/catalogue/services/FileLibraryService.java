@@ -1,7 +1,7 @@
-package it.epicode.catalogo.services;
-import it.epicode.catalogo.data.Book;
-import it.epicode.catalogo.data.Publication;
-import it.epicode.catalogo.data.Magazine;
+package it.epicode.catalogue.services;
+import it.epicode.catalogue.data.Book;
+import it.epicode.catalogue.data.Publication;
+import it.epicode.catalogue.data.Magazine;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +43,7 @@ public class FileLibraryService implements LibraryService {
                 iterator.remove(); // Rimuove la pubblicazione se l'ISBN corrisponde
                 found = true;
                 save(); // Salva le modifiche
-                System.out.println("Pubblicazione con ISBN " + ISBN + " rimossa con successo.");
+                System.out.println("Pubblicazione '" + publication.getTitle() + "' eliminata con successo.");
                 break;
             }
         }
@@ -142,7 +142,14 @@ public class FileLibraryService implements LibraryService {
 
                 try {
                     long ISBN = Long.parseLong(parts[1].replaceAll("\"", "").trim());
-                    Book book = getBook(parts, ISBN);
+                    String titolo = parts[2].replaceAll("\"", "").trim();
+                    int annoPubblicazione = Integer.parseInt(parts[3].replaceAll("\"", "").trim());
+                    int numeroPagine = Integer.parseInt(parts[4].replaceAll("\"", "").trim());
+                    String autore = parts[5].replaceAll("\"", "").trim();
+                    String genere = parts[6].replaceAll("\"", "").trim();
+
+                    Book book = new Book(titolo, annoPubblicazione, numeroPagine, autore, genere);
+                    book.setISBN(ISBN);
                     library.add(book);
 
                     if (ISBN > maxISBN) {
@@ -157,18 +164,6 @@ public class FileLibraryService implements LibraryService {
         } catch (IOException e) {
             logger.error("Errore durante il caricamento", e);
         }
-    }
-
-    private static Book getBook(String[] parts, long ISBN) {
-        String titolo = parts[2].replaceAll("\"", "").trim();
-        int annoPubblicazione = Integer.parseInt(parts[3].replaceAll("\"", "").trim());
-        int numeroPagine = Integer.parseInt(parts[4].replaceAll("\"", "").trim());
-        String autore = parts[5].replaceAll("\"", "").trim();
-        String genere = parts[6].replaceAll("\"", "").trim();
-
-        Book book = new Book(titolo, annoPubblicazione, numeroPagine, autore, genere);
-        book.setISBN(ISBN);
-        return book;
     }
 
 }

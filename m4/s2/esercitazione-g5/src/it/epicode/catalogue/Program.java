@@ -1,9 +1,9 @@
-package it.epicode.catalogo;
+package it.epicode.catalogue;
 
-import it.epicode.catalogo.data.Frequency;
-import it.epicode.catalogo.data.Book;
-import it.epicode.catalogo.data.Magazine;
-import it.epicode.catalogo.services.FileLibraryService;
+import it.epicode.catalogue.data.Frequency;
+import it.epicode.catalogue.data.Book;
+import it.epicode.catalogue.data.Magazine;
+import it.epicode.catalogue.services.FileLibraryService;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package it.epicode.catalogo.data;
+package it.epicode.catalogue.data;
 
 public enum Frequency {
 

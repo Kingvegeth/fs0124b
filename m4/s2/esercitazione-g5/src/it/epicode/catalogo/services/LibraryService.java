@@ -1,23 +1,23 @@
 package it.epicode.catalogo.services;
 
-import it.epicode.catalogo.data.Pubblicazione;
+import it.epicode.catalogo.data.Publication;
 
 import java.util.List;
 
 public interface LibraryService {
 
 
-    void addPublication(Pubblicazione pubblicazione);
+    void addPublication(Publication publication);
 
     void removeByISBN(Long ISBN);
 
-    List<Pubblicazione> findByISBN(Long ISBN);
+    List<Publication> findByISBN(Long ISBN);
 
-    List<Pubblicazione> findByYear(int year);
+    List<Publication> findByYear(int year);
 
-    List<Pubblicazione> findByAuthor(String author);
+    List<Publication> findByAuthor(String author);
 
-    List<Pubblicazione> getAllPublications();
+    List<Publication> getAllPublications();
 
     void save();
 

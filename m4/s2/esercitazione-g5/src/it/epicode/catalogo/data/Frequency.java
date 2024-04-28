@@ -1,6 +1,6 @@
 package it.epicode.catalogo.data;
 
-public enum Frequenza {
+public enum Frequency {
 
     SETTIMANALE,
     MENSILE,

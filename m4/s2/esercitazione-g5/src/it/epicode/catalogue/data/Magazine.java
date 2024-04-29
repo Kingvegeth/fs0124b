@@ -24,14 +24,14 @@ public class Magazine extends Publication {
     /**
      * Restituisce la periodicità della rivista.
      *
-     * @return La periodicità come valore dell'enum Frequenza.
+     * @return La periodicità come valore dell'enum Frequency.
      */
     public Frequency getFrequency() {
         return frequency;
     }
 
     /**
-     * Override del metodo toString per fornire una rappresentazione stringa dell'oggetto Rivista.
+     * Override del metodo toString per fornire una rappresentazione stringa dell'oggetto Magazine.
      * Utile per la stampa diretta delle informazioni della rivista.
      *
      * @return Una stringa che rappresenta la rivista, includendo ISBN, titolo e periodicità.

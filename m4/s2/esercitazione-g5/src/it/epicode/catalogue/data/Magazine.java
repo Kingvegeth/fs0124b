@@ -38,6 +38,10 @@ public class Magazine extends Publication {
      */
     @Override
     public String toString() {
-        return "- RIVISTA - ISBN: " + getISBN() + ", titolo: '" + getTitle() + "', periodicità: " + getFrequency();
+        // Ottiene la rappresentazione stringa dell'enum e applica la formattazione
+        String frequencyFormatted = getFrequency().name().toLowerCase();
+        frequencyFormatted = Character.toUpperCase(frequencyFormatted.charAt(0)) + frequencyFormatted.substring(1);
+
+        return "- RIVISTA - ISBN: " + getISBN() + ", titolo: '" + getTitle() + "', periodicità: " + frequencyFormatted;
     }
 }

@@ -1,5 +1,6 @@
 package it.epicode.catalogue.services;
 import it.epicode.catalogue.data.Book;
+import it.epicode.catalogue.data.Frequency;
 import it.epicode.catalogue.data.Publication;
 import it.epicode.catalogue.data.Magazine;
 import org.apache.commons.io.FileUtils;
@@ -134,23 +135,42 @@ public class FileLibraryService implements LibraryService {
         try {
             List<String> lines = FileUtils.readLines(f, StandardCharsets.ISO_8859_1);
             for (String line : lines) {
-                String[] parts = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1); // Gestisce correttamente le virgole all'interno delle " "
-                if (parts.length < 7) {
+                // Questa espressione regolare gestisce le virgole all'interno di testi racchiusi tra virgolette
+                String[] parts = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                if (parts.length < 5) {
                     logger.error("Riga non valida o incompleta: {}", line);
                     continue;
                 }
 
                 try {
                     long ISBN = Long.parseLong(parts[1].replaceAll("\"", "").trim());
-                    String titolo = parts[2].replaceAll("\"", "").trim();
-                    int annoPubblicazione = Integer.parseInt(parts[3].replaceAll("\"", "").trim());
-                    int numeroPagine = Integer.parseInt(parts[4].replaceAll("\"", "").trim());
-                    String autore = parts[5].replaceAll("\"", "").trim();
-                    String genere = parts[6].replaceAll("\"", "").trim();
+                    String title = parts[2].replaceAll("\"", "").trim();
+                    int yearPublished = Integer.parseInt(parts[3].replaceAll("\"", "").trim());
+                    int pageCount = Integer.parseInt(parts[4].replaceAll("\"", "").trim());
 
-                    Book book = new Book(titolo, annoPubblicazione, numeroPagine, autore, genere);
-                    book.setISBN(ISBN);
-                    library.add(book);
+                    if ("Book".equals(parts[0].replaceAll("\"", "").trim())) {
+                        if (parts.length < 7) {
+                            logger.error("Informazioni insufficienti per creare un libro: {}", line);
+                            continue;
+                        }
+                        String author = parts[5].replaceAll("\"", "").trim();
+                        String genre = parts[6].replaceAll("\"", "").trim();
+                        Book book = new Book(title, yearPublished, pageCount, author, genre);
+                        book.setISBN(ISBN);
+                        library.add(book);
+                    } else if ("Magazine".equals(parts[0].replaceAll("\"", "").trim())) {
+                        if (parts.length < 6) {
+                            logger.error("Informazioni insufficienti per creare una rivista: {}", line);
+                            continue;
+                        }
+                        Frequency frequency = Frequency.valueOf(parts[5].replaceAll("\"", "").trim());
+                        Magazine magazine = new Magazine(title, yearPublished, pageCount, frequency);
+                        magazine.setISBN(ISBN);
+                        library.add(magazine);
+                    } else {
+                        logger.error("Tipo di pubblicazione non riconosciuto: {}", line);
+                        continue;
+                    }
 
                     if (ISBN > maxISBN) {
                         maxISBN = ISBN;
@@ -160,10 +180,11 @@ public class FileLibraryService implements LibraryService {
                 }
             }
 
-            nextISBN = maxISBN + 1;
+            nextISBN = maxISBN + 1; // Aggiorna il prossimo ISBN disponibile
         } catch (IOException e) {
             logger.error("Errore durante il caricamento", e);
         }
     }
+
 
 }

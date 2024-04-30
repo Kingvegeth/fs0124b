@@ -14,19 +14,12 @@ public class EventoDAO {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
     EntityManager em = emf.createEntityManager();
 
-    public void save() {
-
-
-
-        var e = new Evento(1L, "Suicidio di massa", new Date(), TipoEvento.PUBBLICO, "Basta con Java, basta con Nello, Accogliamo la pace eterna!", 1000);
+    public void save(Evento e) {
 
         EntityTransaction trans = em.getTransaction();
         trans.begin();
 
-
         em.persist(e);
-
-
         trans.commit();
 
         em.close();
@@ -41,8 +34,10 @@ public class EventoDAO {
 
         EntityTransaction trans = em.getTransaction();
         trans.begin();
+
         em.remove(getById(id));
         trans.commit();
+
         em.close();
         emf.close();
 

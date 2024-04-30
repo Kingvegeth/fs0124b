@@ -30,6 +30,7 @@ public class Evento {
     @Column(name = "numero_massimo_partecipanti", nullable = false)
     private int numeroMassimoPartecipanti;
 
+    public Evento(){}
 
     public Evento(Long id, String titolo, Date dataEvento, TipoEvento tipoEvento, String descrizione, int numeroMassimoPartecipanti) {
         this.id = id;
@@ -90,13 +91,12 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" +
+        return "Evento - " +
                 "id=" + id +
                 ", titolo='" + titolo + '\'' +
                 ", dataEvento=" + dataEvento +
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
-                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
-                '}';
+                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti ;
     }
 }

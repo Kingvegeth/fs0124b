@@ -1,7 +1,9 @@
-package it.epicode.eserciziog2;
+package it.epicode.eserciziog3;
 
+import it.epicode.eserciziog3.enums.TipoEvento;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -10,6 +12,7 @@ import java.util.Date;
 public class Evento {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     @Column(name = "titolo", length = 50, nullable = false)
@@ -17,6 +20,10 @@ public class Evento {
 
     @Column(name = "data_evento", nullable = false)
     private Date dataEvento;
+
+    @ManyToOne
+    @JoinColumn(name = "id_location")
+    private Location location;
 
     @Column(name = "descrizione", length = 100, nullable = true)
     private String descrizione;
@@ -27,15 +34,21 @@ public class Evento {
     @Column(name = "numero_massimo_partecipanti", nullable = false)
     private int numeroMassimoPartecipanti;
 
+    @OneToMany(mappedBy = "evento")
+    private ArrayList<Partecipazione> listaPartecipazioni;
+
+
     public Evento(){}
 
-    public Evento(Long id, String titolo, Date dataEvento, TipoEvento tipoEvento, String descrizione, int numeroMassimoPartecipanti) {
-        this.id = id;
+    public Evento(String titolo, Date dataEvento, TipoEvento tipoEvento, String descrizione, int numeroMassimoPartecipanti, Location location) {
+
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.tipoEvento = tipoEvento;
         this.descrizione = descrizione;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+        this.location = location;
+
     }
 
     public Long getId() {
@@ -94,6 +107,7 @@ public class Evento {
                 ", dataEvento=" + dataEvento +
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
-                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti ;
+                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
+                ", location=" + location;
     }
 }

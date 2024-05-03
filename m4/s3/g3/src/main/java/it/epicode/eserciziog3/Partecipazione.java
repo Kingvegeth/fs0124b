@@ -12,11 +12,9 @@ public class Partecipazione {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id_persona")
     private Persona persona;
 
     @ManyToOne
-    @JoinColumn(name = "id_evento")
     private Evento evento;
 
     @Enumerated(EnumType.STRING)

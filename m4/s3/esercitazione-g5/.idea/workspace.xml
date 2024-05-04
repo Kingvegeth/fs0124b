@@ -4,26 +4,105 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="" />
+    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/constants/Tables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/enums/Frequency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/services/IsbValidatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/services/IsbnValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Kingvegeth"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kingvegeth/fs0124b.git",
+    "accountId": "0a085533-b99f-4d03-b703-25cf75bbb452"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2fxWBIX1SPLiLsqtJlcHLyRlRxj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Program.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kingv/Desktop/Progetti/Corso Full Stack/fs0124b/m4/s2/esercitazione-g5",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kingv\Desktop\Progetti\Corso Full Stack\fs0124b\m4\s3\esercitazione-g5\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.epicode.app.Program" />
+      <module name="esercitazione-g5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.epicode.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -74,6 +74,13 @@ public class LibraryItemDaoImpl implements LibraryItemDao {
         }
     }
 
+
+    @Override
+    public List<LibraryItem> getAllItems() {
+        return em.createQuery("SELECT i FROM LibraryItem i", LibraryItem.class)
+                .getResultList();
+    }
+
     @Override
     public void removeItemByISBN(String isbn) {
         try {

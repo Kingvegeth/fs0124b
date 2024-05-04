@@ -25,9 +25,6 @@ public class Magazine extends LibraryItem {
         return frequency;
     }
 
-    public void setFrequency(Frequency frequency) {
-        this.frequency = frequency;
-    }
 
     @Override
     public String toString() {

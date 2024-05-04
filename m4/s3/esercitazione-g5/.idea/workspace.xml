@@ -4,29 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/constants/Tables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/enums/Frequency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/services/IsbValidatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/services/IsbnValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="Primo commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +100,19 @@
       <option name="presentableId" value="Default" />
       <updated>1714743073234</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primo commit">
+      <option name="closed" value="true" />
+      <created>1714832117256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714832117256</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primo commit" />
   </component>
 </project>

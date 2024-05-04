@@ -35,29 +35,6 @@ public abstract class LibraryItem extends BaseEntity {
 		return title;
 	}
 
-	public int getPublicationYear() {
-		return publicationYear;
-	}
-
-	public int getPages() {
-		return pages;
-	}
-
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public void setPublicationYear(int publicationYear) {
-		this.publicationYear = publicationYear;
-	}
-
-	public void setPages(int pages) {
-		this.pages = pages;
-	}
 
 	@Override
 	public String toString() {

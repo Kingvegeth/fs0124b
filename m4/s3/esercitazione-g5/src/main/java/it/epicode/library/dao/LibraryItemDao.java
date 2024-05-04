@@ -14,6 +14,8 @@ public interface LibraryItemDao {
     void addItem(LibraryItem item);
 
 
+    List<LibraryItem> getAllItems();
+
     void removeItemByISBN(String isbn);
 
     LibraryItem getItemByISBN(String isbn);

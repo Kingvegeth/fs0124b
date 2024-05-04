@@ -1,18 +1,14 @@
 package it.epicode.app;
 
-import it.epicode.library.dao.LibraryItemDao;
-import it.epicode.library.dao.LibraryItemDaoImpl;
-import it.epicode.library.dao.LoanDao;
-import it.epicode.library.dao.LoanDaoImpl;
-import it.epicode.library.entities.Book;
-import it.epicode.library.entities.LibraryItem;
-import it.epicode.library.entities.Loan;
-import it.epicode.library.entities.Magazine;
+import it.epicode.library.dao.*;
+import it.epicode.library.entities.*;
 import it.epicode.library.entities.enums.Frequency;
 import it.epicode.library.services.IsbValidatorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,21 +20,49 @@ public class Program {
 		IsbValidatorImpl isbnValidator = new IsbValidatorImpl();
 		LibraryItemDaoImpl libraryItemDao = new LibraryItemDaoImpl();
 		LoanDao loanDao = new LoanDaoImpl();
+		UserDaoImpl userDao = new UserDaoImpl();
 
 		// Menu
 		Scanner scanner = new Scanner(System.in);
 		int choice;
 		do {
-			System.out.println("Menu:");
+			System.out.println("Menu Principale:");
+			System.out.println("1. Gestione Elementi");
+			System.out.println("2. Gestione Prestiti");
+			System.out.println("0. Esci");
+			System.out.print("Scelta: ");
+			choice = scanner.nextInt();
+
+			switch (choice) {
+				case 1:
+					manageItemsMenu(libraryItemDao, isbnValidator);
+					break;
+				case 2:
+					manageLoansMenu(loanDao, userDao);
+					break;
+				case 0:
+					System.out.println("Uscita...");
+					break;
+				default:
+					System.out.println("Scelta non valida!");
+			}
+		} while (choice != 0);
+		scanner.close();
+	}
+
+	private static void manageItemsMenu(LibraryItemDao libraryItemDao, IsbValidatorImpl isbnValidator) {
+		Scanner scanner = new Scanner(System.in);
+		int choice;
+		do {
+			System.out.println("Menu Gestione Elementi:");
 			System.out.println("1. Aggiungi elemento al catalogo");
 			System.out.println("2. Rimuovi elemento dal catalogo dato un codice ISBN");
 			System.out.println("3. Ricerca per ISBN");
 			System.out.println("4. Ricerca per anno di pubblicazione");
 			System.out.println("5. Ricerca per autore");
-			System.out.println("6. Ricerca per titolo o parte di esso");
-			System.out.println("7. Ricerca degli elementi attualmente in prestito dato un numero di tessera utente");
-			System.out.println("8. Ricerca di tutti i prestiti scaduti e non ancora restituiti");
-			System.out.println("0. Esci");
+			System.out.println("6. Ricerca per titolo");
+			System.out.println("7. Visualizza tutti gli elementi nel catalogo");
+			System.out.println("0. Torna al Menu Principale");
 			System.out.print("Scelta: ");
 			choice = scanner.nextInt();
 
@@ -62,19 +86,47 @@ public class Program {
 					searchByTitle(libraryItemDao);
 					break;
 				case 7:
-					searchLoansByTessera(loanDao);
-					break;
-				case 8:
-					searchOverdueLoans(loanDao);
+					displayAllItems(libraryItemDao);
 					break;
 				case 0:
-					System.out.println("Uscita...");
+					System.out.println("Tornando al Menu Principale...");
 					break;
 				default:
 					System.out.println("Scelta non valida!");
 			}
 		} while (choice != 0);
-		scanner.close();
+	}
+
+	private static void manageLoansMenu(LoanDao loanDao, UserDao userDao) {
+		Scanner scanner = new Scanner(System.in);
+		int choice;
+		do {
+			System.out.println("Menu Gestione Prestiti:");
+			System.out.println("1. Aggiungi un utente");
+			System.out.println("2. Aggiungi un prestito");
+			System.out.println("3. Ricerca degli elementi attualmente in prestito dato un numero di tessera utente");
+			System.out.println("4. Ricerca di tutti i prestiti scaduti e non ancora restituiti");
+			System.out.println("0. Torna al Menu Principale");
+			System.out.print("Scelta: ");
+			choice = scanner.nextInt();
+
+			switch (choice) {
+				case 1:
+					addUser((UserDaoImpl) userDao);
+					break;
+				case 3:
+					searchLoansByTessera(loanDao);
+					break;
+				case 4:
+					searchOverdueLoans(loanDao);
+					break;
+				case 0:
+					System.out.println("Tornando al Menu Principale...");
+					break;
+				default:
+					System.out.println("Scelta non valida!");
+			}
+		} while (choice != 0);
 	}
 
 	private static void addLibraryItem(LibraryItemDao libraryItemDao, IsbValidatorImpl isbnValidator) {
@@ -89,14 +141,14 @@ public class Program {
 			int publicationYear = scanner.nextInt();
 			System.out.print("Numero di pagine: ");
 			int pages = scanner.nextInt();
-			scanner.nextLine();  // Consumiamo il newline dopo nextInt()
+			scanner.nextLine();
 
 			System.out.println("Seleziona il tipo di elemento:");
 			System.out.println("1. Libro");
 			System.out.println("2. Rivista");
 			System.out.print("Scelta: ");
 			int elementType = scanner.nextInt();
-			scanner.nextLine();  // Consumiamo il newline dopo nextInt()
+			scanner.nextLine();
 
 			LibraryItem newItem = null;
 			if (elementType == 1) {
@@ -175,6 +227,42 @@ public class Program {
 		log.debug("Elementi trovati per titolo {}: {}", titleToSearch, itemsByTitle);
 	}
 
+	private static void displayAllItems(LibraryItemDao libraryItemDao) {
+		List<LibraryItem> allItems = libraryItemDao.getAllItems();
+		if (allItems.isEmpty()) {
+			System.out.println("Nessun elemento nel catalogo.");
+		} else {
+			System.out.println("Elementi nel catalogo:");
+			for (LibraryItem item : allItems) {
+				System.out.println(item);
+			}
+		}
+	}
+
+	private static void addUser(UserDaoImpl userDao) {
+		Scanner scanner = new Scanner(System.in);
+		try {
+			System.out.println("Aggiungi un utente:");
+			System.out.print("Nome: ");
+			String nome = scanner.nextLine();
+			System.out.print("Cognome: ");
+			String cognome = scanner.nextLine();
+			System.out.print("Data di nascita (formato yyyy-MM-dd): ");
+			String dataDiNascitaStr = scanner.nextLine();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Date dataDiNascita = sdf.parse(dataDiNascitaStr);
+			System.out.print("Numero tessera: ");
+			int numeroTessera = scanner.nextInt();
+
+			User newUser = new User(nome, cognome, dataDiNascita, numeroTessera);
+			userDao.addUser(newUser);
+			log.debug("Utente aggiunto: {}", newUser);
+		} catch (Exception e) {
+			log.error("Errore durante l'aggiunta dell'utente", e);
+		}
+	}
+	
+	
 	private static void searchLoansByTessera(LoanDao loanDao) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Inserisci il numero di tessera utente: ");

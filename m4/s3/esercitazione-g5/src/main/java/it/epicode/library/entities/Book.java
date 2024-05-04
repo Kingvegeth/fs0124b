@@ -17,7 +17,7 @@ public class Book extends LibraryItem {
 
 
 
-	public Book() {}
+	public Book(){}
 
 	public Book(String isbn, String title, int publicationYear, int pages, String author, String genre) {
 		super(isbn, title, publicationYear, pages);
@@ -32,17 +32,11 @@ public class Book extends LibraryItem {
 		return author;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
 
 	public String getGenre() {
 		return genre;
 	}
 
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
 
 	@Override
 	public String toString() {

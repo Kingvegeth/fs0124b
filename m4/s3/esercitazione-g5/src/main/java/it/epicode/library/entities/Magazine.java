@@ -14,7 +14,6 @@ public class Magazine extends LibraryItem {
     private Frequency frequency;
 
 
-
     public Magazine() {}
     public Magazine(String isbn, String title, int publicationYear, int pages, Frequency frequency) {
         super(isbn, title, publicationYear, pages);
@@ -28,7 +27,6 @@ public class Magazine extends LibraryItem {
 
     @Override
     public String toString() {
-        // Ottiene la rappresentazione stringa dell'enum e applica la formattazione
         String frequencyFormatted = getFrequency().name().toLowerCase();
         frequencyFormatted = Character.toUpperCase(frequencyFormatted.charAt(0)) + frequencyFormatted.substring(1);
 

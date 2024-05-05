@@ -31,33 +31,18 @@ public class User extends BaseEntity {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
 
     public String getCognome() {
         return cognome;
     }
 
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
-    }
-
-    public Date getDataDiNascita() {
-        return dataDiNascita;
-    }
-
-    public void setDataDiNascita(Date dataDiNascita) {
-        this.dataDiNascita = dataDiNascita;
-    }
 
     public int getNumeroTessera() {
         return numeroTessera;
     }
 
-    public void setNumeroTessera(int numeroTessera) {
-        this.numeroTessera = numeroTessera;
-    }
+
 
     @Override
     public String toString() {

@@ -1,21 +1,15 @@
 package it.epicode.library.dao;
 
-import it.epicode.library.entities.Book;
 import it.epicode.library.entities.LibraryItem;
-import it.epicode.library.entities.Magazine;
-import it.epicode.library.entities.enums.Frequency;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.Persistence;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
-import java.util.Scanner;
+
 
 public class LibraryItemDaoImpl implements LibraryItemDao {
 
-    private static final Logger log = LoggerFactory.getLogger(LibraryItemDaoImpl.class);
 
     private static final String PERSISTENCE_UNIT = "JPA_Sample";
     private final EntityManager em;
@@ -28,14 +22,11 @@ public class LibraryItemDaoImpl implements LibraryItemDao {
     @Override
     public boolean isValidIsbn(String code) {
         code = code.replace("-", "");
-        switch (code.length()) {
-            case 10:
-                return checkIsbn10(code);
-            case 13:
-                return checkIsbn13(code);
-            default:
-                return false;
-        }
+        return switch (code.length()) {
+            case 10 -> checkIsbn10(code);
+            case 13 -> checkIsbn13(code);
+            default -> false;
+        };
     }
 
     private boolean checkIsbn10(String code) {
@@ -104,49 +95,47 @@ public class LibraryItemDaoImpl implements LibraryItemDao {
             return em.createQuery("SELECT i FROM LibraryItem i WHERE i.isbn = :isbn", LibraryItem.class)
                     .setParameter("isbn", isbn)
                     .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
         } catch (Exception e) {
-            throw e;
+            System.out.println("Si è verificato un errore durante la ricerca per ISBN.");
+            return null;
         }
     }
 
     @Override
     public List<LibraryItem> getItemsByPublicationYear(int publicationYear) {
-        return em.createQuery("SELECT i FROM LibraryItem i WHERE i.publicationYear = :publicationYear", LibraryItem.class)
-                .setParameter("publicationYear", publicationYear)
-                .getResultList();
+        try {
+            return em.createQuery("SELECT i FROM LibraryItem i WHERE i.publicationYear = :publicationYear", LibraryItem.class)
+                    .setParameter("publicationYear", publicationYear)
+                    .getResultList();
+        } catch (Exception e) {
+            System.out.println("\u001B[31m" + "Si è verificato un errore durante la ricerca per anno di pubblicazione.\n \u001B[0m");
+            return null;
+        }
     }
 
     @Override
     public List<LibraryItem> getItemsByAuthor(String author) {
-        return em.createQuery("SELECT b FROM Book b WHERE LOWER(b.author) LIKE LOWER(:author)", LibraryItem.class)
-                .setParameter("author", "%" + author.toLowerCase() + "%")
-                .getResultList();
+        try {
+            return em.createQuery("SELECT b FROM Book b WHERE LOWER(b.author) LIKE LOWER(:author)", LibraryItem.class)
+                    .setParameter("author", "%" + author.toLowerCase() + "%")
+                    .getResultList();
+        } catch (Exception e) {
+            System.out.println("\u001B[31m" + "Si è verificato un errore durante la ricerca per autore.\n \u001B[0m");
+            return null;
+        }
     }
 
     @Override
     public List<LibraryItem> getItemsByTitle(String title) {
-        return em.createQuery("SELECT i FROM LibraryItem i WHERE LOWER(i.title) LIKE LOWER(:title)", LibraryItem.class)
-                .setParameter("title", "%" + title.toLowerCase() + "%")
-                .getResultList();
-    }
-
-
-    private Book createBook(Scanner scanner, String isbn, String title, int publicationYear, int pages) {
-        System.out.print("Autore: ");
-        String author = scanner.nextLine();
-        System.out.print("Genere: ");
-        String genre = scanner.nextLine();
-        return new Book(isbn, title, publicationYear, pages, author, genre);
-    }
-
-    private Magazine createMagazine(Scanner scanner, String isbn, String title, int publicationYear, int pages) {
-        System.out.println("Seleziona la periodicità:");
-        for (Frequency frequency : Frequency.values()) {
-            System.out.println(frequency.ordinal() + 1 + ". " + frequency);
+        try {
+            return em.createQuery("SELECT i FROM LibraryItem i WHERE LOWER(i.title) LIKE LOWER(:title)", LibraryItem.class)
+                    .setParameter("title", "%" + title.toLowerCase() + "%")
+                    .getResultList();
+        } catch (Exception e) {
+            System.out.println("\u001B[31m" + "Si è verificato un errore durante la ricerca per titolo.\n \u001B[0m");
+            return null;
         }
-        System.out.print("Scelta: ");
-        int frequencyChoice = scanner.nextInt();
-        Frequency frequency = Frequency.values()[frequencyChoice - 1];
-        return new Magazine(isbn, title, publicationYear, pages, frequency);
     }
 }

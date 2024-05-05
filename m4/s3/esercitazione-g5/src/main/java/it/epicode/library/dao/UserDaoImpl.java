@@ -3,6 +3,7 @@ package it.epicode.library.dao;
 import it.epicode.library.entities.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.Persistence;
 
 public class UserDaoImpl implements UserDao{
@@ -13,26 +14,37 @@ public class UserDaoImpl implements UserDao{
 
     public UserDaoImpl() {
         emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
-        em = emf.createEntityManager();
     }
 
     @Override
     public void addUser(User user) {
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             em.persist(user);
             em.getTransaction().commit();
-            System.out.println("Utente aggiunto con successo.");
         } catch (Exception e) {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }
-            System.out.println("Si è verificato un errore durante l'aggiunta dell'utente.");
-            e.printStackTrace();
+            throw new RuntimeException("Errore durante l'aggiunta dell'utente", e);
         } finally {
             em.close();
         }
     }
 
+    @Override
+    public User findUserByTessera(int tesseraNumber) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.createQuery("SELECT u FROM User u WHERE u.numeroTessera = :tesseraNumber", User.class)
+                    .setParameter("tesseraNumber", tesseraNumber)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            em.close();
+        }
+    }
 
 }

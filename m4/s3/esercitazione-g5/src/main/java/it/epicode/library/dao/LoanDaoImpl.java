@@ -4,32 +4,50 @@ import it.epicode.library.entities.Loan;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-
 import java.util.List;
 
 public class LoanDaoImpl implements LoanDao{
 
-
     private static final String PERSISTENCE_UNIT = "JPA_Sample";
     private EntityManagerFactory emf;
-    private EntityManager em;
 
     public LoanDaoImpl() {
         emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
-        em = emf.createEntityManager();
+    }
+
+    @Override
+    public void addLoan(Loan loan) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            em.persist(loan);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            throw e;
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public List<Loan> getLoansByUserTessera(int tesseraNumber) {
-        return em.createQuery("SELECT l FROM Loan l WHERE l.user.numeroTessera = :tesseraNumber", Loan.class)
+        EntityManager em = emf.createEntityManager();
+        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.user.numeroTessera = :tesseraNumber", Loan.class)
                 .setParameter("tesseraNumber", tesseraNumber)
                 .getResultList();
+        em.close();
+        return loans;
     }
 
     @Override
     public List<Loan> getOverdueLoans() {
-        return em.createQuery("SELECT l FROM Loan l WHERE l.dataRestituzionePrevista < CURRENT_DATE AND l.dataRestituzioneEffettiva IS NULL", Loan.class)
+        EntityManager em = emf.createEntityManager();
+        List<Loan> overdueLoans = em.createQuery("SELECT l FROM Loan l WHERE l.expectedReturnDate < CURRENT_DATE AND l.actualReturnDate IS NULL", Loan.class)
                 .getResultList();
+        em.close();
+        return overdueLoans;
     }
-
 }

@@ -1,6 +1,5 @@
 package it.epicode.library.entities;
 
-import it.epicode.library.entities.constants.Tables;
 import jakarta.persistence.*;
 
 /**
@@ -35,6 +34,7 @@ public abstract class LibraryItem extends BaseEntity {
 		return title;
 	}
 
+	public int getYear(){ return publicationYear; }
 
 	@Override
 	public String toString() {

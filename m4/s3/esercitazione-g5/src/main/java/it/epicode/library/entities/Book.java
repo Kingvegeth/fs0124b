@@ -23,23 +23,18 @@ public class Book extends LibraryItem {
 		super(isbn, title, publicationYear, pages);
 		this.author = author;
 		this.genre = genre;
-
 	}
-
-
 
 	public String getAuthor() {
 		return author;
 	}
 
-
 	public String getGenre() {
 		return genre;
 	}
 
-
 	@Override
 	public String toString() {
-		return "- LIBRO - ISBN: " + getIsbn() + ", titolo: '" + getTitle() + "', autore: '" + getAuthor() + "', genere: '" + getGenre() + "'";
+		return "- LIBRO - ISBN: " + getIsbn() + ", titolo: '" + getTitle() + "', autore: '" + getAuthor() + "', genere: '" + getGenre() + "', anno di pubblicazione: " + getYear();
 	}
 }

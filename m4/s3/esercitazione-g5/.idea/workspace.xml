@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="Primo commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDaoImpl.java" afterDir="false" />
+    <list default="true" id="2365876d-5822-4715-9777-ddf915a3294c" name="Changes" comment="inserita aggiunta utente, manca creazione prestito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/app/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LibraryItemDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/LoanDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/dao/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/LibraryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Magazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/epicode/library/entities/Loan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Kingvegeth"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kingvegeth&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kingvegeth/fs0124b.git",
-    "accountId": "0a085533-b99f-4d03-b703-25cf75bbb452"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kingvegeth/fs0124b.git&quot;,
+    &quot;accountId&quot;: &quot;0a085533-b99f-4d03-b703-25cf75bbb452&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -62,7 +62,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kingv/Desktop/Progetti/Corso Full Stack/fs0124b/m4/s2/esercitazione-g5",
+    "last_opened_file_path": "C:/Users/kingv/Desktop/Progetti/Corso Full Stack/fs0124b/m4/s3/esercitazione-g5",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -108,11 +108,20 @@
       <option name="project" value="LOCAL" />
       <updated>1714832117256</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="inserita aggiunta utente, manca creazione prestito">
+      <option name="closed" value="true" />
+      <created>1714839869672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714839869672</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primo commit" />
+    <MESSAGE value="inserita aggiunta utente, manca creazione prestito" />
+    <option name="LAST_COMMIT_MESSAGE" value="inserita aggiunta utente, manca creazione prestito" />
   </component>
 </project>

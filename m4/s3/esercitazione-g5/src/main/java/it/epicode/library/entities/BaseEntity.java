@@ -11,7 +11,7 @@ public class BaseEntity {
 	@Id
 	@GeneratedValue
 	private long id;
-	private Date insertedAt = new Date();
+	private final Date insertedAt = new Date();
 
 	public long getId() {
 		return id;

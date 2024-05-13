@@ -25,6 +25,26 @@ public class MyAppConfig {
     @Bean(name = "toppings_tonno")
     public Topping toppingTonnoBean() { return new Topping(1.3,127,"Tonno"); }
 
+    @Bean(name = "coca_cola")
+    public Bevanda bevandaCocaCola(){
+        return new Bevanda("Coca Cola",3.0,100);
+    }
+
+    @Bean(name = "caffè")
+    public Bevanda bevandaCaffe(){
+        return new Bevanda("Caffè",1.1,10);
+    }
+
+    @Bean(name = "the_pesca")
+    public Bevanda bevandaThePesca(){
+        return new Bevanda("The alla pesca",2.5,90);
+    }
+
+    @Bean(name = "limoncello")
+    public Bevanda bevandaLimoncello(){
+        return new Bevanda("Limoncello",5.0,270);
+    }
+
 
     @Bean(name = "pizza_margherita")
     public Pizza pizzaMargheritaBean(){
@@ -67,6 +87,7 @@ public class MyAppConfig {
     public Menu menuBean(){
         List<Pizza> pizzaList = new ArrayList<>();
         List<Topping> toppingsList = new ArrayList<>();
+        List<Bevanda> drinkList = new ArrayList<>();
 
         pizzaList.add(pizzaMargheritaBean());
         pizzaList.add(pizzaDiavolaBean());
@@ -81,7 +102,12 @@ public class MyAppConfig {
         toppingsList.add(toppingSalsicciaBean());
         toppingsList.add(toppingPomodoroBean());
 
-        return new Menu(pizzaList,toppingsList);
+        drinkList.add(bevandaCaffe());
+        drinkList.add(bevandaThePesca());
+        drinkList.add(bevandaCocaCola());
+        drinkList.add(bevandaLimoncello());
+
+        return new Menu(pizzaList,toppingsList,drinkList);
     }
 
 }

@@ -15,7 +15,7 @@ import java.util.List;
 public class Menu {
     private List<Pizza> pizzaList;
     private List<Topping> toppingList;
-    //private List<Drink> drinkList;
+    private List<Bevanda> drinkList;
 
     public void printMenu() {
         System.out.println("******* Menu *******");
@@ -27,9 +27,9 @@ public class Menu {
         this.toppingList.forEach(System.out::println);
         System.out.println();
 
-//        System.out.println("DRINKS");
-//        this.drinkList.forEach(System.out::println);
-//        System.out.println();
+       System.out.println("DRINKS");
+       this.drinkList.forEach(System.out::println);
+       System.out.println();
 
     }
 }

@@ -18,8 +18,8 @@ public class Topping extends Prodotto{
     public String toString() {
         return "Topping{" +
                 "nome='" + nome + '\'' +
-                ", prezzo=" + prezzo +
                 ", calorie=" + calorie +
+                ", prezzo=" + prezzo +
                 '}';
     }
 }

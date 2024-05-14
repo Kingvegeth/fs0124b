@@ -40,8 +40,8 @@ public class Pizza extends Prodotto{
     public String toString() {
         return "Pizza{" +
                 "nome='" + nome + '\'' +
-                ", prezzo=" + prezzo +
                 ", calorie=" + calorie +
+                ", prezzo=" + prezzo +
                 ", listaTopping=" + listaTopping +
                 '}';
     }

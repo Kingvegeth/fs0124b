@@ -4,16 +4,19 @@ import it.epicode.postazioni.entities.Edificio;
 import it.epicode.postazioni.entities.Postazione;
 import it.epicode.postazioni.entities.Prenotazione;
 import it.epicode.postazioni.entities.Utente;
+import it.epicode.postazioni.enums.TipoPostazione;
 import it.epicode.postazioni.services.EdificioService;
 import it.epicode.postazioni.services.PostazioneService;
 import it.epicode.postazioni.services.PrenotazioneService;
 import it.epicode.postazioni.services.UtenteService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Component
 public class PostazioniRunner implements CommandLineRunner {
@@ -34,6 +37,7 @@ public class PostazioniRunner implements CommandLineRunner {
     private ApplicationContext ctx;
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
 
         Utente utente1 = (Utente) ctx.getBean("utente1");
@@ -96,5 +100,14 @@ public class PostazioniRunner implements CommandLineRunner {
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
+
+        // Metodo per ricercare le postazioni indicando il tipo di postazione desiderato e la città di interesse
+        List<Postazione> postazioniRomaPrivato = postazioneService.findByTipoAndCitta(TipoPostazione.PRIVATO, "Roma");
+        System.out.println("Postazioni di tipo PRIVATO nella città di Roma:");
+        postazioniRomaPrivato.forEach(System.out::println);
+
+        List<Postazione> postazioniRomaOpenspace = postazioneService.findByTipoAndCitta(TipoPostazione.OPENSPACE, "Roma");
+        System.out.println("Postazioni di tipo OPENSPACE nella città di Roma:");
+        postazioniRomaOpenspace.forEach(System.out::println);
     }
 }

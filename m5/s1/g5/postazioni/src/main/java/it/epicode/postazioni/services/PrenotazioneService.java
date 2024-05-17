@@ -42,10 +42,14 @@ public class PrenotazioneService {
     }
 
     public Prenotazione creaPrenotazione(Prenotazione prenotazione) {
-        if (isPostazioneLibera(prenotazione.getPostazione().getId(), prenotazione.getDataPrenotazione())) {
-            return prenotazioneRepository.save(prenotazione);
-        } else {
+        if (!isPostazioneLibera(prenotazione.getPostazione().getId(), prenotazione.getDataPrenotazione())) {
             throw new RuntimeException("La postazione non è disponibile per questa data.");
         }
+
+        if (utenteHaPrenotazionePerData(prenotazione.getUtente().getId(), prenotazione.getDataPrenotazione())) {
+            throw new RuntimeException("L'utente ha già una prenotazione per questa data.");
+        }
+
+        return prenotazioneRepository.save(prenotazione);
     }
 }

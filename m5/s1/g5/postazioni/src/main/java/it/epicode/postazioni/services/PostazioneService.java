@@ -18,10 +18,16 @@ public class PostazioneService {
         return postazioneRepository.findAll();
     }
 
-    public Postazione findById(long id) { return postazioneRepository.findById(id).orElseThrow(() -> new NotFoundException(id));}
+    public Postazione findById(long id) {
+        return postazioneRepository.findById(id).orElseThrow(() -> new NotFoundException(id));
+    }
 
     public void save(Postazione postazione) {
         postazioneRepository.save(postazione);
+    }
+
+    public Postazione saveAndReturn(Postazione postazione) {
+        return postazioneRepository.save(postazione);
     }
 
     public void findByIdAndDelete(long id) {
@@ -32,5 +38,4 @@ public class PostazioneService {
     public List<Postazione> findByTipoAndCitta(TipoPostazione tipo, String citta) {
         return postazioneRepository.findByTipoAndCitta(tipo, citta);
     }
-
 }

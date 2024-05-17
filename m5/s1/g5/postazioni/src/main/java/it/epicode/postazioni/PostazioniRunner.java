@@ -109,5 +109,9 @@ public class PostazioniRunner implements CommandLineRunner {
         List<Postazione> postazioniRomaOpenspace = postazioneService.findByTipoAndCitta(TipoPostazione.OPENSPACE, "Roma");
         System.out.println("Postazioni di tipo OPENSPACE nella città di Roma:");
         postazioniRomaOpenspace.forEach(System.out::println);
+
+
+
+
     }
 }

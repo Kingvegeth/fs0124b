@@ -1,6 +1,7 @@
 package it.epicode.deviceManager.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import it.epicode.deviceManager.entities.enums.DeviceStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ public class Device {
     private DeviceStatus status;
 
     @ManyToOne
+    @JsonBackReference
     private Employee employee;
 
 }

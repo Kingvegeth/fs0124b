@@ -1,6 +1,7 @@
 package it.epicode.deviceManager.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -23,25 +24,23 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @NotBlank
-    @NotEmpty
-    @NotNull
+    @NotBlank(message = "Username is mandatory")
     private String username;
-    @NotBlank
-    @NotEmpty
-    @NotNull
+
+    @NotBlank(message = "First name is mandatory")
     private String firstName;
-    @NotBlank
-    @NotEmpty
-    @NotNull
+
+    @NotBlank(message = "Last name is mandatory")
     private String lastName;
-    @Email
-    @NotBlank
-    @NotEmpty
-    @NotNull
+
+    @Email(message = "Email should be valid")
+    @NotBlank(message = "Email is mandatory")
     private String email;
 
     @OneToMany(mappedBy = "employee")
+    @JsonManagedReference
     private List<Device> devices;
+
+    private String profileImagePath;
 
 }

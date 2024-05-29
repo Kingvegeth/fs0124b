@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef239308-eca8-4a65-af74-748136604f6b" name="Changes" comment="" />
+    <list default="true" id="50fa0fc2-028c-4e5a-b39b-98443d483c29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../s1/g5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../s1/g5/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,22 +15,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Kingvegeth&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Kingvegeth"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kingvegeth/fs0124b.git&quot;,
-    &quot;accountId&quot;: &quot;0a085533-b99f-4d03-b703-25cf75bbb452&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kingvegeth/fs0124b.git",
+    "accountId": "0a085533-b99f-4d03-b703-25cf75bbb452"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2gmJrPtXWbNwZe4HwBA8qDxvP4H" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2h3OVMcWA3BnRmjHvcQaBSCvAji" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
@@ -44,11 +46,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef239308-eca8-4a65-af74-748136604f6b" name="Changes" comment="" />
-      <created>1716297017363</created>
+      <changelist id="50fa0fc2-028c-4e5a-b39b-98443d483c29" name="Changes" comment="" />
+      <created>1716819316306</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716297017363</updated>
+      <updated>1716819316306</updated>
     </task>
     <servers />
   </component>

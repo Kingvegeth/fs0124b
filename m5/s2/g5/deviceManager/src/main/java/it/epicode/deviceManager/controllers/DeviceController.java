@@ -1,4 +1,4 @@
-package it.epicode.deviceManager.entities.controllers;
+package it.epicode.deviceManager.controllers;
 
 import it.epicode.deviceManager.entities.Device;
 import it.epicode.deviceManager.services.DeviceService;

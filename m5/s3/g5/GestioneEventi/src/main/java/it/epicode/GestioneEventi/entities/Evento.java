@@ -19,15 +19,10 @@ import java.util.List;
 public class Evento extends BaseEntity{
 
     private String titolo;
-
     private String descrizione;
-
     private LocalDate data;
-
     private String luogo;
-
     private int postiDisponibili;
-
     private boolean disponibilita;
 
     @OneToMany(mappedBy = "evento")

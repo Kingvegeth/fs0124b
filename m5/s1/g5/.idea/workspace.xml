@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef239308-eca8-4a65-af74-748136604f6b" name="Changes" comment="" />
+    <list default="true" id="ef239308-eca8-4a65-af74-748136604f6b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/config/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/controllers/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/controllers/EventoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/controllers/PrenotazioneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/controllers/UtenteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/repositories/EventoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/repositories/PrenotazioneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/repositories/UtenteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/services/EventoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/services/PrenotazioneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/services/UtenteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Prenotazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Prenotazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Utente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/java/it/epicode/GestioneEventi/entities/Utente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../s3/g5/GestioneEventi/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,9 +54,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kingv/Desktop/Progetti/Corso Full Stack/fs0124b/m5/s2/g5"
+    "last_opened_file_path": "C:/Users/kingv/Desktop/Progetti/Nello"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

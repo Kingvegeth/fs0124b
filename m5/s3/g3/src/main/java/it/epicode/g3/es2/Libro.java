@@ -24,4 +24,5 @@ public class Libro extends ComponenteLibro{
         this.capitoli.forEach(Sezione::stampa);
     }
 
+
 }
